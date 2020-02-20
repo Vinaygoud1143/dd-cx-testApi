@@ -1,0 +1,136 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Provider_Details_By_Passing_The_ProviderKey":{
+         "request":{
+            "providerKey":"GRP240818738240818738002PRV24089802520"
+         },
+         "params":{
+            "lat":18.40638,
+            "long":-65.9743304
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providerKey":"GRP240818738240818738002PRV24089802520",
+               "fullName":"LUIS TORO LLOVERAS",
+               "specialty":"Orthodontist",
+               "officeName":"Toro Especialistas en Ortodoncia",
+               "practiceLocationNumber":"240818738002",
+               "npi":"1699878025",
+               "license":{
+                  "licenseNumber":"1448",
+                  "licenseState":"PR"
+               }
+            },
+            "TC-3":{
+               "yelp":{
+      "yelpId": null,
+      "yelpUrl": null,
+      "yelpReviewCount": 0,
+      "yelpRating": 0,
+      "yelpDeltaDentalId": null
+    },
+               "pandRDental":{
+      "profilingRating": 0,
+      "clinicalCompetencyRating": 0,
+      "adherenceToTreatmentProtocolsRating": 0,
+      "customerSatisfactionRating": 0,
+      "costAndUtilizationRating": 0,
+      "overallRating": 0,
+      "overallGrade": null,
+      "overallAbuseGrade": null,
+      "reliabilityScore": null,
+      "pandrProviderQualityUrl": null
+    }
+            },
+            "TC-4":{
+               "providerNetworks":[
+    {
+      "networkId": "2PPO",
+      "networkName": "Delta Dental PPO",
+      "acceptsNewPatients": "Y",
+      "suppressed": false,
+      "dentalHomeType": null
+    },
+    {
+      "networkId": "2PREMIER",
+      "networkName": "Delta Dental Premier",
+      "acceptsNewPatients": "Y",
+      "suppressed": false,
+      "dentalHomeType": null
+    }
+  ]
+            }
+         }
+      },
+      "Scenario2-Retrieve_The_Provider_Details_By_Passing_The_ProviderKey_And_CustomProviderNetworks_In_Source_TargetNetwork":{
+         "request":{
+            "providerKey":"GRP240818738240818738002PRV24089802520"
+         },
+         "params":{
+            "lat":18.40638,
+            "long":-65.9743304,
+            "sourceNetwork":"2CPPHFP",
+            "targetNetwork":"2CPPHFP"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providerKey":"GRP240818738240818738002PRV24089802520",
+               "fullName":"LUIS TORO LLOVERAS",
+               "specialty":"Orthodontist",
+               "officeName":"Toro Especialistas en Ortodoncia",
+               "practiceLocationNumber":"240818738002",
+               "npi":"1699878025",
+               "license":{
+                  "licenseNumber":"1448",
+                  "licenseState":"PR"
+               }
+            },
+            "TC-3":{
+               "yelp":{
+      "yelpId": null,
+      "yelpUrl": null,
+      "yelpReviewCount": 0,
+      "yelpRating": 0,
+      "yelpDeltaDentalId": null
+    },
+               "pandRDental":{
+      "profilingRating": 0,
+      "clinicalCompetencyRating": 0,
+      "adherenceToTreatmentProtocolsRating": 0,
+      "customerSatisfactionRating": 0,
+      "costAndUtilizationRating": 0,
+      "overallRating": 0,
+      "overallGrade": null,
+      "overallAbuseGrade": null,
+      "reliabilityScore": null,
+      "pandrProviderQualityUrl": null
+    }
+            },
+            "TC-4":{
+               "providerNetworks":[
+    {
+      "networkId": "2PPO",
+      "networkName": "Delta Dental PPO",
+      "acceptsNewPatients": "Y",
+      "suppressed": false,
+      "dentalHomeType": null
+    },
+    {
+      "networkId": "2PREMIER",
+      "networkName": "Delta Dental Premier",
+      "acceptsNewPatients": "Y",
+      "suppressed": false,
+      "dentalHomeType": null
+    }
+  ]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,25 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds":
+        {
+            "TC-1":"GIVEN Valid facilityIds,WHEN requesting to view multiple Facility details THEN should allowed to view facility details", 
+            "TC-2":"Validating isOpen of practiceHours in facility API",
+            "TC-3":"Validating details of facility from facility API"
+        }
+    },
+   "AMGENSCENARIOS":{
+      "Scenario1-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds, sourceNetwork (2NYPPO) & targetNetwork (2PPO) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityIds,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      },
+      "Scenario2-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds, sourceNetwork (2NYPPO) & targetNetwork (2PREMIER) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityIds,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      },
+      "Scenario3-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds, sourceNetwork (2NYPPO) & targetNetwork (2DELTACARE) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityIds,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      }
+   }
+}

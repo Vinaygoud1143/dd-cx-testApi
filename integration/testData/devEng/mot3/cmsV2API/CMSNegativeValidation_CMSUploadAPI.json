@@ -1,0 +1,61 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Upload_The_CMS_Details_By_Providing_Valid_Excel_File_And_Missing_Header":
+        {
+            "request":
+            {},
+            "headers":
+            {
+                "APPLICATION_NAME": "dental_test",
+                "CONTENT_TYPE": "procedure_test",
+                "TENANT_NAME": ""
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 503
+                },
+                "TC-2":
+                {
+                    "errorCode": "CMS004",
+				    "shortDescription": "Error reading content from given excel file",
+				    "detailedDescription": "Error reading content from given excel file - file"
+                }
+
+            }
+        },
+		"Scenario2-Upload_The_CMS_Details_By_Providing_Invalid_Excel_File_And_Valid_Header":
+        {
+            "request":
+            {},
+            "headers":
+            {
+                "APPLICATION_NAME": "dental_test",
+                "CONTENT_TYPE": "procedure_test",
+                "TENANT_NAME": "dentegra_test"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 503
+                },
+                "TC-2":
+                {
+
+                    "errorCode": "CMS004",
+				    "shortDescription": "Error reading content from given excel file",
+				    "detailedDescription": "Error reading content from given excel file - file"
+                    
+                }
+
+            }
+        }
+    }
+}

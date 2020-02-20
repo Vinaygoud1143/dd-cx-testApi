@@ -1,0 +1,10 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Requesting_To_View_With_Valid_Costco_Member_Details": 
+        {
+            "TC-1": "GIVEN valid member WHEN requesting to view Costco member details THEN should be able to view member details",
+            "TC-2": "Validation of member details in the response"
+        } 
+    }  
+}

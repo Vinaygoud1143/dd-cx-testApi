@@ -1,0 +1,20 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Requesting_To_View_Usage_Of_All_Members":
+        {
+            "TC-1": "GIVEN primary member WHEN requesting to view usage all the members THEN should be allowed to view usage records",
+            "TC-2": "Validation of procedureDetail in the response"
+        } ,
+        "Scenario2-Adult_Member_Requesting_To_View_Usage_Of_All_Members":
+        {
+            "TC-1": "GIVEN adult member WHEN requesting to view usage all the members THEN should be allowed to view usage records",
+            "TC-2": "Validation of procedureDetail in the response"
+        } ,
+         "Scenario3-Child_Member_Requesting_To_View_Usage_Of_All_Members":
+        {
+            "TC-1": "GIVEN Child member WHEN requesting to view usage all the members THEN should be allowed to view usage records",
+            "TC-2": "Validation of procedureDetail in the response"
+        }     
+    }
+}

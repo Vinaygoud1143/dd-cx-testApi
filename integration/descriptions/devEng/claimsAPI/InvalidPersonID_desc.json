@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Person_ID":
+        {
+            "TC-1": "Given a Invalid PersonID WHEN requesting to view other Claims THEN should NOT be allowed to view claim records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }     
+    }
+}

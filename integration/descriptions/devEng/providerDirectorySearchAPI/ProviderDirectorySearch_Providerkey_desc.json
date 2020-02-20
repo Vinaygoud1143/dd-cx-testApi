@@ -1,0 +1,19 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Provider_Details_By_Passing_The_ProviderKey":
+        {
+            "TC-1": "GIVEN Valid ProviderKey,WHEN requesting to view Provider details THEN should allowed to view provider details",
+            "TC-2": "Validation of the provider details with API response",
+            "TC-3": "Validation of the providerQuality details with API response",
+            "TC-4": "Validation of the ProviderNetworks details with API response"
+        },
+        "Scenario2-Retrieve_The_Provider_Details_By_Passing_The_ProviderKey_And_CustomProviderNetworks_In_Source_TargetNetwork":
+        {
+            "TC-1": "GIVEN Valid ProviderKey and CustomProviderNetworks,WHEN requesting to view Provider details THEN should allowed to view provider details",
+            "TC-2": "Validation of the provider details with API response",
+            "TC-3": "Validation of the providerQuality details with API response",
+            "TC-4": "Validation of the ProviderNetworks details with API response"
+        }     
+    }
+}

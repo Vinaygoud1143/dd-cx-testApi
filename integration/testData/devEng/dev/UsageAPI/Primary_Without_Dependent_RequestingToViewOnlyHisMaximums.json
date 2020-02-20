@@ -1,0 +1,58 @@
+{  
+   "Scenarios":{  
+      "Scenario1-Primary_Member_With_out_Dependent_Requesting_To_View_Only_His_Maximums_Utilization":{  
+         "request":{  
+            "contract-id":"0005616950"
+         },
+         "headers":{  
+            "personId":"5107000004058027",
+            "ClientKey":"12345"
+         },
+         "params":{  
+            "benefit-package-id":"P0093352"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "maximumsInfo":[  
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##NP",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Cosmetic Services",
+                        "Endodontics",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":5000,
+                        "totalUsedAmt":219.42,
+                        "remainingAmt":4780.58
+                     }
+                  }
+               ]
+            }
+         }
+      }
+   }
+}

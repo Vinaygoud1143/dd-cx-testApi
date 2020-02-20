@@ -1,0 +1,14 @@
+{
+   "Scenarios":{
+      "Scenario1-Retriveing_ProviderNetwork_when_FacilityId_matches_in_ProviderNetworks_And_facility_subNetwork":{
+         "TC-1":"GIVEN Valid ProviderKey,WHEN requesting to view Provider details THEN should allowed to view provider details",
+         "TC-2":"Validation of the provider details with API response",
+         "TC-3":"Validation of the ProviderNetworks details with API response"
+      },
+      "Scenario2-Retriveing_ProviderNetwork_when_FacilityId_Different_from_ProviderNetworks_And_facility_subNetwork":{
+         "TC-1":"GIVEN Valid ProviderKey,WHEN requesting to view Provider details THEN should allowed to view provider details",
+         "TC-2":"Validation of the provider details with API response",
+         "TC-3":"Validation of the ProviderNetworks details with API response"
+      }
+   }
+}

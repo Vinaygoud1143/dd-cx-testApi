@@ -1,0 +1,61 @@
+{
+   "Scenarios":{
+      "Scenario1-Primary_Member_Requesting_To_View_Usage_Of_All_Members":{
+         "request":{
+            "contract-id":"1004871950"
+         },
+         "headers":{
+            "personId":"0358980916542245",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"USAGE003",
+               "shortDescription":"DB error. Unable to retrieve usage records.",
+               "detailedDescription":"Problem occurred while reading usage records from metavance database for enrollee id:1004871950"
+            }
+         }
+      },
+      "Scenario2-Adult_Member_Requesting_To_View_Usage_Of_All_Members":{
+         "request":{
+            "contract-id":"1158654700"
+         },
+         "headers":{
+            "personId":"0084420209190724",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"USAGE003",
+               "shortDescription":"DB error. Unable to retrieve usage records.",
+               "detailedDescription":"Problem occurred while reading usage records from metavance database for enrollee id:1158654700"
+            }
+         }
+      },
+      "Scenario3-Child_Member_Requesting_To_View_Usage_Of_All_Members":{
+         "request":{
+            "contract-id":"1165727039"
+         },
+         "headers":{
+            "personId":"0274372112093614",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"USAGE003",
+               "shortDescription":"DB error. Unable to retrieve usage records.",
+               "detailedDescription":"Problem occurred while reading usage records from metavance database for enrollee id:1165727039"
+            }
+         }
+      }
+   }
+}

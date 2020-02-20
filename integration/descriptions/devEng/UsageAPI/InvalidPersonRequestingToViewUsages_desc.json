@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Person_Requesting_To_View_Usages":
+        {
+            "TC-1": "GIVEN Invalid Person WHEN requesting to view other Usages THEN should NOT be allowed to view Usages records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }     
+    }
+}

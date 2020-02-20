@@ -1,0 +1,23 @@
+{
+   "Scenarios":{
+      "Scenario1-Individual_Member_Viewing_His_Own_Contracts":{
+         "request":{
+            "personId":"6107000007143442"
+         },
+         "headers":{
+            "personId":"6107000007143442",
+            "ClientKey":"9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "contractId":[
+                  "2709600291"
+               ]
+            }
+         }
+      }
+   }
+}

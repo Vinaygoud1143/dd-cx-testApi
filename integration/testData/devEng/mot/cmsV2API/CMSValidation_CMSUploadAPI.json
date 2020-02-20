@@ -1,0 +1,30 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Upload_The_CMS_Details_By_Providing_Valid_Excel_File":
+        {
+            "request":
+            {},
+            "headers":
+            {
+                "APPLICATION_NAME": "dental_test",
+                "CONTENT_TYPE": "procedure_test",
+                "TENANT_NAME": "dentegra_test"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 503
+                },
+                "TC-2":
+                {
+                    "response": true
+                }
+
+            }
+        }
+    }
+}

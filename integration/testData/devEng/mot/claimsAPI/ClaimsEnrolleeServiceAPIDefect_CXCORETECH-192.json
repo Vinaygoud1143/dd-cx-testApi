@@ -1,0 +1,184 @@
+{
+    "Scenarios": {
+        "Scenario1-CXCORETECH-192- Recent Claims API Issues": {
+            "request": {
+                "enrollee-id": "111990448502"
+            },
+            "headers": {
+                "personId": "0019491317250405",
+                "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+            },
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "enrolleeId": "111990448502",
+                    "enrolleeName": "Robert Jones",
+                    "enrolleeType": "Dependent"
+                },
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0210",
+                        "procedureDescription": "INTRAORAL - COMPLETE SERIES OF RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0220",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D2740",
+                        "procedureDescription": "CROWN - PORCELAIN/CERAMIC",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0230",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL EACH ADDITIONAL RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D2150",
+                        "procedureDescription": "AMALGAM - TWO SURFACES, PRIMARY OR PERMANENT TOOTH",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                    "procedureCode": "D6059",
+                    "procedureDescription": "ABUTMENT SUPPORTED PORCELAIN FUSED TO METAL CROWN (HIGH NOBLE METAL)",
+                    "procedureCount": 1
+                }],
+                "procedureDetails": [{
+                    "procedureCode": "D6059",
+                    "procedureDescription": "ABUTMENT SUPPORTED PORCELAIN FUSED TO METAL CROWN (HIGH NOBLE METAL)",
+                    "procedureCount": 1
+                }],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D9220",
+                        "procedureDescription": "DEEP SEDATION/GENERAL ANESTHESIA - FIRST 30 MINUTES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D6010",
+                        "procedureDescription": "SURGICAL PLACEMENT OF IMPLANT BODY: ENDOSTEAL IMPLANT",
+                        "procedureCount": 1
+                    }
+                ]
+            }
+        }
+    }
+}

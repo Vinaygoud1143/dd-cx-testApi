@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario-1":
+        {
+            "TC-1": "GIVEN Child Member WHEN requesting to view his or her claim records THEN should be able to view all his claim records",
+            "TC-2": "Validation of claimIds in the repsonse"
+        }     
+    }
+}

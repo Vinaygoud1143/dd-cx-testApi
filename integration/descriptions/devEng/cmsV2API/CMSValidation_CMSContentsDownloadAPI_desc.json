@@ -1,0 +1,14 @@
+{
+   "Scenariospositive":{
+      "Scenario1-Download_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria":{
+         "TC-1":"GIVEN Valid applicationName,contentType,tenantNameAndCriteria,WHEN requesting to Download CMS details THEN should allowed to Download CMS details"         
+      }
+   },
+   "Scenariosnegative" :{
+   	 "Scenario1-Download_The_CMS_Details_By_Providing_Valid_emptyApplicationNameContentTypeTenantNameAndCriteria":{
+         "TC-1":"GIVEN Valid empty applicationName,contentType,tenantNameAndCriteria,WHEN requesting to Download CMS details THEN should allowed to Download CMS details",
+         "TC-2":"Validation of ErrorCode & ErrorMessage Description"         
+
+      }
+   }
+}

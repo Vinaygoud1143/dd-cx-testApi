@@ -1,0 +1,57 @@
+{
+   "Scenarios":{
+      "Scenario1-CC_WITH_TOKEN_AUTOPAY_DISABLE":{
+         "request":{
+            "amount":11.36,
+            "creditCardToken":{
+               "encryptedToken":"R1lfmaCpBIKjqbwATImhrzDGJWXmljoPqsH2loBDXOg=",
+               "expiryDate":"12/2019",
+               "last4Digits":"2183",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"454567",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autopay":true
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            }
+         }
+      }
+   },
+   "BILLINGSCENARIOS":{
+      "Scenario1-CC_WITH_TOKEN_AUTOPAY_DISABLE":{
+         "headers":{
+            "PersonId":"454567",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":true
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "savedPaymentId":"0777832293",
+               "last4Digits":"2183",
+               "expiryDate":"12/2019",
+               "nameOnCard":"raghu",
+               "cardType":"Master Card",
+               "encryptedToken": "R1lfmaCpBIKjqbwATImhrzDGJWXmljoPqsH2loBDXOg=",
+               "active":true
+            }
+         }
+      }
+   }
+}

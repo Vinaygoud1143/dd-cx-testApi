@@ -1,0 +1,157 @@
+{
+    "saturday": {
+        "TC1": {
+            "params": {
+                "zipcode"     : "94105",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": "saturday",
+                "meta_data"   : false
+            }
+        }
+    },
+    "sunday": {
+        "TC1": {
+            "params": {
+                "zipcode"     : "94105",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": "sunday",
+                "meta_data"   : false
+            }
+        }
+    },
+    "evening": {
+        "TC1": {
+            "params": {
+                "zipcode"     : "94105",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": "evening",
+                "meta_data"   : false
+            }
+        }
+    },
+    "morning": {
+        "TC1": {
+            "params": {
+                "zipcode"     : "94105",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": "morning",
+                "meta_data"   : false
+            }
+        }
+    },
+    "allOfficeHours": {
+        "TC1": {
+            "params": {
+                "zipcode"     : "94105",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": "morning",
+                "meta_data"   : false
+            }
+        }
+    },
+    "freeParking": {
+        "TC1": {
+            "params": {
+                "zipcode"      : "94105",
+                "distance"     : "60",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_access": "free_parking",
+                "meta_data"    : false
+            }
+        }
+    },
+    "wheelChairAccess": {
+        "TC1": {
+            "params": {
+                "zipcode"      : "94105",
+                "distance"     : "60",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_access": "wheel_chair_access",
+                "meta_data"    : false
+            }
+        }
+    },
+    "publicTransitAccess": {
+        "TC1": {
+            "params": {
+                "zipcode"      : "94105",
+                "distance"     : "60",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_access": "public_transit_access",
+                "meta_data"    : false
+            }
+        }
+    },
+    "internetAccess": {
+        "TC1": {
+            "params": {
+                "zipcode"      : "94105",
+                "distance"     : "60",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_access": "internet_access",
+                "meta_data"    : false
+            }
+        }
+    },
+    "allOfficeAccess": {
+        "TC1": {
+            "params": {
+                "zipcode"      : "94105",
+                "distance"     : "60",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_access": "internet_access",
+                "meta_data"    : false
+            }
+        }
+    },
+    "acceptNewPatients": {
+        "TC1": {
+            "params": {
+                "zipcode"            : "94105",
+                "distance"           : "60",
+                "page"               : "0",
+                "per_page"           : "60000",
+                "max"                : "60000",
+                "accept_new_patients": "true",
+                "meta_data"          : false
+            }
+        }
+    },
+    "notAcceptNewPatients": {
+        "TC1": {
+            "params": {
+                "zipcode"  : "94105",
+                "distance" : "60",
+                "page"     : "0",
+                "per_page" : "60000",
+                "max"      : "60000",
+                "meta_data": false
+            }
+        }
+    }
+}

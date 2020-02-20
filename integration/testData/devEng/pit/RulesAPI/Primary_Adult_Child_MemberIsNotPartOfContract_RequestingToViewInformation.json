@@ -1,0 +1,95 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Not_Part_Of_Contract_Trying_View_Information_Of_All_Members":
+        {
+            "request":
+            {
+                "contract-id": "1004571940"
+            },
+            "headers":
+            {
+                "personId": "0358980916542245",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 404
+                },
+                "TC-2":
+                {
+                    "errorCode": "OMNIBUS_ERROR_RULE005",
+				    "shortDescription": "Unauthorized access.",
+				    "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+                }
+            }
+        },
+        "Scenario2-Adult_Member_Not_Part_Of_Contract_Trying_View_Information_Of_All_Members":
+        {
+            "request":
+            {
+                "contract-id": "1004571940"
+            },
+            "headers":
+            {
+                "personId": "0002580916542268",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 404
+                },
+                "TC-2":
+                {
+                        "errorCode": "OMNIBUS_ERROR_RULE005",
+					    "shortDescription": "Unauthorized access.",
+					    "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+                }
+            }
+        },
+
+        "Scenario3-Child_Member_Not_Part_Of_Contract_Trying_View_Information_Of_All_Members":
+        {
+            "request":
+            {
+                "contract-id": "1004571940"
+            },
+            "headers":
+            {
+                "personId": "0656241316550777",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 404
+                },
+                "TC-2":
+                {
+                    "errorCode": "OMNIBUS_ERROR_RULE005",
+				    "shortDescription": "Unauthorized access.",
+				    "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+                }
+            }
+
+        }
+
+    }
+}

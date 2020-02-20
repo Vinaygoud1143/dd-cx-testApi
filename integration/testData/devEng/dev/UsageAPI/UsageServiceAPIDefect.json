@@ -1,0 +1,34 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-CXCORETECH-847-Incorrect message shown for a person having PHI against his account":
+        {
+
+            "request":
+            {
+                "contract-id": "0045793778"
+            },
+            "headers":
+            {
+                "personId": "5047000004566430",
+                "ClientKey": "12345"
+            },
+            "verify":
+            {
+
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+                "TC-2":
+                {
+                    
+                 "errorCode": "USAGE003",
+				 "shortDescription": "DB error. Unable to retrieve usage records.",
+				 "detailedDescription": "Problem occurred while reading usage records from metavance database for enrollee id:0045793778"
+                   
+                }
+            }
+        }
+    }
+}

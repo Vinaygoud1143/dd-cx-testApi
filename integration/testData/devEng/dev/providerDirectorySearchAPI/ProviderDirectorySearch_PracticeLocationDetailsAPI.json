@@ -1,0 +1,45 @@
+{  
+   "Scenarios":{  
+      "Scenario1-Retrieve_The_Practice_Location_Details_By_Providing_OfficeId":{  
+         "request":{  
+            "officeId":"240607599010"
+         },
+         "params":{  
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "practiceLocationNumber":"240607599010",
+               "officeName": "JDC Healthcare",
+               "address":{  
+                  "addressLine":"4396 Interstate 30 Ste 110",
+                  "city":"Dallas",
+                  "state":"TX",
+                  "zipcode":"75211-1351",
+                  "latitude":32.7644615,
+                  "longitude":-96.8988342
+               }
+            }
+         }
+      },
+       "Scenario2-Retrieve_The_Practice_Location_Details_By_Providing_Invalid_OfficeId":{  
+         "request":{  
+            "officeId":"12345"
+         },
+         "params":{  
+          },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "practiceLocationNumber":null,
+               "officeName": null,
+               "address":null
+            }
+         }
+      }
+   }
+}

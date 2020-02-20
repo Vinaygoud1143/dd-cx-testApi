@@ -1,0 +1,2517 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDes": "Test 1: GIVEN Primary Enrollee, WHEN trying to access his/her claims information, THEN s/he should be able to view all his/her claim records",
+            "enrolleeId" : "115882278301",
+            "PersonId"   : "0434620217130408",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "115882278301",
+                "enrolleeName"            : "Mary George",
+                "enrolleeType"            : "Primary",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0434620217130408",
+                        "claimId"        : "20182296073272",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "08/16/2018",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240769072240769072001PRV24089907400",
+                            "providerName"      : "GEORGE STEVENS",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "617-266-0441"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0210",
+                                "procedureDescription": "INTRAORAL - COMPLETE SERIES OF RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0150",
+                                "procedureDescription": "COMPREHENSIVE ORAL EVALUATION - NEW OR ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "0434620217130408",
+                        "claimId"        : "20173636044838",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "12/13/2017",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240769072240769072001PRV24089907400",
+                            "providerName"      : "GEORGE STEVENS",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "617-266-0441"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            }
+        },
+        "test2": {
+            "testCaseDes": "Test 2: GIVEN a Spouse, WHEN trying to access his/her claims information, THEN s/he should be able to view all his/her claim records",
+            "enrolleeId" : "100087998002",
+            "PersonId"   : "0314621212471100",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "100087998002",
+                "enrolleeName"            : "Matthew Alexander",
+                "enrolleeType"            : "Dependent",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0314621212471100",
+                        "claimId"        : "20112706042467",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "09/26/2011",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240597524240597524001PRV24066018100",
+                            "providerName"      : "Wayde W Fawcett",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "281-440-6648"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 42.1
+                    }
+                ]
+            }
+        },
+        "test3": {
+            "testCaseDes": "Test 3: GIVEN a Child, WHEN trying to access his/her claims information, THEN s/he should be able to view all his/her claim records",
+            "enrolleeId" : "100088318304",
+            "PersonId"   : "0495621213150840",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "100088318304",
+                "enrolleeName"            : "Caden Fortino",
+                "enrolleeType"            : "Dependent",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0495621213150840",
+                        "claimId"        : "20123183405249",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "11/05/2012",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240781245240781245001PRV24090915500",
+                            "providerName"      : "JOHN MORTELL",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "630-893-7900"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0272",
+                                "procedureDescription": "BITEWINGS - TWO RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1203",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - CHILD",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "0495621213150840",
+                        "claimId"        : "20121213407806",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "04/13/2012",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240781245240781245001PRV24090915500",
+                            "providerName"      : "JOHN MORTELL",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "630-893-7900"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1203",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - CHILD",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "0495621213150840",
+                        "claimId"        : "20112693416034",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "09/16/2011",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240781245240781245001PRV24090915500",
+                            "providerName"      : "JOHN MORTELL",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "630-893-7900"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0272",
+                                "procedureDescription": "BITEWINGS - TWO RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1203",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - CHILD",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            }
+        },
+        "test4": {
+            "testCaseDes": "Test 4: GIVEN a Child, WHEN trying to access his/her claims information, THEN s/he should be able to view all his/her claim records",
+            "enrolleeId" : "000015390005",
+            "PersonId"   : "0769011913201698",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "000015390005",
+                "enrolleeName"            : "Ryan Pabellon",
+                "enrolleeType"            : "Dependent",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0769011913201698",
+                        "claimId"        : "20180822403966",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "03/20/2018",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240582808240582808001PRV24069665400",
+                            "providerName"      : "Kristin Gordos",
+                            "active"            : true,
+                            "gender"            : "Female",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "610-916-7600"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1208",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - EXCLUDING VARNISH",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "0769011913201698",
+                        "claimId"        : "20172542417627",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "09/07/2017",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240582808240582808001PRV24069665400",
+                            "providerName"      : "Kristin Gordos",
+                            "active"            : true,
+                            "gender"            : "Female",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "610-916-7600"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D1208",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - EXCLUDING VARNISH",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0150",
+                                "procedureDescription": "COMPREHENSIVE ORAL EVALUATION - NEW OR ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            }
+        },
+        "test5": {
+            "testCaseDes": "Test 5: GIVEN Primary Enrollee, WHEN trying to access his/her claims information, THEN s/he should be able to view all his/her claim records",
+            "enrolleeId" : "000001277401",
+            "PersonId"   : "0416831806012809",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "000001277401",
+                "enrolleeName"            : "Natalie Soto Ramirez",
+                "enrolleeType"            : "Primary",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0416831806012809",
+                        "claimId"        : "20141406079036",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "05/16/2014",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240791559240791559001PRV24087893600",
+                            "providerName"      : "CARLOS MATOS MUNERA",
+                            "active"            : false,
+                            "gender"            : null,
+                            "providerSuppressed": false,
+                            "contactNumber"     : []
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "0416831806012809",
+                        "claimId"        : "20133206000218",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "11/15/2013",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240791559240791559001PRV24087893600",
+                            "providerName"      : "CARLOS MATOS MUNERA",
+                            "active"            : false,
+                            "gender"            : null,
+                            "providerSuppressed": false,
+                            "contactNumber"     : []
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            }
+        },
+        "test6": {
+            "testCaseDes": "Test 6: GIVEN a Dependent, WHEN trying to access his/her claims information, THEN s/he should be able to view all his/her claim records",
+            "enrolleeId" : "000001277402",
+            "PersonId"   : "0840431806012980",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "000001277402",
+                "enrolleeName"            : "Priscilla Padilla Soto",
+                "enrolleeType"            : "Dependent",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0840431806012980",
+                        "claimId"        : "20150656080935",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "03/05/2015",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240805256240805256001PRV24082590530",
+                            "providerName"      : "JUAN RIVERA BERICOCHEA",
+                            "active"            : true,
+                            "gender"            : "Male",
+                            "providerSuppressed": false,
+                            "contactNumber"     : [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "787-834-1525"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0220",
+                                "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1208",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - EXCLUDING VARNISH",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0150",
+                                "procedureDescription": "COMPREHENSIVE ORAL EVALUATION - NEW OR ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0230",
+                                "procedureDescription": "INTRAORAL - PERIAPICAL EACH ADDITIONAL RADIOGRAPHIC IMAGE",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0272",
+                                "procedureDescription": "BITEWINGS - TWO RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "0840431806012980",
+                        "claimId"        : "20133519400218",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "11/15/2013",
+                        "providerDetails": {
+                            "providerKey"       : "GRP240791559240791559001PRV24087893600",
+                            "providerName"      : "CARLOS MATOS MUNERA",
+                            "active"            : false,
+                            "gender"            : null,
+                            "providerSuppressed": false,
+                            "contactNumber"     : []
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D1208",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE - EXCLUDING VARNISH",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1120",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - CHILD",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            }
+        },
+        "test7": {
+            "testCaseDes": "Test 7: GIVEN an Adult Dependent (Spouse), WHEN requesting to view a Child's claim records in the plan, THEN s/he should NOT be able to view child's claim records:",
+            "enrolleeId" : "002160095808",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0997710510201371"
+            }
+        },
+        "test8": {
+            "testCaseDes": "Test 8: GIVEN an Adult Dependent (Child), WHEN requesting to view a Child's claim records in the plan, THEN s/he should NOT be able to view child's claim records:",
+            "enrolleeId" : "002160095808",
+            "PersonId"   : "0986921809261140",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0997710510201371"
+            }
+        },
+        "test9": {
+            "testCaseDes": "Test 9: GIVEN an Adult Dependent (Spouse), WHEN requesting to view another Adult Dependent's (Child) claim records in the plan, THEN s/he should NOT be able to view child's claim records:",
+            "enrolleeId" : "002160095805",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0368121809264833"
+            }
+        },
+        "test10": {
+            "testCaseDes": "Test 10: GIVEN an Adult Dependent (Child), WHEN requesting to view another Adult Dependent's (Spouse) claim records in the plan, THEN s/he should NOT be able to view child's claim records:",
+            "enrolleeId" : "002160095802",
+            "PersonId"   : "0368121809264833",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001276381"
+            }
+        },
+        "test11": {
+            "testCaseDes": "Test 11: GIVEN an Adult Dependent (Spouse), WHEN requesting to view another Primary Enrollee's claim records in the plan, THEN s/he should NOT be able to view the Primary Enrollee's claim records:",
+            "enrolleeId" : "002160095801",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001241105"
+            }
+        },
+        "test12": {
+            "testCaseDes": "Test 12: GIVEN an Adult Dependent (Child), WHEN requesting to view another Primary Enrollee's claim records in the plan, THEN s/he should NOT be able to view the Primary Enrollee's claim records:",
+            "enrolleeId" : "002160095801",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001241105"
+            }
+        },
+        "test13": {
+            "testCaseDes": "Test 13: GIVEN a Primary Enrollee, WHEN requesting to view an Adult Dependent's (Spouse) claim records in the plan, AND WHEN the Adult Dependent has not given permission, THEN Primary Enrollee should NOT be able to view Adult Dependent's claim records:",
+            "enrolleeId" : "002160095802",
+            "PersonId"   : "5020000001241105",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001276381"
+            }
+        },
+        "test14": {
+            "testCaseDes": "Test 14: GIVEN a Primary Enrollee, WHEN requesting to view an Adult Dependent's (Child) claim records in the plan, AND WHEN the Adult Dependent has not given permission, THEN Primary Enrollee should NOT be able to view Adult Dependent's claim records:",
+            "enrolleeId" : "002160095806",
+            "PersonId"   : "5020000001241105",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0004821809272008"
+            }
+        },
+        "test15": {
+            "testCaseDes": "Test 15: GIVEN a Child, WHEN requesting to view Primary Enrollee's claim records in the plan, THEN s/he should NOT be able to view Primary Enrollee's claim records:",
+            "enrolleeId" : "002160095801",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001241105"
+            }
+        },
+        "test16": {
+            "testCaseDes": "Test 16: GIVEN a Child, WHEN requesting to view Adult Dependent's (Spouse) claim records in the plan, THEN s/he should NOT be able to view Adult Dependent's claim records:",
+            "enrolleeId" : "002160095802",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001276381"
+            }
+        },
+        "test17": {
+            "testCaseDes": "Test 17: GIVEN a Child, WHEN requesting to view Adult Dependent's (Child) claim records in the plan, THEN s/he should NOT be able to view Adult Dependent's claim records:",
+            "enrolleeId" : "002160095806",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0004821809272008"
+            }
+        },
+        "test18": {
+            "testCaseDes": "Test 18: GIVEN a Child, WHEN requesting to view another Child's claim records in the plan, THEN s/he should NOT be able to view their claim records:",
+            "enrolleeId" : "002160095803",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001274098"
+            }
+        },
+        "test19": {
+            "testCaseDes": "Test 19: GIVEN an Adult Dependent (Child), WHEN requesting to view another Adult Dependent's (Child) claim records in the plan, THEN s/he should NOT be able to view Adult Dependent's claim records:",
+            "enrolleeId" : "002160095806",
+            "PersonId"   : "0368121809264833",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0004821809272008"
+            }
+        },
+        "test20": {
+            "testCaseDes": "Test 20: GIVEN an Enrollee having No Claims, WHEN requesting to view his/her claim records in the plan, THEN s/he should see only enrolleeId, enrolleeName and enrolleeType with enrolleeClaimSummaryList being blank:",
+            "enrolleeId" : "100088883704",
+            "PersonId"   : "0864921214005266",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId": "100088883704",
+                "enrolleeName": "Tyler Stephenson",
+                "enrolleeType": "Dependent",
+                "enrolleeClaimSummaryList": []
+              }
+        },
+        "test21": {
+            "testCaseDes": "Test 21: Given a PRIMARY member, WHEN requesting to view other Adult member who is not part of the same contract as PRIMARY, THEN s/he should NOT be allowed to view claim records and indicate the person is not part of the contract",
+            "enrolleeId" : "100487194004",
+            "PersonId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id."
+            },
+            "bugNumber": "CXCORETECH-385"
+        },
+        "test22": {
+            "testCaseDes": "Test 22: Given Adult member, WHEN requesting to view other members NOT in this current contract & THEN should NOT be allowed to view claim records and should raise security alert.",
+            "enrolleeId" : "100487795003",
+            "PersonId"   : "0002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id."
+            },
+            "bugNumber": "CXCORETECH-385"
+        },
+        "test23": {
+            "testCaseDes": "Test 23: Invalid Person ID or Enrollee ID",
+            "enrolleeId" : "00487795003",
+            "PersonId"   : "1002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id."
+            },
+            "bugNumber": "CXCORETECH-386"
+        },
+        "test24": {
+            "testCaseDes": "Test 24: Person ID mandatory scenario",
+            "enrolleeId" : "100487795003",
+            "PersonId"   : "1",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id."
+            },
+            "bugNumber": "CXCORETECH-386"
+        },
+        "test25": {
+            "testCaseDes": "Test 25: Enrollee ID mandatory scenario",
+            "enrolleeId" : "1",
+            "PersonId"   : "0002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS001",
+                "shortDescription"   : "General Exception",
+                "detailedDescription": "General Exception"
+            },
+            "bugNumber": "CXCORETECH-386"
+        },
+        "test26": {
+            "testCaseDes": "Test 26: GIVEN Primary Enrollee who has an Inactive Provider in all the Claims, WHEN trying to access his/her claims information, THEN s/he should be able to view Provider Details in all his/her claim records",
+            "enrolleeId" : "115882278801",
+            "PersonId"   : "0795720217130484",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId": "115882278801",
+                "enrolleeName": "Kirk Hunter",
+                "enrolleeType": "Primary",
+                "enrolleeClaimSummaryList": [
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20182066035406",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "07/24/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0220",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0230",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL EACH ADDITIONAL RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 400
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20182087400167",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "02/02/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D2393",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D2332",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, ANTERIOR TOOTH",
+                        "procedureCount": 2
+                      },
+                      {
+                        "procedureCode": "D2392",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - TWO SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20180402404611",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "02/02/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D2332",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, ANTERIOR TOOTH",
+                        "procedureCount": 2
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 55
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20180106058834",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "01/09/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 55
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "201820874001671",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "07/14/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D2393",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D2392",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - TWO SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20180366047005",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "07/14/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0220",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0230",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL EACH ADDITIONAL RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D2393",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 2
+                      },
+                      {
+                        "procedureCode": "D2332",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, ANTERIOR TOOTH",
+                        "procedureCount": 2
+                      },
+                      {
+                        "procedureCode": "D2392",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - TWO SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20171956100124",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "07/14/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D2393",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - THREE SURFACES, POSTERIOR TOOTH",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D2150",
+                        "procedureDescription": "AMALGAM - TWO SURFACES, PRIMARY OR PERMANENT TOOTH",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 140.2
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20171776076169",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "06/23/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0220",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0230",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL EACH ADDITIONAL RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0795720217130484",
+                    "claimId": "20180366047314",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "06/23/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240612576240612576001PRV24070359700",
+                      "providerName": "Kathy Kouroupas",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "212-252-1601"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  }
+                ]
+              },
+            "bugNumber": "CXCORETECH-449"
+        },
+        "test27": {
+            "testCaseDes": "Test 27: GIVEN a DEPENDENT who has an Inactive Provider in all the Claims, WHEN trying to access his/her claims information, THEN s/he should be able to view Provider Details in all his/her claim records",
+            "enrolleeId" : "000570324302",
+            "PersonId"   : "5107000004627510",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "000570324302",
+                "enrolleeName"            : "Catherine Laffdon",
+                "enrolleeType"            : "Dependent",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20172096073887",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "07/27/2017",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20170526060158",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "01/23/2017",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0210",
+                                "procedureDescription": "INTRAORAL - COMPLETE SERIES OF RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20161966050058",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "07/11/2016",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20153226048937",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "11/12/2015",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20151326042473",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "05/11/2015",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20143166043254",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "11/10/2014",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20141216049967",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "04/30/2014",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20132116052129",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "07/29/2013",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 2
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 2
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 2
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20121996047510",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "07/13/2012",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0210",
+                                "procedureDescription": "INTRAORAL - COMPLETE SERIES OF RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20113366061784",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "11/30/2011",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    },
+                    {
+                        "personId"       : "5107000004627510",
+                        "claimId"        : "20111526015639",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "05/17/2011",
+                        "providerDetails": {
+                            "providerKey"  : "GRP240739349240739349002PRV24087636100",
+                            "providerName" : "ALAN AINLEY",
+                            "active"       : true,
+                            "gender"       : "Male",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "870-239-2285"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0120",
+                                "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            },
+            "bugNumber": "CXCORETECH-361"
+        },
+        "test28": {
+            "testCaseDes": "Test 28: GIVEN Primary Enrollee with PHI Flag enabled, WHEN trying to access his/her claims information, THEN s/he should NOT be able to view all his/her claim records",
+            "enrolleeId" : "004565104201",
+            "PersonId"   : "5047000004091215",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS013",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "PHI is enabled for this member 004565104201."
+            }
+        },
+        "test29": {
+            "testCaseDes": "Test 29: GIVEN Primary Member with PHI Flag enabled, WHEN requesting to view his or her claim records & THEN should NOT be able to view any informatio",
+            "enrolleeId" : "004579377801",
+            "PersonId"   : "5047000004566430",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS013",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "PHI is enabled for this member 004579377801."
+            }
+        },
+        "test30": {
+            "testCaseDes": "Test 30: GIVEN Primary Member with PHI Flag enabled against his/her account AND an Adult Dependnt who has not given permission to Primary. WHEN the Primary Member requests to view ADULT dependent's claim records, THEN OMNIBUS rules should restrict the Primary from doing so AND PHI being enabled against his/her account should not effect his/her viewing capability",
+            "enrolleeId" : "004579377802",
+            "PersonId"   : "5047000004566430",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045793778 and person 5047000004555079"
+            }
+        },
+        "test31": {
+            "testCaseDes": "Test 31: GIVEN Primary Member who has PHI Flag disbaled AND an Adult Dependnt who has not given permission to Primary. WHEN the Primary Member requests to view ADULT dependent's claim records, THEN OMNIBUS rules should restrict the Primary from doing so",
+            "enrolleeId" : "000561219902",
+            "PersonId"   : "5107000004050672",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0005612199 and person 5107000004226957"
+            }
+        },
+        "test32": {
+            "testCaseDes": "Test 32: GIVEN Primary Member with PHI Flag enabled against his/her account AND an Adult Dependnt who has not given permission to Primary. WHEN the Primary Member requests to view ADULT dependent's claim records, THEN OMNIBUS rules should restrict the Primary from doing so AND PHI being enabled against his/her account should not effect his/her viewing capability",
+            "enrolleeId" : "004579377802",
+            "PersonId"   : "5047000004566430",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045793778 and person 5047000004555079"
+            }
+        },
+        "test33": {
+            "testCaseDes": "Test 33: GIVEN a Dependent with PHI Flag enabled, WHEN requesting to view his/her claim records, THEN s/he should NOT be able to view any information",
+            "enrolleeId" : "002580176002",
+            "PersonId"   : "5027000004566758",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS013",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "PHI is enabled for this member 002580176002."
+            },
+            "bugNumber": "CXCORETECH-654"
+        },
+        "test34": {
+            "testCaseDes": "Test 34: GIVEN a Dependent with PHI Flag enabled, WHEN requesting to his/her claim records, THEN s/he should NOT be able to view any information",
+            "enrolleeId" : "000570338806",
+            "PersonId"   : "5037000004577305",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS013",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "PHI is enabled for this member 000570338806."
+            },
+            "bugNumber": "CXCORETECH-654"
+        },
+        "test35": {
+            "testCaseDes": "Test 35: This task is to account for Bug Number CXCORETECH-659 where Contact Details for Provider were missing for Claim ID 20180293004402. GIVEN Primary Member with PHI Flag disabled, WHEN requesting to view his/her claim records with Provider Contact Details, THEN s/he should be able to see Provider Details in Claims Information",
+            "enrolleeId" : "114262595201",
+            "PersonId"   : "0938661113434711",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId": "114262595201",
+                "enrolleeName": "Stephen Duplechin",
+                "enrolleeType": "Primary",
+                "enrolleeClaimSummaryList": [
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20181736078159",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "06/20/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 4
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20180293004402",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "01/23/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D2740",
+                        "procedureDescription": "CROWN - PORCELAIN/CERAMIC",
+                        "procedureCount": 2
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 1035
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20180106041216",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "01/08/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0220",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0140",
+                        "procedureDescription": "LIMITED ORAL EVALUATION - PROBLEM FOCUSED",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20173336143321",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "11/27/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV73401559900",
+                      "providerName": "Katherine Rothermel Hubbard",
+                      "active": true,
+                      "gender": "Female",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 1
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20171456043742",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "05/23/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20163336055725",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "11/22/2016",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20161326035167",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "05/10/2016",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0330",
+                        "procedureDescription": "PANORAMIC RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20153366039039",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "12/01/2015",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D2391",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - ONE SURFACE, POSTERIOR TOOTH",
+                        "procedureCount": 3
+                      },
+                      {
+                        "procedureCode": "D2140",
+                        "procedureDescription": "AMALGAM - ONE SURFACE, PRIMARY OR PERMANENT TOOTH",
+                        "procedureCount": 2
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 236.8
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "20153096036864",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "11/03/2015",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "0938661113434711",
+                    "claimId": "201513134159601",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "04/30/2015",
+                    "providerDetails": {
+                      "providerKey": "GRP240614104240614104001PRV24068944300",
+                      "providerName": "Kurt S Rothermel",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "337-783-2113"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 111
+                  }
+                ]
+              },
+            "bugNumber": "CXCORETECH-659"
+        },
+        "test36": {
+            "testCaseDes": "Test 36: This test is to account for Bug number CXCORETECH-558 where multiple contact numbers were being returned in claim number 20172156031045 for a single provider location. GIVEN Primary Member with PHI Flag disabled, WHEN requesting to view his/her claim records with Provider Contact Details, THEN s/he should be able to see Provider Details in Claims Information",
+            "enrolleeId" : "001065669701",
+            "PersonId"   : "5100000001602301",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId": "001065669701",
+                "enrolleeName": "David Linville",
+                "enrolleeType": "Primary",
+                "enrolleeClaimSummaryList": [
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20181736091683",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "06/21/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP122822138122822138001PRV24070472315",
+                      "providerName": "Jeffery Woodson",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-691-5223"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0220",
+                        "procedureDescription": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0140",
+                        "procedureDescription": "LIMITED ORAL EVALUATION - PROBLEM FOCUSED",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20180886053658",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "03/27/2018",
+                    "providerDetails": {
+                      "providerKey": "GRP240644030240644030002PRV24072686300",
+                      "providerName": "William H Miller",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0210",
+                        "procedureDescription": "INTRAORAL - COMPLETE SERIES OF RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 180
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20172156031045",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "08/02/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240644030240644030002PRV24072686300",
+                      "providerName": "William H Miller",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20172166045140",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "08/02/2017",
+                    "providerDetails": {
+                      "providerKey": "GRP240644030240644030002PRV24072686300",
+                      "providerName": "William H Miller",
+                      "active": true,
+                      "gender": "Male",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20163366052222",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "11/30/2016",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20161056043782",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "04/13/2016",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20152096041216",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "07/15/2015",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20150156047105",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "01/14/2015",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20130936033544",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "04/02/2013",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20121246041988",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "05/02/2012",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20112926022771",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "10/18/2011",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 120
+                  },
+                  {
+                    "personId": "5100000001602301",
+                    "claimId": "20111606008577",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "06/07/2011",
+                    "providerDetails": {
+                      "providerKey": "GRP240625465240625465001PRV24070998400",
+                      "providerName": "Paul D Wallace",
+                      "active": true,
+                      "gender": "Unisex",
+                      "providerSuppressed": false,
+                      "contactNumber": [
+                        {
+                          "contactCode": "PHONE",
+                          "contactNumber": "214-692-1050"
+                        }
+                      ]
+                    },
+                    "procedureDetails": [
+                      {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                      },
+                      {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                      }
+                    ],
+                    "enrolleeResponsibilityAmount": 0
+                  }
+                ]
+              },
+            "bugNumber": "CXCORETECH-558"
+        },
+        "test37": {
+            "testCaseDes": "Test 37: GIVEN a Profile with 1 Primary and 2 Dependents with 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view his/her claim records, THEN s/he should be able to see Claims Information AND the PHI flag for 2nd Dependent should NOT block the Primary from viewing the information",
+            "enrolleeId" : "535040012501",
+            "PersonId"   : "0052611011512994",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "535040012501",
+                "enrolleeName"            : "Michael Parido",
+                "enrolleeType"            : "Primary",
+                "enrolleeClaimSummaryList": []
+            },
+            "bugNumber": "CXCORETECH-671"
+        },
+        "test38": {
+            "testCaseDes": "Test 38: GIVEN a Profile with 1 Primary and 2 Dependents with the 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view 1st Dependent's claim records (PHI flag disabled), THEN s/he should be able to see 1st Dependent's Claims Information AND the PHI flag for 2nd Dependent should NOT block the Primary from viewing the information",
+            "enrolleeId" : "535040012502",
+            "PersonId"   : "0052611011512994",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"              : "535040012502",
+                "enrolleeName"            : "Morrison Parido",
+                "enrolleeType"            : "Dependent",
+                "enrolleeClaimSummaryList": [
+                    {
+                        "personId"       : "0705411011513070",
+                        "claimId"        : "20173216063520",
+                        "claimStatus"    : "Claim Paid",
+                        "claimStatusCode": "Y",
+                        "dateOfService"  : "10/30/2017",
+                        "providerDetails": {
+                            "providerKey"  : "GRP133762104133762104001PRV24072217200",
+                            "providerName" : "Leslie Odowd",
+                            "active"       : true,
+                            "gender"       : "Female",
+                            "contactNumber": [
+                                {
+                                    "contactCode"  : "PHONE",
+                                    "contactNumber": "717-879-9700"
+                                }
+                            ]
+                        },
+                        "procedureDetails": [
+                            {
+                                "procedureCode"       : "D0150",
+                                "procedureDescription": "COMPREHENSIVE ORAL EVALUATION - NEW OR ESTABLISHED PATIENT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D0274",
+                                "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1110",
+                                "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                                "procedureCount"      : 1
+                            },
+                            {
+                                "procedureCode"       : "D1206",
+                                "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE VARNISH",
+                                "procedureCount"      : 1
+                            }
+                        ],
+                        "enrolleeResponsibilityAmount": 0
+                    }
+                ]
+            },
+            "bugNumber": "CXCORETECH-671"
+        },
+        "test39": {
+            "testCaseDes": "Test 39: GIVEN a Profile with 1 Primary and 6 Dependents with the 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view 6nd Dependent's claim records (PHI flag enabled), THEN s/he should NOT be able to see 6th Dependent's Claims Information",
+            "enrolleeId" : "000570338806",
+            "PersonId"   : "5107000004372613",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0005703388 and person 5037000004577305"
+            },
+            "bugNumber": "CXCORETECH-671"
+        },
+        "test40": {
+            "testCaseDes": "Test 40: To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-1's claims records (Dependent 1 has denied permission)",
+            "enrolleeId" : "114284598902",
+            "PersonId"   : "5057000005158214",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 1142845989 and person 5057000004698196"
+            },
+            "bugNumber": "CXCORETECH-677"
+        },
+        "test41": {
+            "testCaseDes": "Test 41: To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-2's claims records (Dependent 2 has denied permission)",
+            "enrolleeId" : "114284598903",
+            "PersonId"   : "5057000005158214",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 1142845989 and person 5057000005162905"
+            },
+            "bugNumber": "CXCORETECH-677"
+        },
+        "test42": {
+            "testCaseDes": "Test 42: To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-1's claims records (Dependent 1 has denied permission)",
+            "enrolleeId" : "001060129102",
+            "PersonId"   : "5100000001241590",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0010601291 and person 5100000001271271"
+            },
+            "bugNumber": "CXCORETECH-677"
+        },
+        "test43": {
+            "testCaseDes": "Test 43: To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-2's claims records (Dependent 2 has denied permission)",
+            "enrolleeId" : "001060129103",
+            "PersonId"   : "5100000001241590",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0010601291 and person 5100000001270527"
+            },
+            "bugNumber": "CXCORETECH-677"
+        }
+    }
+}

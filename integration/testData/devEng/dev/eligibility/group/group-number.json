@@ -1,0 +1,136 @@
+{
+    "positive_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "group-number": "GN000002"
+            },
+            "response":
+            {
+                "status": 200,
+                "groupNumber": "GN000002",
+                "groupName": "DeltaDental",
+                "groupSurrogateId": "GS_ID0002",
+                "groupTypeIdentifier": "Customer",
+                "healthCareContractHolderIdentifier": "HC_ID0002",
+                "state": "UP",
+                "networkId": "NT_002",
+                "prePaidGroup": true,
+                "programtype": "complex",
+                "division": [
+                {
+                    "divisionNumber": "DN_002",
+                    "divsionName": "Delta",
+                    "divisionSurrogateId": "DS_ID0002",
+                    "benefitPackage": [
+                    {
+                        "id": null
+                    }],
+                    "divisionSelfFunded": true,
+                    "basisofpayment": "CC",
+                    "contactCode": [
+                    {
+                        "contactTypeCode": null,
+                        "contactTitle": "Initial_Contact",
+                        "firstName": "Bhaskar",
+                        "middleName": "",
+                        "lastName": "Verma",
+                        "nameSuffix": "Mr.",
+                        "effectiveDate": "02-12-2029",
+                        "endDate": "02-12-2021",
+                        "whoTypeIndicator": "Single"
+                    }]
+                }]
+
+            }
+        }
+    },
+    "negative_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "group-number": ""
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "group-number": "123"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "GROUP_002",
+                "shortDescription": "Data Not Found.",
+                "detailedDescription": "Group data did not find with given group-number."
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "group-number": "!@#$"
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "GROUP_001",
+                "shortDescription": "Empty/Invalid groupNumber In Request",
+                "detailedDescription": "Problem occurred while invoke GROUP Service with groupNumber"
+            }
+        },
+        "scenario4":
+        {
+            "request":
+            {
+                "group-number": "<script>alert('XSS')</script>"
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+            }
+        },
+        "scenario5":
+        {
+            "request":
+            {
+                "group-number": "test"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "GROUP_002",
+                "shortDescription": "Data Not Found.",
+                "detailedDescription": "Group data did not find with given group-number."
+            }
+        },
+        "scenario6":
+        {
+            "request":
+            {
+                "group-number": " "
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "GROUP_001",
+                "shortDescription": "Empty/Invalid groupNumber In Request",
+                "detailedDescription": "Problem occurred while invoke GROUP Service with groupNumber"
+            }
+        }
+
+    }
+}

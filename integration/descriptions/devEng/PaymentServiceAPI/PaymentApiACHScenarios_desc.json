@@ -1,0 +1,24 @@
+{
+   "Scenarios":{
+      "Scenario1-D2C_ACH_Payment":{
+         "TC-1":"GIVEN Valid ACH Details, WHEN requesting to make Payment THEN should return HTTPSTATUS OK.",
+         "TC-2":"Validation of EnrolleeId & RequestReferenceId Status in the response."
+      },
+      "Scenario2-D2C_ACH_Payment_Missing_Or_Empty_AccountNumber":{
+         "TC-1":"GIVEN Empty AccountNumber to ACH Details, WHEN requesting to make Payment THEN should return ACH Information Invalid.",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response."
+      },
+      "Scenario3-D2C_ACH_Payment_Missing_Or_Empty_BankRoutingNumber":{
+         "TC-1":"GIVEN Empty BankRoutingNumber to ACH Details, WHEN requesting to make Payment THEN should return ACH Information Invalid.",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response."
+      },
+      "Scenario4-D2C_ACH_Payment_Invalid_Amount":{
+         "TC-1":"GIVEN Invalid Amount to ACH Details, WHEN requesting to make Payment THEN should return Payment Amount Invalid.",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response."
+      },
+      "Scenario5-D2C_ACH_Payment_Empty_PaymentType":{
+         "TC-1":"GIVEN Empty PaymentType to ACH Details, WHEN requesting to make Payment THEN should return Unsupported payment type.",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response."
+      }
+   }
+}

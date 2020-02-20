@@ -1,0 +1,173 @@
+{
+   "Scenarios":{
+      "Scenario1-Accounts&Billing-Get Billing Details for EnrolleedId - 113275597601":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "enrolleeId":"113275597601",
+               "autopay":true
+            }
+         }
+      },
+      "Scenario2-Accounts&Billing-Get Billing Details for EnrolleedId - 116667239501":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116667239501"
+         },
+         "query-params":{
+            "history":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "enrolleeId":"116667239501"
+            }
+         }
+      },
+      "Scenario3-Accounts&Billing-Get Billing Details with Empty EnrolleeId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":" "
+         },
+         "query-params":{
+            "history":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"BILLING_001",
+               "shortDescription":"Problem occurred while process the Billing Service.",
+               "detailedDescription":"While process the Billing Service, got the internal server error."
+            }
+         }
+      },
+      "Scenario4-Accounts&Billing-Get Billing Details with Wrong EnrolleeId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"4456554685"
+         },
+         "query-params":{
+            "history":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"BILLING_001",
+               "shortDescription":"Problem occurred while process the Billing Service.",
+               "detailedDescription":"While process the Billing Service, got the internal server error."
+            }
+         }
+      },
+      "Scenario5-Accounts&Billing-Get Billing Details with Invalid ClentKey":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"123456"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error":"Unauthorized",
+               "message":"Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario6-Accounts&Billing-Get Billing Details with ClentKey as String":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"abc"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error":"Unauthorized",
+               "message":"Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario7-Accounts&Billing-Get Billing Details with Empty ClentKey":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":" "
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      },
+      "Scenario8-Accounts&Billing-Get Billing Details with Empty PersonId":{
+         "headers":{
+            "PersonId":" ",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,60 @@
+{
+    "Scenarios": {
+        "Scenario1-Retrieve_The_Broker_Details_By_Providing_Valid_BrokerId": {
+            "request": {
+                "brokerId": "2012836"
+            },
+            "params": {},
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "brokerNumber": "2012836",
+				    "taxIdNumber": "122094697",
+				    "oracleVendorId": 15041,
+				    "brokerName": "CHARLES DARROW",
+				    "vendorType": "BRK",
+				    "sites": [
+				        {
+				            "vendorSiteCode": "2012836",
+				            "orgId": 85,
+				            "vendorSiteId": 15154,
+				            "legalEntity": "DDIC DHMO",
+				            "purchasingSiteFlag": "N",
+				            "paySiteFlag": "Y",
+				            "address": {
+				                "addressLine3": null,
+				                "addressLine2": null,
+				                "addressLine1": "841 APPLEWILDE DR",
+				                "city": "SAN MARCOS",
+				                "state": "CA",
+				                "zip": "920784971"
+                              
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "negativetestdata": {
+        "Scenario1-Invalid_BrokerId": {
+            "request": {
+                "brokerId": "20128545"
+            },
+            "params": {},
+            "verify": {
+                "TC-1": {
+                    "statuscode": 400
+                },
+                "TC-2": {
+                    "errorCode": "BROKER001",
+                    "shortDescription": "input data issue.",
+                    "detailedDescription": "Invalid tax Id input.",
+                    "stackTrace": null
+                }
+            }
+        }
+    }
+}

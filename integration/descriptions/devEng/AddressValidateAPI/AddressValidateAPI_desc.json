@@ -1,0 +1,30 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Retrieve_The_Address_Details_For_Given_Address_ForState_DC": 
+        {
+            "TC-1": "Requesting Address details with Valid Address",
+            "TC-2": "Validating Address details"
+        },
+        "Scenario2-Retrieve_The_Address_Details_For_Given_Address_ForState_MD": 
+        {
+            "TC-1": "Requesting Address details with Valid Address",
+            "TC-2": "Validating Address details"
+        },
+        "Scenario3-Retrieve_The_Address_Details_For_Given_Address_ForState_PR": 
+        {
+            "TC-1": "Requesting Address details with Valid Address",
+            "TC-2": "Validating Address details"
+        },
+        "Scenario4-Retrieve_The_Address_Details_For_Given_Address_ForState_TN": 
+        {
+            "TC-1": "Requesting Address details with Valid Address",
+            "TC-2": "Validating Address details"
+        },
+        "Scenario5-Retrieve_The_Address_Details_For_Given_Address_ForState_AK": 
+        {
+            "TC-1": "Requesting Address details with Valid Address",
+            "TC-2": "Validating Address details"
+        }
+    }  
+}

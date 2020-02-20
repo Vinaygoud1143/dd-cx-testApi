@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Viewing_Other_Adult_Claims_Granted_Permission(Omnibus rule)":
+        {
+            "TC-1": "Given Primary member (Omnibus rule) WHEN requesting to view other Adult member who has granted permission (Omnibus rule) THEN should be allowed to view claim records",
+            "TC-2": "Validation of Claim Details in the response"        
+        }   
+    }
+}

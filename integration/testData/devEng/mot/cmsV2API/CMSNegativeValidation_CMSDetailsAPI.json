@@ -1,0 +1,89 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_CMS_Details_By_Providing_Given_Missing_ApplicationName_Valid_ContentTypeTenantNameAndCriteria_ISUSER_STATE":
+        {
+            "request":
+            {
+                "criteria": ["issuer=COSTCO", "state=TX"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "",
+                "CONTENT_TYPE": "procedure",
+                "TENANT_NAME": "dentegra"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+                "TC-2":{ 
+                  "errorCode": "CMS002",
+                  "shortDescription": "Unable to build and execute content query",
+                  "detailedDescription": "Unable to build and execute content query"
+                }
+
+            }
+        },
+        "Scenario2-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationName_Missing_ContentType_Valid_TenantNameAndCriteria_FIRSTNAME_LASTNAME":
+        {
+            "request":
+            {
+                "criteria": ["FirstName=Alan", "LastName=Wakefield"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "cx",
+                "CONTENT_TYPE": "",
+                "TENANT_NAME": "delta"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+                "TC-2":{ 
+                  "errorCode": "CMS002",
+                  "shortDescription": "Unable to build and execute content query",
+                  "detailedDescription": "Unable to build and execute content query"
+                }
+
+            }
+        },
+        "Scenario3-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentType_Missing_TenantName_And_Valid_Criteria_COMPANY_CITY":
+        {
+            "request":
+            {
+                "criteria": ["Company=Delta Dental Insurance Company", "City=Alpharetta"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "ep",
+                "CONTENT_TYPE": "idcards",
+                "TENANT_NAME": ""
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+                "TC-2":{ 
+                  "errorCode": "CMS002",
+                  "shortDescription": "Unable to build and execute content query",
+                  "detailedDescription": "Unable to build and execute content query"
+                }
+
+            }
+        }
+    }
+}

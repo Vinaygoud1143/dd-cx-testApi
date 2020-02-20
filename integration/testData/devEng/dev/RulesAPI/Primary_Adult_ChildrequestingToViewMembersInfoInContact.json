@@ -1,0 +1,250 @@
+{
+    "Scenarios": {
+        "Scenario1-Primary_Member_With_out_PHI_Flag_Viewing_Information_Of_All_Members": {
+            "request": {
+                "contract-id": "1004871950"
+            },
+            "headers": {
+                "personId": "0358980916542245",
+                "ClientKey": "12345"
+            },
+            "params": {
+                "rule-types": "omnibus"
+            },
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "memberInfo": [{
+                            "personId": "0358980916542245",
+                            "memberId": "01",
+                            "phiEnabled": false,
+                            "omnibusInfo": {
+                                "permissionGranted": true,
+                                "message": "Omnibus-rule: Member is requesting for his or her own records."
+                            }
+
+                        },
+                        {
+                            "personId": "0002580916542268",
+                            "memberId": "02",
+                            "omnibusInfo": {
+                                "permissionGranted": true,
+                                "message": "Omnibus-rule: Adult Dependent has granted permission to the primary enrollee."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0055480916542294",
+                            "memberId": "03",
+                            "omnibusInfo": {
+                                "permissionGranted": true,
+                                "message": "Omnibus-rule: Adult Dependent has granted permission to the primary enrollee."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0374780916542310",
+                            "memberId": "04",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a primary enrollee on the contract. However, he/she has no permission to view the Adult Dependent's information."
+                            },
+                            "phiEnabled": false
+                        }
+
+                    ]
+                }
+            }
+        },
+        "Scenario2-Primary_Member_With_PHI_Flag_Viewing_Information_Of_All_Members": {
+            "request": {
+                "contract-id": "0045793778"
+            },
+            "headers": {
+                "personId": "5047000004566430",
+                "ClientKey": "12345"
+            },
+            "params": {
+                "rule-types": "omnibus"
+            },
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "memberInfo": [{
+                            "personId": "5047000004566430",
+                            "memberId": "01",
+                            "omnibusInfo": {
+                                "permissionGranted": true,
+                                "message": "Omnibus-rule: Member is requesting for his or her own records."
+                            },
+                            "phiEnabled": true
+
+                        },
+                        {
+                            "personId": "5047000004555079",
+                            "memberId": "02",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a primary enrollee on the contract. However, he/she has no permission to view the Adult Dependent's information."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "5047000004753793",
+                            "memberId": "03",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a primary enrollee on the contract. However, he/she has no permission to view the Adult Dependent's information."
+                            },
+                            "phiEnabled": false
+                        }
+
+                    ]
+                }
+            }
+        },
+
+        "Scenario3-Adult_Member_Requesting_To_View_Information_Of_All_Members": {
+            "request": {
+                "contract-id": "1004871950"
+            },
+            "headers": {
+                "personId": "0002580916542268",
+                "ClientKey": "12345"
+            },
+            "params": {
+                "rule-types": "omnibus"
+            },
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "memberInfo": [{
+                            "personId": "0358980916542245",
+                            "memberId": "01",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is not a primary on the contract. He/She cannot view other adult member's records."
+                            },
+                            "phiEnabled": false
+
+                        },
+                        {
+                            "personId": "0002580916542268",
+                            "memberId": "02",
+                            "omnibusInfo": {
+                                "permissionGranted": true,
+                                "message": "Omnibus-rule: Member is requesting for his or her own records."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0055480916542294",
+                            "memberId": "03",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is not a primary on the contract. He/She cannot view other adult member's records."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0374780916542310",
+                            "memberId": "04",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is not a primary on the contract. He/She cannot view other adult member's records."
+                            },
+                            "phiEnabled": false
+                        }
+
+                    ]
+                }
+            }
+
+        },
+        "Scenario4-Child_Member_Requesting_To_View_Information_Of_All_Members": {
+            "request": {
+                "contract-id": "1163798575"
+            },
+            "headers": {
+                "personId": "0431041316550753",
+                "ClientKey": "12345"
+            },
+            "params": {
+                "rule-types": "omnibus"
+            },
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "memberInfo": [{
+                            "personId": "0709841316550733",
+                            "memberId": "01",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a child. A Child cannot view other members records."
+                            },
+                            "phiEnabled": false
+
+                        },
+                        {
+                            "personId": "0661141316550746",
+                            "memberId": "02",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a child. A Child cannot view other members records."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0431041316550753",
+                            "memberId": "03",
+                            "omnibusInfo": {
+                                "permissionGranted": true,
+                                "message": "Omnibus-rule: Member is requesting for his or her own records."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0785941316550767",
+                            "memberId": "04",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a child. A Child cannot view other members records."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0656241316550777",
+                            "memberId": "05",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a child. A Child cannot view other members records."
+                            },
+                            "phiEnabled": false
+                        },
+                        {
+                            "personId": "0682641316550784",
+                            "memberId": "06",
+                            "omnibusInfo": {
+                                "permissionGranted": false,
+                                "message": "Omnibus-rule: Member is a child. A Child cannot view other members records."
+                            },
+                            "phiEnabled": false
+                        }
+
+                    ]
+                }
+            }
+
+        }
+
+
+    }
+}

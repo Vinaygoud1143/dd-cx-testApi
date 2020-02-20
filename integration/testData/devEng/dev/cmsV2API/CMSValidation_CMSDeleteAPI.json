@@ -1,0 +1,56 @@
+{
+    "Scenariospositive":
+    {
+        "Scenario1-Delete_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantName":
+        {
+            "request":
+             {},
+            "headers":
+            {
+                "APPLICATION_NAME": "dental_test",
+                "CONTENT_TYPE": "procedure_test",
+                "TENANT_NAME": "dentegra_test"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                }
+
+            }
+        }
+    },
+     "Scenariosnegative":
+    {
+         "Scenario1-Delete_The_CMS_Details_By_Providing_Valid_empty_ApplicationNameContentTypeTenantName":
+        {
+            "request":
+            {},
+            "headers":
+            {
+                "APPLICATION_NAME": "",
+                "CONTENT_TYPE": "procedure_test",
+                "TENANT_NAME": "dentegra_test"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                "statuscode": 500
+                },
+            "TC-2":{ 
+               "errorCode": "CMS001",
+               "shortDescription": "string"
+            }
+
+            }
+        }
+
+    }
+
+}

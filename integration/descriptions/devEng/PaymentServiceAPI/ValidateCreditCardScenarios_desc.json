@@ -1,0 +1,42 @@
+{
+  "ValidateCreditCardAPIScenarios":{
+      "Scenario1-ValidateCreditCard_with_Valid_CreditCardRequest":{
+         "TC-1":"GIVEN Valid CreditCard Details WHEN requesting for CreditCard validation THEN should get succesfully validated Credit Card.",
+         "TC-2":"Validation of CreditCard response"
+      },
+      "Scenario2-ValidateCreditCard_With_Empty_CardNumber":{
+         "TC-1":"GIVEN CreditCard Details with empty CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario3-ValidateCreditCard_With_Empty_CVVNumber":{
+         "TC-1":"GIVEN CreditCard Details with empty CVVNumber WHEN requesting for CreditCard validation THEN should get Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario4-ValidateCreditCard_With_Empty_ExpiryDate":{
+         "TC-1":"GIVEN CreditCard Details with empty ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario5-ValidateCreditCard_With_Empty_NameOnCard":{
+         "TC-1":"GIVEN CreditCard Details with empty NameOnCard WHEN requesting for CreditCard validation THEN should get Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario6-ValidateCreditCard_With_Invalid_CardNumber":{
+         "TC-1":"GIVEN CreditCard Details with Invalid CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Number is Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario7-ValidateCreditCard_With_Invalid_CVVNumber":{
+         "TC-1":"GIVEN CreditCard Details with Invalid CVVNumber WHEN requesting for CreditCard validation THEN should get Invalid Credit Card CVV",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario8-ValidateCreditCard_With_Invalid_ExpiryDate":{
+         "TC-1":"GIVEN CreditCard Details with Invalid ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Expiry Date is Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario9-ValidateCreditCard_With_Invalid_InvalidPersonId":{
+         "TC-1":"GIVEN CreditCard Details with Invalid PersonId WHEN requesting for CreditCard validation THEN should get PersonId is Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      }     
+  }
+}
+
+

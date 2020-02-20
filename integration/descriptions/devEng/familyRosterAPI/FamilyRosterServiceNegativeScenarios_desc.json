@@ -1,0 +1,25 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Person_Id":
+        {
+        	"TC-1": "Given a Empty PersonId WHEN requesting to view Contracts THEN should show Invalid PersonId message ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario2-Invalid_ClientKey":
+        {
+            "TC-1": "Given an Empty ClientKey WHEN requesting to view Contracts THEN should show Security violation message ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },  
+        "Scenario3-Empty_Person_Id_In_Header":
+        {
+            "TC-1": "Given an Empty PersonId in Header WHEN requesting to view Contracts THEN should show Security Headers are missing ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario4-Empty_ClientKey_In_Header":
+        {
+            "TC-1": "Given an Empty ClientKey in Header WHEN requesting to view Contracts THEN should show Security Headers are missing ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }   
+   }
+}

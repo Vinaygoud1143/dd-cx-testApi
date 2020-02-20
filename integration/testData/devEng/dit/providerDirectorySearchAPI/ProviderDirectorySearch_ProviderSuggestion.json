@@ -1,0 +1,683 @@
+
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Suggestion_Details_For_Given_FullName":{
+         "request":{
+            "text":"Augusto"
+         },
+         "params":{
+            "text":"Augusto",
+            "lat":33.6566391,
+            "long":-117.2981415
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+    {
+      "term": "Augusto Santos",
+      "weight": 0,
+      "providerKey": "GRP240001239240001239129PRV24000748000",
+      "firstName": "Augusto",
+      "middleName": "A",
+      "lastName": "Santos",
+      "specialty": "General Dentist",
+      "address": {
+        "addressLine": "19071 Bear Valley Rd Ste 1",
+        "city": "Apple Valley",
+        "state": "CA",
+        "zipcode": "92308-2718",
+        "latitude": 34.4707031,
+        "longitude": -117.2476349
+      }
+    },
+    {
+      "term": "Augusto Santos",
+      "weight": 0,
+      "providerKey": "GRP240001239240001239172PRV24000748000",
+      "firstName": "Augusto",
+      "middleName": "A",
+      "lastName": "Santos",
+      "specialty": "General Dentist",
+      "address": {
+        "addressLine": "31960 Mission Trl",
+        "city": "Lake Elsinore",
+        "state": "CA",
+        "zipcode": "92530-4539",
+        "latitude": 33.6566391,
+        "longitude": -117.2981415
+      }
+    },
+    {
+      "term": "Augusto Santos",
+      "weight": 0,
+      "providerKey": "GRP240001239240001239082PRV24000748000",
+      "firstName": "Augusto",
+      "middleName": "A",
+      "lastName": "Santos",
+      "specialty": "General Dentist",
+      "address": {
+        "addressLine": "23185 Hemlock Ave Ste 1",
+        "city": "Moreno Valley",
+        "state": "CA",
+        "zipcode": "92557-8043",
+        "latitude": 33.9413338,
+        "longitude": -117.2583771
+      }
+    },
+    {
+      "term": "Augusto Santos",
+      "weight": 0,
+      "providerKey": "GRP240001239240001239115PRV24000748000",
+      "firstName": "Augusto",
+      "middleName": "A",
+      "lastName": "Santos",
+      "specialty": "General Dentist",
+      "address": {
+        "addressLine": "25155 Madison Ave Ste 101",
+        "city": "Murrieta",
+        "state": "CA",
+        "zipcode": "92562-8975",
+        "latitude": 33.5567169,
+        "longitude": -117.2003555
+      }
+    },
+    {
+      "term": "Augusto Santos",
+      "weight": 0,
+      "providerKey": "GRP240001239240001239119PRV24000748000",
+      "firstName": "Augusto",
+      "middleName": "A",
+      "lastName": "Santos",
+      "specialty": "General Dentist",
+      "address": {
+        "addressLine": "260 W Foothill Blvd",
+        "city": "Rialto",
+        "state": "CA",
+        "zipcode": "92376-5048",
+        "latitude": 34.1069603,
+        "longitude": -117.3737793
+      }
+    }
+  ]
+            }
+         }
+      },
+      "Scenario2-Retrieve_The_Suggestion_Details_For_Given_FacilityName":{
+         "request":{
+            "text":"Element"
+         },
+         "params":{
+            "text":"Element"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "practiceLocations":[
+    {
+      "term": "<b>Element</b> Dental - Bryan",
+      "weight": 0,
+      "practiceLocationNumber": "586911937002",
+      "address": {
+        "addressLine": "910 N Earl Rudder Fwy Ste 100, ",
+        "city": "Bryan",
+        "state": "TX",
+        "zipcode": "77802-2930",
+        "latitude": 30.6741982,
+        "longitude": -96.3372498
+      },
+      "officeName": "Element Dental - Bryan"
+    },
+    {
+      "term": "<b>Element</b> Dental - Lufkin",
+      "weight": 0,
+      "practiceLocationNumber": "965034351001",
+      "address": {
+        "addressLine": "103 N Brentwood Ste 400",
+        "city": "Lufkin",
+        "state": "TX",
+        "zipcode": "75904-7147",
+        "latitude": 31.2982941,
+        "longitude": -94.7296906
+      },
+      "officeName": "Element Dental - Lufkin"
+    },
+    {
+      "term": "<b>Element</b> Dental - Bryan",
+      "weight": 0,
+      "practiceLocationNumber": "586911937002",
+      "address": {
+        "addressLine": "910 N Earl Rudder Fwy Ste 100, ",
+        "city": "Bryan",
+        "state": "TX",
+        "zipcode": "77802-2930",
+        "latitude": 30.6741982,
+        "longitude": -96.3372498
+      },
+      "officeName": "Element Dental - Bryan"
+    },
+    {
+      "term": "<b>Element</b> Dental - Humble",
+      "weight": 0,
+      "practiceLocationNumber": "437531604001",
+      "address": {
+        "addressLine": "9490 FM 1960 Bypass Rd W #700",
+        "city": "Humble",
+        "state": "TX",
+        "zipcode": "77338",
+        "latitude": 30.0050659,
+        "longitude": -95.2646255
+      },
+      "officeName": "Element Dental - Humble"
+    },
+    {
+      "term": "<b>Element</b> Dental-Tomball",
+      "weight": 0,
+      "practiceLocationNumber": "871801185001",
+      "address": {
+        "addressLine": "24179 State Highway 249 Ste B, ",
+        "city": "Tomball",
+        "state": "TX",
+        "zipcode": "77375-8298",
+        "latitude": 30.0347862,
+        "longitude": -95.6039658
+      },
+      "officeName": "Element Dental-Tomball"
+    }
+  ],
+               "facilities":[
+                  {
+                     "term":"<b>Element</b> Dental",
+                     "weight":0,
+                     "facilityId":"043461",
+                     "facilityName":"Element Dental",
+                     "address":{
+                        "addressLine":"24179 State Highway 249 Ste B, ",
+                        "city":"Tomball",
+                        "state":"TX",
+                        "zipcode":"77375-8298",
+                        "latitude":30.0347862,
+                        "longitude":-95.6039658
+                     }
+                  },
+                  {
+                     "term":"<b>Element</b> Dental",
+                     "weight":0,
+                     "facilityId":"043461",
+                     "facilityName":"Element Dental",
+                     "address":{
+                        "addressLine":"24179 State Highway 249 Ste B, ",
+                        "city":"Tomball",
+                        "state":"TX",
+                        "zipcode":"77375-8298",
+                        "latitude":30.0347862,
+                        "longitude":-95.6039658
+                     }
+                  },
+                  {
+                     "term":"<b>Element</b> Dental",
+                     "weight":0,
+                     "facilityId":"043457",
+                     "facilityName":"Element Dental",
+                     "address":{
+                        "addressLine":"103 N Brentwood Ste 400",
+                        "city":"Lufkin",
+                        "state":"TX",
+                        "zipcode":"75904-7147",
+                        "latitude":31.2982941,
+                        "longitude":-94.7296906
+                     }
+                  },
+                  {
+                     "term":"<b>Element</b> Dental",
+                     "weight":0,
+                     "facilityId":"043457",
+                     "facilityName":"Element Dental",
+                     "address":{
+                        "addressLine":"103 N Brentwood Ste 400",
+                        "city":"Lufkin",
+                        "state":"TX",
+                        "zipcode":"75904-7147",
+                        "latitude":31.2982941,
+                        "longitude":-94.7296906
+                     }
+                  },
+                  {
+                     "term":"<b>Element</b> Dental",
+                     "weight":0,
+                     "facilityId":"043457",
+                     "facilityName":"Element Dental",
+                     "address":{
+                        "addressLine":"103 N Brentwood Ste 400",
+                        "city":"Lufkin",
+                        "state":"TX",
+                        "zipcode":"75904-7147",
+                        "latitude":31.2982941,
+                        "longitude":-94.7296906
+                     }
+                  }
+               ]
+            }
+         }
+      },
+      "Scenario3-Retrieve_The_Suggestion_Details_For_Given_OfficeName":{
+         "request":{
+            "text":"Amherst Dentistry"
+         },
+         "params":{
+            "text":"Amherst Dentistry"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "practiceLocations":[
+    {
+      "term": "<b>Amherst Dentistry</b>",
+      "weight": 0,
+      "practiceLocationNumber": "017232414001",
+      "address": {
+        "addressLine": "8588 Transit Rd",
+        "city": "East Amherst",
+        "state": "NY",
+        "zipcode": "14051-2607",
+        "latitude": 43.0400963,
+        "longitude": -78.6900864
+      },
+      "officeName": "Amherst Dentistry"
+    },
+    {
+      "term": "<b>Amherst Dentistry</b>",
+      "weight": 0,
+      "practiceLocationNumber": "017232414001",
+      "address": {
+        "addressLine": "8588 Transit Rd",
+        "city": "East Amherst",
+        "state": "NY",
+        "zipcode": "14051-2607",
+        "latitude": 43.0400963,
+        "longitude": -78.6900864
+      },
+      "officeName": "Amherst Dentistry"
+    }
+  ],
+               "facilities":[]
+            }
+         }
+      },
+      "Scenario4-Retrieve_The_Suggestion_Details_For_Given_Specialty":{
+         "request":{
+            "text":"Orthodontist"
+         },
+         "params":{
+            "text":"Orthodontist"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "specialties":[
+                  {
+                     "term":"Orthodontist",
+                     "weight":0,
+                     "specialty":"Orthodontist"
+                  }
+               ],
+               "practiceLocations":[
+                  {
+                     "term":"<b>Orthodontist</b>s Of Maryland PA",
+                     "weight":0,
+                     "practiceLocationNumber":"240612417001",
+                     "address":{
+                        "addressLine":"7935 Crain Hwy S, ",
+                        "city":"Glen Burnie",
+                        "state":"MD",
+                        "zipcode":"21061-4934",
+                        "latitude":39.1326599,
+                        "longitude":-76.6315079
+                     },
+                     "officeName":"Orthodontists Of Maryland PA"
+                  },
+                  {
+                     "term":"<b>Orthodontist</b>s Of Maryland PA",
+                     "weight":0,
+                     "practiceLocationNumber":"240612417002",
+                     "address":{
+                        "addressLine":"409 Main St",
+                        "city":"Reisterstown",
+                        "state":"MD",
+                        "zipcode":"21136-1905",
+                        "latitude":39.459465,
+                        "longitude":-76.8268814
+                     },
+                     "officeName":"Orthodontists Of Maryland PA"
+                  }
+               ]
+            }
+         }
+      },
+      "Scenario5-Retrieve_The_Suggestion_Details_For_Given_SingleCustomNetwork_zipcode_FirstName":{
+         "request":{
+            "text":"Scott"
+         },
+         "params":{
+            "text":"Scott",
+            "zipcode":11570,
+            "customProviderNetworks":"2NYPPO",
+            "distance":60
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+                  {
+                     "term":"Scott Culpepper",
+                     "weight":0,
+                     "providerKey":"GRP463654007463654007001PRV97317002700",
+                     "firstName":"Scott",
+                     "middleName":"B",
+                     "lastName":"Culpepper",
+                     "specialty":"General Dentist",
+                     "address":{
+                        "addressLine":"71 Lincoln Ave, ",
+                        "city":"Rockville Centre",
+                        "state":"NY",
+                        "zipcode":"11570-5732",
+                        "latitude":40.6551819,
+                        "longitude":-73.6470261
+                     }
+                  }
+               ],
+               "specialties":[
+
+               ],
+               "practiceLocations":[
+
+               ],
+               "facilities":[
+
+               ]
+            }
+         }
+      },
+      "Scenario6-Retrieve_The_Suggestion_Details_For_Given_TwoCustomNetworks_Lat_Long_FacilityName":{
+         "request":{
+            "text":"American Dental Solutions of Lititz"
+         },
+         "params":{
+            "text":"Unique Dental",
+            "lat":29.7370033,
+            "long":-95.5405807,
+            "distance":60
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+
+               ],
+               "specialties":[
+
+               ],
+               "practiceLocations":[
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "practiceLocationNumber":"240295001001",
+                     "address":{
+                        "addressLine":"9733 Westheimer Rd",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77042-3960",
+                        "latitude":29.7370033,
+                        "longitude":-95.5405807
+                     },
+                     "officeName":"Unique Dental"
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "practiceLocationNumber":"240295001004",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     },
+                     "officeName":"Unique Dental"
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "practiceLocationNumber":"240295001004",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     },
+                     "officeName":"Unique Dental"
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "practiceLocationNumber":"240295001004",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     },
+                     "officeName":"Unique Dental"
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "practiceLocationNumber":"240295001004",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     },
+                     "officeName":"Unique Dental"
+                  }
+               ],
+               "facilities":[
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "facilityId":"038179",
+                     "facilityName":"Unique Dental",
+                     "address":{
+                        "addressLine":"9733 Westheimer Rd",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77042-3960",
+                        "latitude":29.7370033,
+                        "longitude":-95.5405807
+                     }
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "facilityId":"038181",
+                     "facilityName":"Unique Dental",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     }
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "facilityId":"038181",
+                     "facilityName":"Unique Dental",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     }
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "facilityId":"038181",
+                     "facilityName":"Unique Dental",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     }
+                  },
+                  {
+                     "term":"Unique Dental",
+                     "weight":0,
+                     "facilityId":"038181",
+                     "facilityName":"Unique Dental",
+                     "address":{
+                        "addressLine":"6608C Highway 6 N, ",
+                        "city":"Houston",
+                        "state":"TX",
+                        "zipcode":"77084-1320",
+                        "latitude":29.8743362,
+                        "longitude":-95.6446991
+                     }
+                  }
+               ]
+            }
+         }
+      },
+      "Scenario7-Retrieve_The_Suggestion_Details_For_Given_MulitipleCustomNetworks_zipcode_OfficeName":{
+         "request":{
+            "text":"Dental Excellence Corporation"
+         },
+         "params":{
+            "text":"Dental Excellence Corporation",
+            "zipcode":33067,
+            "customProviderNetworks":"2DCUSAAVM 2DCHLTHSUN 2DCUSACOVFL",
+            "distance":60
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+
+               ],
+               "specialties":[
+
+               ],
+               "practiceLocations":[
+                  {
+                     "term":"Dental Excellence Corporation",
+                     "weight":0,
+                     "practiceLocationNumber":"240592034001",
+                     "address":{
+                        "addressLine":"7426 Wiles Rd",
+                        "city":"Coral Springs",
+                        "state":"FL",
+                        "zipcode":"33067-2066",
+                        "latitude":26.286562,
+                        "longitude":-80.2258072
+                     },
+                     "officeName":"Dental Excellence Corporation"
+                  },
+                  {
+                     "term":"Dental Excellence Corporation",
+                     "weight":0,
+                     "practiceLocationNumber":"240592034001",
+                     "address":{
+                        "addressLine":"7426 Wiles Rd",
+                        "city":"Coral Springs",
+                        "state":"FL",
+                        "zipcode":"33067-2066",
+                        "latitude":26.286562,
+                        "longitude":-80.2258072
+                     },
+                     "officeName":"Dental Excellence Corporation"
+                  }
+               ],
+               "facilities":[
+
+               ]
+            }
+         }
+      },
+      "Scenario8-Retrieve_The_Suggestion_Details_For_Given_MulitipleCustomNetworks_FullName":{
+         "request":{
+            "text":"Mahendrakumar"
+         },
+         "params":{
+            "text":"Mahendrakumar",
+            "zipcode":90022,
+            "customProviderNetworks":"2BENUNLTD3 2BOEING 2BENUNLTD4",
+            "distance":60
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+                  {
+                     "term":"Mahendrakumar Mehta",
+                     "weight":0,
+                     "providerKey":"GRP240004817240004817001PRV24001270200",
+                     "firstName":"Mahendrakumar",
+                     "middleName":"V",
+                     "lastName":"Mehta",
+                     "specialty":"General Dentist",
+                     "address":{
+                        "addressLine":"4576 Whittier Blvd",
+                        "city":"Los Angeles",
+                        "state":"CA",
+                        "zipcode":"90022-2430",
+                        "latitude":34.0224571,
+                        "longitude":-118.1684952
+                     }
+                  }
+               ],
+               "specialties":[
+
+               ],
+               "practiceLocations":[
+
+               ],
+               "facilities":[
+
+               ]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,12 @@
+{
+   "Scenarios":{
+      "Scenario1-D2C_Payment_Using_CreditCard_With_Token":{
+         "TC-1":"GIVEN Valid CreditCard Details with token, WHEN requesting to make Payment THEN should return Successfully Processed Payment."
+      },
+    
+      "Scenario2-D2C_Payment_STATUS_FOR_CreditCard_With_Token":{
+         "TC-1":"GIVEN Valid EnroleeId, ReferenceId, PersonId and ClientKey, WHEN requesting to make Payment THEN should return Successfully Processed Payment.",
+         "TC-2":"Validate Status, NameOnCard, AmountCharged, Last4Digits"
+      }
+   }
+}

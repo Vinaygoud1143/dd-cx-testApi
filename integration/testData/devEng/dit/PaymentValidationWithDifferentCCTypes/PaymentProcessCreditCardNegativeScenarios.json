@@ -1,0 +1,544 @@
+{
+   "PaymentNegativeScenariosWithCreditCard":{
+      "Scenario1-Payment_With_VISA_Type_CreditCard_with_Invalid_Amount_0.51":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4298899999999996",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.51
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_043",
+               "shortDescription":"An issue with Credit Card Payment.",
+               "detailedDescription":"Sorry but your credit card was declined. Please try again with another credit card or bank account."
+            }
+         }
+      },
+      "Scenario2-Payment_With_VISA_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4298899999999996",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.54
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_042",
+               "shortDescription":"The Credit Card entered has been expired.",
+               "detailedDescription":"The Credit Card entered has been expired. Please correct and try again."
+            }
+         }
+      },
+      "Scenario3-Payment_With_VISA_Type_CreditCard_with_Invalid_Amount_0.43":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4298899999999996",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.43
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_040",
+               "shortDescription":"Card is either expired or stolen.",
+               "detailedDescription":"Card is either expired or stolen. Please use another card or contact customer service."
+            }
+         }
+      },
+      "Scenario4-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.07":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5406004444444443",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.07
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_043",
+               "shortDescription":"An issue with Credit Card Payment",
+               "detailedDescription":"An issue with Credit Card Payment."
+            }
+         }
+      },
+      "Scenario5-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.41":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5406004444444443",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.41
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_040",
+               "shortDescription":"Card is either declined or stolen",
+               "detailedDescription":"The Credit Card Number entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario6-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5406004444444443",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.54
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_040",
+               "shortDescription":"The Credit card entered has been expired",
+               "detailedDescription":"The Credit card entered has been expired"
+            }
+         }
+      },
+      "Scenario7-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.74":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5406004444444443",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.74
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_040",
+               "shortDescription":"The Credit card entered has been expired",
+               "detailedDescription":"The Credit card entered has been expired"
+            }
+         }
+      },
+      "Scenario8-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.07":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000999999990",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.07
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_043",
+               "shortDescription":"",
+               "detailedDescription":"An issue with Credit Card Payment"
+            }
+         }
+      },
+      "Scenario9-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.13":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000999999990",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.13
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_038",
+               "shortDescription":"Generic Error. Issue with payment.",
+               "detailedDescription":"There was an issue processing your request. Please try with a different card or contact customer support."
+            }
+         }
+      },
+      "Scenario10-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000999999990",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.54
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_042",
+               "shortDescription":"The Credit Card entered has been expired.",
+               "detailedDescription":"The Credit Card entered has been expired. Please correct and try again."
+            }
+         }
+      },
+      "Scenario11-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.78":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000999999990",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.78
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_038",
+               "shortDescription":"Generic Error. Issue with payment.",
+               "detailedDescription":"There was an issue processing your request. Please try with a different card or contact customer support."
+            }
+         }
+      },
+      "Scenario12-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.21":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011993333333334",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.21
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_043",
+               "shortDescription":"An issue with Credit Card Payment.",
+               "detailedDescription":"Sorry but your credit card was declined. Please try again with another credit card or bank account."
+            }
+         }
+      },
+      "Scenario13-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.14":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011993333333334",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.14
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_043",
+               "shortDescription":"An issue with Credit Card Payment.",
+               "detailedDescription":"Sorry but your credit card was declined. Please try again with another credit card or bank account."
+            }
+         }
+      },
+      "Scenario14-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011993333333334",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.54
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_042",
+               "shortDescription":"The Credit Card entered has been expired.",
+               "detailedDescription":"The Credit Card entered has been expired. Please correct and try again."
+            }
+         }
+      },
+      "Scenario15-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.78":{
+         "request":{
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011993333333334",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 0.78
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_043",
+               "shortDescription":"An issue with Credit Card Payment.",
+               "detailedDescription":"Sorry but your credit card was declined. Please try again with another credit card or bank account."
+            }
+         }
+      }
+   }
+}

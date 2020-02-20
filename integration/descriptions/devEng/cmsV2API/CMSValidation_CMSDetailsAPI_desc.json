@@ -1,0 +1,16 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria_ISUSER_STATE":{
+         "TC-1":"GIVEN Valid applicationName,contentType,tenantNameAndCriteria,WHEN requesting to view CMS details THEN should allowed to view CMS details",
+         "TC-2": "Validation of CMS Details in the response"         
+      },
+      "Scenario2-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria_FIRSTNAME_LASTNAME":{
+         "TC-1":"GIVEN Valid applicationName,contentType,tenantNameAndCriteria,WHEN requesting to view CMS details THEN should allowed to view CMS details",
+         "TC-2": "Validation of CMS Details in the response"         
+      },
+      "Scenario3-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria_COMPANY_CITY":{
+         "TC-1":"GIVEN Valid applicationName,contentType,tenantNameAndCriteria,WHEN requesting to view CMS details THEN should allowed to view CMS details",
+         "TC-2": "Validation of CMS Details in the response"         
+      }
+   }
+}

@@ -1,0 +1,7 @@
+{
+   "Scenarios":{
+      "Scenario1-Validating_Indexer_Status":{
+         "TC-1":"GIVEN Tryitout button WHEN requesting to Validate Status of indexer THEN should Return Status Code As 200"
+      }
+   }
+}

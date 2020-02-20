@@ -1,0 +1,38 @@
+{  
+   "Scenarios":{  
+      "Scenario1-CXCORETECH-265- Recent Claims API: Claim Status coming as Null":{  
+         "request":{  
+            "enrollee-id":"117274915905"
+         },
+         "headers":{  
+            "personId":"0933010812301600",
+            "ClientKey":"9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "claimId":[  
+                  "20192566051959",
+                  "20190736058788",
+                  "201902276559078",
+                  "20182346054472",
+                  "20180963004962",
+                  "20180653007772",
+                  "20180245014565"
+               ],
+               "claimStatus":[  
+                  "Claim Paid",
+                  "Claim Paid",
+                  "Claim Paid",
+                  "Claim Paid",
+                  "Claim Paid",
+                  "Claim Paid",
+                  "Claim Paid"
+               ]
+            }
+         }
+      }
+   }
+}

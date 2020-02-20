@@ -1,0 +1,117 @@
+{
+    "positive_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "contract-Id": 12345
+            },
+            "response":
+            {
+                "status": 200,
+                "contractId": "12345"
+            }
+        }
+    },
+    "negative_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "contract-Id": ""
+            },
+            "response":
+            {
+                "status": 405,
+                "error": "Method Not Allowed",
+                "message": "Request method 'GET' not supported"
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "contract-Id": "123"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "CONTRACT_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Contract data not found by given contractId 123."
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "contract-Id": "!@#$"
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "CONTRACT_001",
+                "shortDescription": "Empty/Invalid ContractId In Request",
+                "detailedDescription": "Problem occurred while invoke Contract Service with contractId"
+            }
+        },
+        "scenario4":
+        {
+            "request":
+            {
+                "contract-Id": "<script>alert('XSS')</script>"
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+            }
+        },
+        "scenario5":
+        {
+            "request":
+            {
+                "contract-Id": "test"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "CONTRACT_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Contract data not found by given contractId test."
+            }
+        },
+        "scenario6":
+        {
+            "request":
+            {
+                "contract-Id": " "
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "CONTRACT_001",
+                "shortDescription": "Empty/Invalid ContractId In Request",
+                "detailedDescription": "Problem occurred while invoke Contract Service with contractId"
+            }
+        },
+        "scenario7":
+        {
+            "request":
+            {
+                "contract-Id": null
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "CONTRACT_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Contract data not found by given contractId null."
+            }
+        }
+
+    }
+}

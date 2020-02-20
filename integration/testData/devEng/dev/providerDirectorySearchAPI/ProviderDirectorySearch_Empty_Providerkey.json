@@ -1,0 +1,30 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Provider_Details_By_Passing_The_Empty_ProviderKey":
+        {
+            "request":
+            {
+                "providerKey": "{providerKey}"
+            },
+            "params":
+            {
+                "lat": 37.7931023,
+                "long": -122.3924255
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+                "TC-2":
+                {
+                    "errorCode": "PDS009",
+                    "shortDescription": "Solr exception. Unable to retrieve provider details for the provider key:{providerKey}",
+                    "detailedDescription": "Solr exception. Unable to retrieve provider details for the provider key:{providerKey}"
+                }
+            }
+        }
+    }
+}

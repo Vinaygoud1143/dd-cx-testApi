@@ -1,0 +1,36 @@
+{
+   "Scenarios":{
+      "Scenario1-Accounts&Billing-Get Billing Details for EnrolleedId - 113275597601":{
+         "TC-1":"GIVEN Valid EnrolleeId, PersonId & ClientKey Details,WHEN requesting to get billing details THEN should get Successfull billings List.",
+         "TC-2":"Validation of Billing Details in the response."
+      },
+      "Scenario2-Accounts&Billing-Get Billing Details for EnrolleedId - 116667239501":{
+         "TC-1":"GIVEN Valid EnrolleeId, PersonId & ClientKey Details,WHEN requesting to get billing details THEN should get Successfull billings List.",
+         "TC-2":"Validation of Billing Details in the response."
+      },
+      "Scenario3-Accounts&Billing-Get Billing Details with Empty EnrolleeId":{
+         "TC-1":"GIVEN Empty EnrolleeId, PersonId & ClientKey Details,WHEN requesting to get billing details THEN should get Internal Server Error.",
+         "TC-2":"Validation of ErrorCodes and Billing Details in the response."
+      },
+      "Scenario4-Accounts&Billing-Get Billing Details with Wrong EnrolleeId":{
+         "TC-1":"GIVEN Wrong EnrolleeId, PersonId & ClientKey Details,WHEN requesting to get billing details THEN should get Internal Server Error.",
+         "TC-2":"Validation of ErrorCodes and Billing Details in the response."
+      },
+      "Scenario5-Accounts&Billing-Get Billing Details with Invalid ClentKey":{
+         "TC-1":"GIVEN Valid EnrolleeId, PersonId &  Invalid ClientKey Details,WHEN requesting to get billing details THEN should get Unauthorized Error.",
+         "TC-2":"Validation of ErrorCodes and Billing Details in the response."
+      },
+      "Scenario6-Accounts&Billing-Get Billing Details with ClentKey as String":{
+         "TC-1":"GIVEN Valid EnrolleeId, PersonId & ClientKey as String,WHEN requesting to get billing details THEN should get Unauthorized Error.",
+         "TC-2":"Validation of ErrorCodes and Billing Details in the response."
+      },
+      "Scenario7-Accounts&Billing-Get Billing Details with Empty ClentKey":{
+         "TC-1":"GIVEN Valid EnrolleeId, PersonId & Empty ClientKey Details,WHEN requesting to get billing details THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Billing Details in the response."
+      },
+      "Scenario8-Accounts&Billing-Get Billing Details with Empty PersonId":{
+         "TC-1":"GIVEN Valid EnrolleeId, Empty PersonId & ClientKey Details,WHEN requesting to get billing details THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Billing Details in the response."
+      }
+   }
+}

@@ -1,0 +1,15 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Requesting_To_View_Costco_Member_Details_With_Invalid_Member_Id":
+        {
+            "TC-1": "GIVEN Invalid member WHEN requesting to view Costco member details THEN should not be able to view member details",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+         "Scenario2-Requesting_To_View_Costco_Member_Details_With_Non_Numeric_Member_Id":
+        {
+            "TC-1": "GIVEN Non-Numeric member WHEN requesting to view Costco member details THEN should not be able to view member details",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }      
+    }
+}

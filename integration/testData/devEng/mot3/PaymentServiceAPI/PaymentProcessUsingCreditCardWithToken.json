@@ -1,0 +1,52 @@
+{
+   "Scenarios":{
+      "Scenario1-D2C_Payment_Using_CreditCard_With_Token":{
+         "request":{
+            "amount":34.35,
+            "creditCardToken":{
+               "cardType":"Visa",
+               "encryptedToken":"idgyUMdtF1sE9BM1JKk9tBx3icZv1hxJOHKGQKzT5Tg=",
+               "expiryDate":"12/2019",
+               "last4Digits":"9996",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            }
+         }
+      },
+      
+      "Scenario2-D2C_Payment_STATUS_FOR_CreditCard_With_Token":{
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "status":"CC_PAYMENT_SYSTEM_APPROVED",
+               "nameOnCard":"raghu",
+               "amountCharged":34.35,
+               "last4Digits":"9996",
+               "numberOfRetries":0,
+               "message":"The CC payment system approves the transaction."
+            }
+         }
+      }
+   }
+}

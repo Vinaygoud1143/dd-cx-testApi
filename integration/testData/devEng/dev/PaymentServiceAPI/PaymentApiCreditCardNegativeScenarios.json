@@ -1,0 +1,541 @@
+{
+   "PaymentNegativeScenariosWithCreditCard": {
+      "Scenario1-Payment_ServiceAPI_CreditCard_With_Empty_Amount": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4298899999999996",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": ""
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_005",
+               "shortDescription": "Payment Amount Invalid.",
+               "detailedDescription": "Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario2-Payment_ServiceAPI_CreditCard_With_Empty_CardNumber": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_002",
+               "shortDescription": "Credit Card Request Invalid",
+               "detailedDescription": "Please verify payment request. Unable to find all the required payment information in the request."
+            }
+         }
+      },
+      "Scenario3-Payment_ServiceAPI_CreditCard_With_Invalid_ExpirationDate": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5406004444444443",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2012"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 500
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_025",
+               "shortDescription": "Credit Card Expiry Date is Invalid (5001)",
+               "detailedDescription": "The Credit Card Expiration Date entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario4-Payment_ServiceAPI_CreditCard_With_Empty_PaymentType": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011993333333334",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_004",
+               "shortDescription": "Unsupported payment type.",
+               "detailedDescription": "Payment method is not supported. Please verify payment request."
+            }
+         }
+      },
+      "Scenario5-Payment_ServiceAPI_CreditCard_With_Null_NameOnCard": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000999999990",
+               "cvvNumber": 1234,
+               "nameOnCard": null,
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_002",
+               "shortDescription": "Credit Card Request Invalid",
+               "detailedDescription": "Please verify payment request. Unable to find all the required payment information in the request."
+            }
+         }
+      },
+      "Scenario6-Payment_ServiceAPI_CreditCard_With_Negative_Amount": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011402344444445",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": -1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_005",
+               "shortDescription": "Payment Amount Invalid.",
+               "detailedDescription": "Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario7-Payment_ServiceAPI_CreditCard_With_Null_Amount": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4130904199999994",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": null
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_005",
+               "shortDescription": "Payment Amount Invalid.",
+               "detailedDescription": "Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario8-Payment_ServiceAPI_CreditCard_With_Null_PaymentType": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4913270000000007",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": null,
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_004",
+               "shortDescription": "Unsupported payment type.",
+               "detailedDescription": "Payment method is not supported. Please verify payment request."
+            }
+         }
+      },
+      "Scenario9-Payment_ServiceAPI_CreditCard_With_PaymentType_As_CreditCardToken": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4130904199999994",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD_TOKEN",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_006",
+               "shortDescription": "Credit Card Information Invalid.",
+               "detailedDescription": "Required credit card information is missing."
+            }
+         }
+      },
+      "Scenario10-Payment_ServiceAPI_CreditCard_With_Empty_NameOnCard": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5415244444444444",
+               "cvvNumber": 1234,
+               "nameOnCard": "",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_002",
+               "shortDescription": "Credit Card Request Invalid",
+               "detailedDescription": "Please verify payment request. Unable to find all the required payment information in the request."
+            }
+         }
+      },
+      "Scenario11-Payment_ServiceAPI_CreditCard_With_Empty_ExpirationDate": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000888888882",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": ""
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "errorCode": "PAYMENT_002",
+               "shortDescription": "Credit Card Request Invalid",
+               "detailedDescription": "Please verify payment request. Unable to find all the required payment information in the request."
+            }
+         }
+      },
+      "Scenario12-Payment_ServiceAPI_CreditCard_With_Empty_EnrolleeId": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "6011990000000006",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": ""
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 404
+            },
+            "TC-2": {
+               "error": "Not Found",
+               "message": "No message available"
+            }
+         }
+      },
+      "Scenario13-Payment_ServiceAPI_CreditCard_With_Wrong_ClientKey": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "5415244444444444",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": "12"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 401
+            },
+            "TC-2": {
+               "error": "Unauthorized",
+               "message": "Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario14-Payment_ServiceAPI_CreditCard_With_Empty_ClientKey": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "370000888888882",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0332020209460653",
+            "ClientKey": ""
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 400
+            },
+            "TC-2": {
+               "error": "Bad Request",
+               "message": "Security violation. Expected security headers are missing."
+            }
+         }
+      },
+      "Scenario15-Payment_ServiceAPI_CreditCard_With_Invalid_PersonId": {
+         "request": {
+            "creditCard": {
+               "address": {
+                  "addressLine": "1198 Mario Dr",
+                  "city": "Monroe",
+                  "state": "MI",
+                  "country": "US",
+                  "zipcode": "94539"
+               },
+               "cardNumber": "4130904199999994",
+               "cvvNumber": 1234,
+               "nameOnCard": "Swathi",
+               "expiryDate": "12/2019"
+            },
+            "paymentType": "CREDIT_CARD",
+            "amount": 1.2
+         },
+         "headers": {
+            "PersonId": "0331121222473183",
+            "ClientKey": "12345"
+         },
+         "params": {
+            "enrolleeId": "113275597601"
+         },
+         "verify": {
+            "TC-1": {
+               "statuscode": 200
+            },
+            "TC-2": {
+              "errorCode": "PAYMENT_046",
+              "shortDescription": "Given person id is not valid.",
+              "detailedDescription": "Problem occurred while validating the person id in datastore."
+            }
+         }
+      }
+   }
+}

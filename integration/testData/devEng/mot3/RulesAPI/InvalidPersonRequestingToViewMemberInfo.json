@@ -1,0 +1,33 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Person_Requesting_To_View_Member_Information":
+        {
+            "request":
+            {
+                "contract-id": "1004571940"
+            },
+            "headers":
+            {
+                "personId": "1002580916542268",
+                "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+            },
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 404
+                },
+                "TC-2":{     
+	                "errorCode": "OMNIBUS_ERROR_RULE005",
+				    "shortDescription": "Unauthorized access.",
+				    "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Suggestion_Details_For_Given_FullName":{
+         "TC-1":"GIVEN FullName, WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario2-Retrieve_The_Suggestion_Details_For_Given_FacilityName":{
+         "TC-1":"GIVEN facilityName, WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario3-Retrieve_The_Suggestion_Details_For_Given_OfficeName":{
+         "TC-1":"GIVEN officeName, WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario4-Retrieve_The_Suggestion_Details_For_Given_Specialty":{
+         "TC-1":"GIVEN specialty, WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario5-Retrieve_The_Suggestion_Details_For_Given_SingleCustomNetwork_zipcode_FirstName":{
+         "TC-1":"GIVEN Single customNetwork,zipcode & Name as text WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario6-Retrieve_The_Suggestion_Details_For_Given_TwoCustomNetworks_Lat_Long_FacilityName":{
+         "TC-1":"GIVEN Two customNetwork,Lat,Long & FacilityName as text WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario7-Retrieve_The_Suggestion_Details_For_Given_MulitipleCustomNetworks_zipcode_OfficeName":{
+         "TC-1":"GIVEN Mulitiple customNetwork,zipcode & OfficeName as text WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      },
+      "Scenario8-Retrieve_The_Suggestion_Details_For_Given_MulitipleCustomNetworks_FullName":{
+         "TC-1":"GIVEN Mulitiple customNetwork,zipcode & Fullname as text WHEN requesting to view Provider suggestion details THEN  able to view suggestion for given text",
+         "TC-2":"Validation of the suggestion with API response"
+      }
+   }
+}

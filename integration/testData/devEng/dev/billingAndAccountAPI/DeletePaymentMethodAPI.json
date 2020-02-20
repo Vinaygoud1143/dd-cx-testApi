@@ -1,0 +1,134 @@
+{
+   "Scenarios":{
+      "Scenario1-Accounts&Billing-Delete Payment method for PaymentMethodId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601",
+            "paymentMethodId":"9862693005"
+         },
+         "query-params":{
+            "operation-type":"delete"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            }
+         }
+      },
+      "Scenario2-Accounts&Billing-Delete Payment method with Invalid PaymentMethodId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601",
+            "paymentMethodId":"986269"
+         },
+         "query-params":{
+            "operation-type":"delete"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_014",
+               "shortDescription":"Payment method entered is invalid.",
+               "detailedDescription":"The payment method chosen is not valid. Please select a valid payment method. "
+            }
+         }
+      },
+      "Scenario3-Accounts&Billing-Delete Payment method with Empty EnrolleeId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"",
+            "paymentMethodId":"9862693005"
+         },
+         "query-params":{
+            "operation-type":"delete"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_005",
+               "shortDescription":"EnrolleeId is missing in the request",
+               "detailedDescription":"Please verify EnrolleeId in the request."
+            }
+         }
+      },
+      "Scenario4-Accounts&Billing-Delete Payment method with Invalid ClientKey":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"123456"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601",
+            "paymentMethodId":"9862693005"
+         },
+         "query-params":{
+            "operation-type":"delete"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error":"Unauthorized",
+               "message":"Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario5-Accounts&Billing-Delete Payment method with Empty ClientKey":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":" "
+         },
+         "path-params":{
+            "enrolleeId":"113275597601",
+            "paymentMethodId":"9862693005"
+         },
+         "query-params":{
+            "operation-type":"delete"
+         },
+         "verify":{
+             "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      },
+      "Scenario6-Accounts&Billing-Delete Payment method with Empty PersonId":{
+         "headers":{
+             "PersonId":" ",
+            "ClientKey":"123456"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601",
+            "paymentMethodId":"9862693005"
+         },
+         "query-params":{
+            "operation-type":"delete"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      }
+   }
+}

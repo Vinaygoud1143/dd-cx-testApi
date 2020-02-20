@@ -1,0 +1,10 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Individual_Member_Viewing_His_Own_Contracts": 
+        {
+            "TC-1": "Individual Member, WHEN requesting to view his or her contracts & THEN should be able to view all his active/inactive contracts.",
+            "TC-2": "Validation of Contract Details"
+        }   
+    }  
+}

@@ -1,0 +1,174 @@
+{
+   "Scenarios":{
+      "Scenario1-Accounts&Billing-Get Account Details for EnrolleedId - 113275597601":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "enrolleeId":"113275597601",
+               "autopay":true
+            }
+         }
+      },
+      "Scenario2-Accounts&Billing-Get Account Details for EnrolleedId - 116667239501":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116667239501"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "enrolleeId":"116667239501",
+               "autopay":true
+            }
+         }
+      },
+      "Scenario3-Accounts&Billing-Get Account Details with Empty EnrolleeId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":" "
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_008",
+               "shortDescription":"Problem occurred while retrieving the account details from RMB.",
+               "detailedDescription":"Internal error. Problem occurred while retrieving the account details from RMB."
+            }
+         }
+      },
+      "Scenario4-Accounts&Billing-Get Account Details with Wrong EnrolleeId":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"4456554685"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_008",
+               "shortDescription":"Problem occurred while retrieving the account details from RMB.",
+               "detailedDescription":"Internal error. Problem occurred while retrieving the account details from RMB."
+            }
+         }
+      },
+      "Scenario5-Accounts&Billing-Get Account Details with Invalid ClientKey":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"123456"
+         },
+         "path-params":{
+            "enrolleeId":"116667239501"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error":"Unauthorized",
+               "message":"Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario6-Accounts&Billing-Get Account Details with ClientKey as String":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"abc"
+         },
+         "path-params":{
+            "enrolleeId":"116667239501"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error":"Unauthorized",
+               "message":"Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario7-Accounts&Billing-Get Account Details with Empty ClientKey":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":" "
+         },
+         "path-params":{
+            "enrolleeId":"116667239501"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      },
+      "Scenario8-Accounts&Billing-Get Account Details with Empty PersonId":{
+         "headers":{
+            "PersonId":" ",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116667239501"
+         },
+         "query-params":{
+            "payment-method":false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,11 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Group_Member_Viewing_His_In_Active_Contracts": 
+        {
+            "TC-1": "Group Member, WHEN requesting to view his or her contracts & THEN should be able to view all his active/inactive contracts.",
+            "TC-2": "Validation of Contract Details",
+            "TC-3": "Validation of Contract Status"
+        }   
+    }  
+}

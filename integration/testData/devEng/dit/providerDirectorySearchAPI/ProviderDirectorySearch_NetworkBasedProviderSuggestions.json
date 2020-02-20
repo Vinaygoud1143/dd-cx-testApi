@@ -1,0 +1,229 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Suggestion_Details_For_Given_CustomProviderNetwork":{
+         "request":{
+            "text":"oral"
+         },
+         "params":{
+            "text":"oral",
+            "customProviderNetwork":"2BOEING 2DCUSACOVFL",
+            "distance":60
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+
+               ],
+               "specialties":[
+                  {
+                     "term":"Oral Surgeon",
+                     "weight":0,
+                     "specialty":"Oral Surgeon"
+                  }
+               ],
+               "practiceLocations":[
+                  {
+                     "term":"Donlevy and Estess Oral Surgery Group",
+                     "weight":0,
+                     "practiceLocationNumber":"240627005003",
+                     "address":{
+                        "addressLine":"1072 Aviation Blvd, ",
+                        "city":"Hermosa Beach",
+                        "state":"CA",
+                        "zipcode":"90254-4024",
+                        "latitude":33.8641129,
+                        "longitude":-118.3883972
+                     },
+                     "officeName":"Donlevy and Estess Oral Surgery Group"
+                  },
+                  {
+                     "term":"Center For Oral and Facial Surgery",
+                     "weight":0,
+                     "practiceLocationNumber":"240005146001",
+                     "address":{
+                        "addressLine":"150 W Madison Ave",
+                        "city":"El Cajon",
+                        "state":"CA",
+                        "zipcode":"92020-3404",
+                        "latitude":32.8010101,
+                        "longitude":-116.963295
+                     },
+                     "officeName":"Center For Oral and Facial Surgery"
+                  },
+                  {
+                     "term":"NORTHWEST ORAL SURGEONS INC",
+                     "weight":0,
+                     "practiceLocationNumber":"240769067001",
+                     "address":{
+                        "addressLine":"5551 WINGHAVEN BLVD STE 210",
+                        "city":"O FALLON",
+                        "state":"MO",
+                        "zipcode":"63368-0000",
+                        "latitude":38.7523536,
+                        "longitude":-90.7476619
+                     },
+                     "officeName":"NORTHWEST ORAL SURGEONS INC"
+                  },
+                  {
+                     "term":"O C Centers for Oral Surgery and Dental Implants",
+                     "weight":0,
+                     "practiceLocationNumber":"629734564001",
+                     "address":{
+                        "addressLine":"26302 La Paz Rd Ste 102",
+                        "city":"Mission Viejo",
+                        "state":"CA",
+                        "zipcode":"92691-5327",
+                        "latitude":33.5994873,
+                        "longitude":-117.6712036
+                     },
+                     "officeName":"O C Centers for Oral Surgery and Dental Implants"
+                  },
+                  {
+                     "term":"EDWARDSVILLE ORAL SURG & IMPLA",
+                     "weight":0,
+                     "practiceLocationNumber":"240764144001",
+                     "address":{
+                        "addressLine":"1005 PLUMMER DR STE A",
+                        "city":"EDWARDSVILLE",
+                        "state":"IL",
+                        "zipcode":"62025-0000",
+                        "latitude":38.7878582,
+                        "longitude":-89.9777951
+                     },
+                     "officeName":"EDWARDSVILLE ORAL SURG & IMPLA"
+                  }
+               ],
+               "facilities":[
+                  {
+                     "term":"St Louis S Oral & Max Surg",
+                     "weight":0,
+                     "facilityId":"030969",
+                     "facilityName":"St Louis S Oral & Max Surg",
+                     "address":{
+                        "addressLine":"1155 EAST GANNON DR",
+                        "city":"FESTUS",
+                        "state":"MO",
+                        "zipcode":"63028-0000",
+                        "latitude":38.211483,
+                        "longitude":-90.4004669
+                     }
+                  },
+                  {
+                     "term":"Pomerado Oral &  Max Fac Surg",
+                     "weight":0,
+                     "facilityId":"011168",
+                     "facilityName":"Pomerado Oral &  Max Fac Surg",
+                     "address":{
+                        "addressLine":"15725 Pomerado Rd Ste 205, ",
+                        "city":"Poway",
+                        "state":"CA",
+                        "zipcode":"92064-2059",
+                        "latitude":33.0000839,
+                        "longitude":-117.0575027
+                     }
+                  },
+                  {
+                     "term":"Pomerado Oral &  Max Fac Surg",
+                     "weight":0,
+                     "facilityId":"011168",
+                     "facilityName":"Pomerado Oral &  Max Fac Surg",
+                     "address":{
+                        "addressLine":"15725 Pomerado Rd Ste 205, ",
+                        "city":"Poway",
+                        "state":"CA",
+                        "zipcode":"92064-2059",
+                        "latitude":33.0000839,
+                        "longitude":-117.0575027
+                     }
+                  },
+                  {
+                     "term":"Park Blvd Oral Surgery",
+                     "weight":0,
+                     "facilityId":"037153",
+                     "facilityName":"Park Blvd Oral Surgery",
+                     "address":{
+                        "addressLine":"4067 Park Blvd",
+                        "city":"San Diego",
+                        "state":"CA",
+                        "zipcode":"92103-2619",
+                        "latitude":32.751564,
+                        "longitude":-117.1461792
+                     }
+                  },
+                  {
+                     "term":"S Ca Oral/Max Surgical Arts",
+                     "weight":0,
+                     "facilityId":"003725",
+                     "facilityName":"S Ca Oral/Max Surgical Arts",
+                     "address":{
+                        "addressLine":"6240 W Manchester Ave",
+                        "city":"Los Angeles",
+                        "state":"CA",
+                        "zipcode":"90045-3801",
+                        "latitude":33.959568,
+                        "longitude":-118.3946457
+                     }
+                  }
+               ]
+            }
+         }
+      }
+   },
+   "PROVIDERSCENARIOS":{
+      "Scenario1-Validating Network_Based_Providers_Response_with_Providers practiceLocationNumber":{
+         "params":{
+            "zipcode":90254,
+            "distance":60,
+            "per_page":2,
+            "sourceNetwork":"2BOEING",
+            "targetNetwork":"2BOEING",
+            "free_text":"Donlevy and Estess Oral Surgery Group"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providers":[
+                  {
+                     "practiceLocationNumber":"240627005003"
+                  }
+               ]
+            }
+         }
+      }
+   },
+   "Scenario2-Validating Network_Based_Providers_Response_with_Providers facilityId and address":{
+      "params":{
+         "zipcode":92064,
+         "distance":60,
+         "per_page":2,
+         "sourceNetwork":"2BOEING",
+         "targetNetwork":"2BOEING",
+         "free_text":"Pomerado Oral &  Max Fac Surg"
+      },
+      "verify":{
+         "TC-1":{
+            "statuscode":200
+         },
+         "TC-2":{
+            "providers":[
+               {
+                  "facilityId":"011168",
+                  "address":{
+                     "addressLine":"15725 Pomerado Rd Ste 205, ",
+                     "city":"Poway",
+                     "state":"CA",
+                     "zipcode":"92064-2059",
+                     "latitude":33.0000839,
+                     "longitude":-117.0575027
+                  }
+               }
+            ]
+         }
+      }
+   }
+}

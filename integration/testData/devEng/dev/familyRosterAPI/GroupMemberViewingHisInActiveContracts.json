@@ -1,0 +1,26 @@
+{
+   "Scenarios":{
+      "Scenario1-Group_Member_Viewing_His_In_Active_Contracts":{
+         "request":{
+            "personId":"0774622314200620"
+         },
+         "headers":{
+            "personId":"0774622314200620",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "groupTypeId":[
+                  "GROUP"
+               ]
+            },
+            "TC-3":{               
+               "active":"false"
+            }
+         }
+      }
+   }
+}

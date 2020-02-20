@@ -1,0 +1,15 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Empty_Enrollee_ID":
+        {
+        	"TC-1": "Given a Empty EnrolleeID WHEN requesting to view other Claims THEN should show Security violation message ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario2-Empty_Person_ID":
+        {
+            "TC-1": "Given a Empty PersonID WHEN requesting to view other Claims THEN should show Security violation message ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }    
+   }
+}

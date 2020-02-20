@@ -1,0 +1,38 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Facility_Details_By_Providing_FacilityId":{
+         "TC-1":"GIVEN Valid facilityId,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating distance of facility from a specific given latitude/longitude",
+         "TC-3":"Validating isOpen of practiceHours in facility API",
+         "TC-4":"Validating basic details of facility from facility API"
+      }
+   },
+   "AMGENSCENARIOS":{
+      "Scenario1-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2PPO) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityId,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      },
+      "Scenario2-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2PREMIER) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityId,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      },
+      "Scenario3-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2DELTACARE) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityId,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      },
+      "Scenario4-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2NYPPO) - AMGEN SCENARIOS":{
+         "TC-1":"GIVEN Valid facilityId,WHEN requesting to view Facility details THEN should allowed to view facility details",
+         "TC-2":"Validating providernetworks details of facility from facility API"
+      }
+   },
+   "NegativeScenarios":{
+      "Scenario1-Invalid_FacilityId":{
+         "TC-1":"GIVEN InValid facilityId,WHEN requesting to view Facility details THEN should display no content",
+         "TC-2":"Validating response"
+      },
+      "Scenario2-Empty_FacilityId":{
+         "TC-1":"GIVEN Empty facilityId,WHEN requesting to view Facility details THEN should display errorCode",
+         "TC-2":"Validating error details"
+      }
+   }
+}

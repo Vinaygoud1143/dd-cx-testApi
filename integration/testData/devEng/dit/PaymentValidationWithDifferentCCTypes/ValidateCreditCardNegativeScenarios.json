@@ -1,0 +1,484 @@
+{
+   "Scenarios":{
+      "Scenario1-Validate_VISA_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"4298899999999995",
+            "cvvNumber":123,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_024",
+               "shortDescription":"Credit Card Number is Invalid (5000)",
+               "detailedDescription":"The Credit Card Number entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario2-Validate_MasterCard_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"5147359999999990",
+            "cvvNumber":123,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_024",
+               "shortDescription":"Credit Card Number is Invalid (5000)",
+               "detailedDescription":"The Credit Card Number entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario3-Validate_Discover_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"6011991111110000",
+            "cvvNumber":123,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_024",
+               "shortDescription":"Credit Card Number is Invalid (5000)",
+               "detailedDescription":"The Credit Card Number entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario4-Validate_AMEX_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"370000888888880",
+            "cvvNumber":123,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_024",
+               "shortDescription":"Credit Card Number is Invalid (5000)",
+               "detailedDescription":"The Credit Card Number entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario5-Validate_InternationalVISA_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"4257020004444440",
+            "cvvNumber":123,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_024",
+               "shortDescription":"Credit Card Number is Invalid (5000)",
+               "detailedDescription":"The Credit Card Number entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario6-Validate_VISA_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"4298899999999996",
+            "cvvNumber":123,
+            "expiryDate":"12/2018",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_025",
+               "shortDescription":"Credit Card Expiry Date is Invalid (5001)",
+               "detailedDescription":"The Credit Card Expiration Date entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario7-Validate_MasterCard_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"5406004444444443",
+            "cvvNumber":123,
+            "expiryDate":"12/2018",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_025",
+               "shortDescription":"Credit Card Expiry Date is Invalid (5001)",
+               "detailedDescription":"The Credit Card Expiration Date entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario8-Validate_Discover_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"6011993333333334",
+            "cvvNumber":123,
+            "expiryDate":"12/2018",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_025",
+               "shortDescription":"Credit Card Expiry Date is Invalid (5001)",
+               "detailedDescription":"The Credit Card Expiration Date entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario9-Validate_AMEX_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"370000999999990",
+            "cvvNumber":123,
+            "expiryDate":"12/2018",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_025",
+               "shortDescription":"Credit Card Expiry Date is Invalid (5001)",
+               "detailedDescription":"The Credit Card Expiration Date entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario10-Validate_InternationalVISA_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"4032769999999992",
+            "cvvNumber":123,
+            "expiryDate":"12/2018",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_025",
+               "shortDescription":"Credit Card Expiry Date is Invalid (5001)",
+               "detailedDescription":"The Credit Card Expiration Date entered in the authorization request appears to be invalid."
+            }
+         }
+      },
+      "Scenario11-Validate_VISA_Type_CreditCard_with_Invalid_CVV":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"4298899999999996",
+            "cvvNumber":12,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_034",
+               "shortDescription":"Invalid Credit Card CVV (5021)",
+               "detailedDescription":"The Credit Card CVV entered is incorrect. Please correct and try again."
+            }
+         }
+      },
+      "Scenario12-Validate_MasterCard_Type_CreditCard_with_Invalid_CVV":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"5406004444444443",
+            "cvvNumber":12,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_034",
+               "shortDescription":"Invalid Credit Card CVV (5021)",
+               "detailedDescription":"The Credit Card CVV entered is incorrect. Please correct and try again."
+            }
+         }
+      },
+      "Scenario13-Validate_Discover_Type_CreditCard_with_Invalid_CVV":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"6011993333333334",
+            "cvvNumber":12,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_034",
+               "shortDescription":"Invalid Credit Card CVV (5021)",
+               "detailedDescription":"The Credit Card CVV entered is incorrect. Please correct and try again."
+            }
+         }
+      },
+      "Scenario14-Validate_AMEX_Type_CreditCard_with_Invalid_CVV":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"370000999999990",
+            "cvvNumber":12,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_034",
+               "shortDescription":"Invalid Credit Card CVV (5021)",
+               "detailedDescription":"The Credit Card CVV entered is incorrect. Please correct and try again."
+            }
+         }
+      },
+      "Scenario15-Validate_InternationalVISA_Type_CreditCard_with_Invalid_CVV":{
+         "request":{
+            "address":{
+               "addressLine":"1220 brahms cmn",
+               "city":"fremont",
+               "country":"usa",
+               "state":"ca",
+               "zipcode":"94538"
+            },
+            "cardNumber":"4032769999999992",
+            "cvvNumber":12,
+            "expiryDate":"12/2019",
+            "nameOnCard":"Swathi"
+         },
+         "headers":{
+            "personId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":500
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_034",
+               "shortDescription":"Invalid Credit Card CVV (5021)",
+               "detailedDescription":"The Credit Card CVV entered is incorrect. Please correct and try again."
+            }
+         }
+      }
+   }
+}

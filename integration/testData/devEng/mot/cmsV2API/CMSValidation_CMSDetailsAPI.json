@@ -1,0 +1,89 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria_ISUSER_STATE":
+        {
+            "request":
+            {
+                "criteria": ["issuer=COSTCO", "state=TX"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "dental",
+                "CONTENT_TYPE": "procedure",
+                "TENANT_NAME": "dentegra"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "id": "1217",
+                    "lastUpdatedDate": "Mon Nov 26 22:55:04 UTC 2018"
+                }
+
+            }
+        },
+        "Scenario2-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria_FIRSTNAME_LASTNAME":
+        {
+            "request":
+            {
+                "criteria": ["FirstName=Alan", "LastName=Wakefield"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "cx",
+                "CONTENT_TYPE": "test",
+                "TENANT_NAME": "delta"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "id": "4f20ba05-971c-4e98-9661-cf6554bf73de",
+                    "lastUpdatedDate": "Mon Dec 03 23:14:23 UTC 2018"
+                }
+
+            }
+        },
+        "Scenario3-Retrieve_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria_COMPANY_CITY":
+        {
+            "request":
+            {
+                "criteria": ["Company=Delta Dental Insurance Company", "City=Alpharetta"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "ep",
+                "CONTENT_TYPE": "idcards",
+                "TENANT_NAME": "cx"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "id": "f56832b1-c33b-4710-91b9-e7faf41dc432",
+                    "lastUpdatedDate": "Tue Dec 04 21:54:09 UTC 2018"
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-CXCORETECH-847-Incorrect message shown for a person having PHI against his account":
+        {
+            "TC-1": "Given Member is with PHI flag,WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records.",
+            "TC-2": "Validation of rulesInfo"
+        }     
+    }
+}

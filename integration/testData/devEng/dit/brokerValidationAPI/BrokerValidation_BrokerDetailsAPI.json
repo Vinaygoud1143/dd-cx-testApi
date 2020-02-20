@@ -1,0 +1,63 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Broker_Details_By_Providing_Valid_BrokerId":{
+         "request":{
+            "brokerId":"2012839"
+         },
+         "params":{
+
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "brokerNumber":"2012839",
+               "taxIdNumber":"123403125",
+               "oracleVendorId":15044,
+               "brokerName":"TONY JONAS",
+               "vendorType":"BRK",
+               "sites":[
+                  {
+                     "vendorSiteCode":"2012839",
+                     "orgId":85,
+                     "vendorSiteId":15157,
+                     "legalEntity":"DELTACARE",
+                     "purchasingSiteFlag":"N",
+                     "paySiteFlag":"Y",
+                     "address":{
+                        "addressLine3":null,
+                        "addressLine2":null,
+                        "addressLine1":"2001 E 1ST ST STE 140",
+                        "city":"SANTA ANA",
+                        "state":"CA",
+                        "zip":"927054047"
+                     }
+                  }
+               ]
+            }
+         }
+      }
+   },
+   "negativetestdata":{
+      "Scenario1-Invalid_BrokerId":{
+         "request":{
+            "brokerId":"20128545"
+         },
+         "params":{
+
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"BROKER001",
+               "shortDescription":"input data issue.",
+               "detailedDescription":"Invalid tax Id input.",
+               "stackTrace":null
+            }
+         }
+      }
+   }
+}

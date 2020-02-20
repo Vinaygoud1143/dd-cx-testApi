@@ -1,0 +1,56 @@
+{
+   "Scenarios":{
+      "Scenario1-ACH_AUTOPAY_DISABLE":{
+         "request":{
+            "ach":{
+               "accountNumber":"122105278",
+               "accountType":"Checkings",
+               "bankRoutingNumber":"123567123678",
+               "nameOnAccount":"Martha Smith"
+            },
+            "amount":18.29,
+            "paymentType":"ACH"
+         },
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autopay":true
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            }
+         }
+      }
+   },
+   "BILLINGSCENARIOS":{
+      "Scenario1-ACH_AUTOPAY_DISABLE":{
+         "headers":{
+            "PersonId":"6107000007143442",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"113275597601"
+         },
+         "query-params":{
+            "payment-method":true
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+               "TC-2":{
+                  "savedPaymentId":"0777832184",
+                  "accountType":"Checkings",
+                  "accountNumber":"122105278",
+                  "bankRoutingNumber":"123567123678",
+                  "nameOnAccount":"Martha Smith",
+                  "active":true
+               }
+         }
+      }
+   }
+}

@@ -1,0 +1,178 @@
+{
+   "Scenarios":{
+      "Scenario1-AutoPay_For_ACH":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"122105278",
+               "nameOnAccount":"Martha Smith",
+               "bankRoutingNumber":"123567123678"
+            }
+         },
+         "headers":{
+            "PersonId":"0331121222473183",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            }
+         }
+      },
+      "Scenario2-AutoPay_For_ACH With Empty AccountNumber":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"",
+               "nameOnAccount":"Martha Smith",
+               "bankRoutingNumber":"123567123678"
+            }
+         },
+         "headers":{
+            "PersonId":"0331121222473183",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_006",
+               "shortDescription":"Invalid/Missed ACH Card Details in the Request",
+               "detailedDescription":"Please verify requests for ACH Card Details (NameOnAccount/RoutingNumber/AccountNumber). Unable to find all the required account information in the request."
+            }
+         }
+      },
+      "Scenario3-AutoPay_For_ACH With Empty NameOnAccount":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"122105278",
+               "nameOnAccount":"",
+               "bankRoutingNumber":"123567123678"
+            }
+         },
+         "headers":{
+            "PersonId":"0331121222473183",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_006",
+               "shortDescription":"Invalid/Missed ACH Card Details in the Request",
+               "detailedDescription":"Please verify requests for ACH Card Details (NameOnAccount/RoutingNumber/AccountNumber). Unable to find all the required account information in the request."
+            }
+         }
+      },
+      "Scenario4-AutoPay_For_ACH With Empty BankRoutingNumber":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"122105278",
+               "nameOnAccount":"Martha Smith",
+               "bankRoutingNumber":""
+            }
+         },
+         "headers":{
+            "PersonId":"0331121222473183",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId":"116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"ACCOUNT_006",
+               "shortDescription":"Invalid/Missed ACH Card Details in the Request",
+               "detailedDescription":"Please verify requests for ACH Card Details (NameOnAccount/RoutingNumber/AccountNumber). Unable to find all the required account information in the request."
+            }
+         }
+      },
+      "Scenario5-AutoPay_For_ACH With Invalid ClientKey":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"122105278",
+               "nameOnAccount":"Martha Smith",
+               "bankRoutingNumber":"123567123678"
+            }
+         },
+         "headers":{
+            "PersonId":"0331121222473183",
+            "ClientKey":"123456"
+         },
+         "path-params":{
+            "enrolleeId": "116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error": "Unauthorized",
+               "message": "Security violation. Invalid Client Key"
+            }
+         }
+      },
+      "Scenario6-AutoPay_For_ACH With Empty ClientKey":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"122105278",
+               "nameOnAccount":"Martha Smith",
+               "bankRoutingNumber":"123567123678"
+            }
+         },
+         "headers":{
+            "PersonId":"0331121222473183",
+            "ClientKey":""
+         },
+         "path-params":{
+            "enrolleeId": "116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error": "Bad Request",
+               "message": "Security violation. Expected security headers are missing."
+            }
+         }
+      },
+      "Scenario7-AutoPay_For_ACH With Empty PersonId":{
+         "request":{
+            "achAutoPay":{
+               "accountNumber":"122105278",
+               "nameOnAccount":"Martha Smith",
+               "bankRoutingNumber":"123567123678"
+            }
+         },
+         "headers":{
+            "PersonId":"",
+            "ClientKey":"12345"
+         },
+         "path-params":{
+            "enrolleeId": "116777733901"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error": "Bad Request",
+               "message": "Security violation. Expected security headers are missing."
+            }
+         }
+      }
+   }
+}

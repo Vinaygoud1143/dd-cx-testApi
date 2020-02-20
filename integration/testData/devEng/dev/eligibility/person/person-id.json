@@ -1,0 +1,113 @@
+{
+    "positive_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "person-Id": 6543210987654321
+            },
+            "response":
+            {
+                "status": 200,
+                "personId": "6543210987654321",
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates",
+                    "suffix": "III"
+                },
+                "dateOfBirth": "10/28/1955",
+                "ssn": 123456789
+            }
+        }
+    },
+    "negative_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "person-Id": ""
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "person-Id": "123"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "PERSON_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Person data not found by given details 123."
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "person-Id": "!@#$"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "PERSON_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Person data not found by given details !@."
+            }
+        },
+        "scenario4":
+        {
+            "request":
+            {
+                "person-Id": "<script>alert('XSS')</script>"
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+            }
+        },
+        "scenario5":
+        {
+            "request":
+            {
+                "person-Id": "test"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "PERSON_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Person data not found by given details test."
+            }
+        },
+        "scenario6":
+        {
+            "request":
+            {
+                "person-Id": " "
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "PERSON_005",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Person data not found by given details  ."
+       
+            }
+        }
+
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Empty_Enrollee_ID": 
+        {
+            "request": 
+            {
+                "enrollee-id": ""
+            },
+            "headers": 
+            {
+                "personId" : "0002580916542268",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify": 
+            {
+                "TC-1": 
+                {
+                    "statuscode": 404
+                },
+                "TC-2": 
+                {
+                    "errorMessage": "Not Found"
+                }
+            }
+        },
+        "Scenario2-Empty_Person_ID": 
+        {
+            "request": 
+            {
+                "enrollee-id": "00487795003"
+            },
+            "headers": 
+            {
+                "personId" : "",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify": 
+            {
+                "TC-1": 
+                {
+                    "statuscode": 400
+                },
+                "TC-2": 
+                {
+                    "errorMessage": "Bad Request"
+                }
+            }
+        }
+    }
+   
+   
+   
+    
+}

@@ -1,0 +1,197 @@
+{
+   "Scenarios":{
+      "Scenario1-CXCORETECH-1490:Future_Effective_Dates_Changes":{
+         "request":{
+            "personId":"7107000006455229"
+         },
+         "headers":{
+            "personId":"7107000006455229",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":[
+               {
+                  "contractId":"2209645142",
+                  "personId":"7107000006455229",
+                  "benefitId":"M0035394",
+                  "groupId":"03533",
+                  "divisionId":"00011",
+                  "paymentAccountId":null,
+                  "healthCareContractHolderId":"DDC",
+                  "groupTypeId":"GROUP",
+                  "groupSurrogateId":"1472",
+                  "divisionSurrogateId":"6818",
+                  "networkIdMapping":"PREMIER",
+                  "bl7Flag":"PREMIER",
+                  "active":false,
+                  "activeInFuture":false,
+                  "planType":"GROUP",
+                  "planName":"DELTA DENTAL GROUP",
+                  "startDate":"01/01/2010",
+                  "endDate":"12/31/2013",
+                  "groupDescription":"Santa Clara VTA",
+                  "divisionDescription":"SANTA CLARA VALLEY TRANSPORT",
+                  "state":"CA"
+               },
+               {
+                  "contractId":"1116995104",
+                  "personId":"7107000006455229",
+                  "benefitId":"P0036931",
+                  "groupId":"03920",
+                  "divisionId":"00001",
+                  "paymentAccountId":null,
+                  "healthCareContractHolderId":"DDC",
+                  "groupTypeId":"GROUP",
+                  "groupSurrogateId":"1295",
+                  "divisionSurrogateId":"6038",
+                  "networkIdMapping":"Delta Dental PPO",
+                  "bl7Flag":"PPO",
+                  "active":false,
+                  "activeInFuture":false,
+                  "planType":"GROUP",
+                  "planName":"DELTA DENTAL GROUP",
+                  "startDate":"04/01/2013",
+                  "endDate":"06/30/2015",
+                  "groupDescription":"PET FOOD EXPRESS",
+                  "divisionDescription":"PET FOOD EXPRESS/PASSPORT",
+                  "state":"CA"
+               },
+               {
+                  "contractId":"1152707059",
+                  "personId":"7107000006455229",
+                  "benefitId":"DCA01700",
+                  "groupId":"78637",
+                  "divisionId":"00004",
+                  "paymentAccountId":null,
+                  "healthCareContractHolderId":"DDIC DHMO",
+                  "groupTypeId":"INDIVIDUAL",
+                  "groupSurrogateId":"8128365",
+                  "divisionSurrogateId":"2042963",
+                  "networkIdMapping":"DeltaCare USA",
+                  "bl7Flag":"E DLTACARE",
+                  "active":false,
+                  "activeInFuture":false,
+                  "planType":"INDIVIDUAL",
+                  "planName":"DELTACARE",
+                  "startDate":"05/01/2016",
+                  "endDate":"08/01/2017",
+                  "groupDescription":"California Individual Exchange",
+                  "divisionDescription":"California Individual Exchange",
+                  "state":"CA"
+               },
+               {
+                  "contractId":"1180684468",
+                  "personId":"7107000006455229",
+                  "benefitId":"P0083826",
+                  "groupId":"00325",
+                  "divisionId":"00001",
+                  "paymentAccountId":null,
+                  "healthCareContractHolderId":"DDC",
+                  "groupTypeId":"GROUP",
+                  "groupSurrogateId":"2310",
+                  "divisionSurrogateId":"6403",
+                  "networkIdMapping":"Delta Dental PPO",
+                  "bl7Flag":"PPO",
+                  "active":true,
+                  "activeInFuture":false,
+                  "planType":"GROUP",
+                  "planName":"DELTA DENTAL GROUP",
+                  "startDate":"02/01/2019",
+                  "endDate":"12/31/9999",
+                  "groupDescription":"TELECARE CORPORATION",
+                  "divisionDescription":"TX/Union Active",
+                  "state":"CA"
+               }
+            ]
+         }
+      },
+      "Scenario2-CXCORETECH-1518:Future Effective Date issue":{
+         "request":{
+            "personId":"0460622822432544"
+         },
+         "headers":{
+            "personId":"0460622822432544",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":[
+               {
+                  "contractId":"1123703930",
+                  "personId":"0460622822432544",
+                  "benefitId":"DDCXHH00",
+                  "groupId":"77047",
+                  "divisionId":"00004",
+                  "paymentAccountId":null,
+                  "healthCareContractHolderId":"DDIC DHMO",
+                  "groupTypeId":"INDIVIDUAL",
+                  "groupSurrogateId":"8311989",
+                  "divisionSurrogateId":"939625",
+                  "networkIdMapping":"DeltaCare USA",
+                  "bl7Flag":"E DLTACARE",
+                  "active":false,
+                  "activeInFuture":false,
+                  "planType":"INDIVIDUAL",
+                  "planName":"DELTACARE",
+                  "startDate":"01/01/2014",
+                  "endDate":"12/31/2014",
+                  "groupDescription":"DC Individual Exchange",
+                  "divisionDescription":"DC Individual Exchange",
+                  "state":"DC"
+               },
+               {
+                  "contractId":"1134829163",
+                  "personId":"0460622822432544",
+                  "benefitId":"DDC01600",
+                  "groupId":"78545",
+                  "divisionId":"00004",
+                  "paymentAccountId":null,
+                  "healthCareContractHolderId":"DDIC DHMO",
+                  "groupTypeId":"INDIVIDUAL",
+                  "groupSurrogateId":"4661682",
+                  "divisionSurrogateId":"7012652",
+                  "networkIdMapping":"DeltaCare USA",
+                  "bl7Flag":"E DLTACARE",
+                  "active":false,
+                  "activeInFuture":false,
+                  "planType":"INDIVIDUAL",
+                  "planName":"DELTACARE",
+                  "startDate":"01/01/2016",
+                  "endDate":"12/31/2016",
+                  "groupDescription":"DC Individual Exchange",
+                  "divisionDescription":"DC Individual Exchange",
+                  "state":"DC"
+               },
+               {
+                  "contractId":"1134829163",
+                  "personId":"0460622822432544",
+                  "benefitId":"DDC01900",
+                  "groupId":"78545",
+                  "divisionId":"00014",
+                  "paymentAccountId":"7305840609",
+                  "healthCareContractHolderId":"DDIC DHMO",
+                  "groupTypeId":"INDIVIDUAL",
+                  "groupSurrogateId":"4661682",
+                  "divisionSurrogateId":"1699555",
+                  "networkIdMapping":"DeltaCare USA",
+                  "bl7Flag":"E DLTACARE",
+                  "active":true,
+                  "activeInFuture":false,
+                  "planType":"INDIVIDUAL",
+                  "planName":"DELTACARE",
+                  "startDate":"01/01/2017",
+                  "endDate":"12/31/2019",
+                  "groupDescription":"DC Individual Exchange",
+                  "divisionDescription":"DC Individual Exchange",
+                  "state":"DC"
+               }
+            ]
+         }
+      }
+   }
+}

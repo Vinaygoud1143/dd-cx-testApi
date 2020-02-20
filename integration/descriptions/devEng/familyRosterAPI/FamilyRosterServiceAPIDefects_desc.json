@@ -1,0 +1,15 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-CXCORETECH-1259-Benefit Package ID mismatch": 
+        {
+            "TC-1": "Group Member, WHEN requesting to view his or her contracts & THEN should be able to view all his active/inactive contracts.",
+            "TC-2": "Validation of Benefit package Details"
+        },
+        "Scenario2-CXCORETECH-1197-Network ID Mismatch": 
+        {
+            "TC-1": "Group Member, WHEN requesting to view his or her contracts & THEN should be able to view all his active/inactive contracts.",
+            "TC-2": "Validation of NetworkID Details"
+        }   
+    }  
+}

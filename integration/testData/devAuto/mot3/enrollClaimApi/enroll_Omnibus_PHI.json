@@ -1,0 +1,340 @@
+{
+    "Set1": {
+        "Data 1": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Spouse), WHEN requesting to view a Child's claim records in his/her plan, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095808",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0997710510201371",
+                "status"             : 401
+            }
+        },
+        "Data 2": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Child), WHEN requesting to view a Child's claim records in his/her plan, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095808",
+            "PersonId"   : "0986921809261140",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0997710510201371",
+                "status"             : 401
+            }
+        },
+        "Data 3": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Spouse), WHEN requesting to view another Adult Dependent's (Child) claim records in the plan, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095805",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0368121809264833",
+                "status"             : 401
+            }
+        },
+        "Data 4": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Child), WHEN requesting to view another Adult Dependent's (Spouse) claim records in the plan, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095802",
+            "PersonId"   : "0368121809264833",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001276381",
+                "status"             : 401
+            }
+        },
+        "Data 5": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Spouse), WHEN requesting to view Primary Enrollee's claim records in the plan, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095801",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001241105",
+                "status"             : 401
+            }
+        },
+        "Data 6": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Child), WHEN requesting to view Primary Enrollee's claim records in the plan, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095801",
+            "PersonId"   : "5020000001276381",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001241105",
+                "status"             : 401
+            }
+        },
+        "Data 7": {
+            "testCaseDes": "Omnibus - GIVEN a Primary Enrollee AND an Adult Dependent (Spouse) who has not given permission to Primary Enrollee. WHEN the Primary Enrollee requests to view Adult Dependent's claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095802",
+            "PersonId"   : "5020000001241105",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001276381",
+                "status"             : 401
+            }
+        },
+        "Data 8": {
+            "testCaseDes": "Omnibus - GIVEN a Primary Enrollee AND an Adult Dependent (Child) who has not given permission to Primary Enrollee. WHEN the Primary Enrollee requests to view Adult Dependent's claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095806",
+            "PersonId"   : "5020000001241105",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0004821809272008",
+                "status"             : 401
+            }
+        },
+        "Data 9": {
+            "testCaseDes": "Omnibus - GIVEN a Child, WHEN requesting to view Primary Enrollee's claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095801",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001241105",
+                "status"             : 401
+            }
+        },
+        "Data 10": {
+            "testCaseDes": "Omnibus - GIVEN a Child, WHEN requesting to view Adult Dependent's (Spouse) claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095802",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001276381",
+                "status"             : 401
+            }
+        },
+        "Data 11": {
+            "testCaseDes": "Omnibus - GIVEN a Child, WHEN requesting to view Adult Dependent's (Child) claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095806",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0004821809272008",
+                "status"             : 401
+            }
+        },
+        "Data 12": {
+            "testCaseDes": "Omnibus - GIVEN a Child, WHEN requesting to view another Child's claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095803",
+            "PersonId"   : "0506021809313476",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 5020000001274098",
+                "status"             : 401
+            }
+        },
+        "Data 13": {
+            "testCaseDes": "Omnibus - GIVEN an Adult Dependent (Child), WHEN requesting to view another Adult Dependent's (Child) claim records, THEN Ominubus Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "002160095806",
+            "PersonId"   : "0368121809264833",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0021600958 and person 0004821809272008",
+                "status"             : 401
+            }
+        },
+        "Data 14": {
+            "testCaseDes": "PHI - GIVEN a Primary Enrollee with PHI Flag enabled, WHEN accesses his/her claims information, THEN PHI Rules should restrict him/her from doing so: ",
+            "enrolleeId" : "004579377801",
+            "PersonId"   : "5047000004566430",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS013",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "PHI is enabled for this member 004579377801.",
+                "status"             : 401
+            }
+        },
+        "Data 15": {
+            "testCaseDes": "Omnibus - GIVEN Primary Member with PHI Flag enabled, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information due to Omnibus restrictions",
+            "enrolleeId" : "004579377802",
+            "PersonId"   : "5047000004566430",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045793778 and person 5047000004555079",
+                "status"             : 401
+            }
+        },
+        "Data 16": {
+            "testCaseDes": "Omnibus - GIVEN Primary Enrollee with PHI Flag enabled, WHEN trying to access Dependent's claims information, THEN s/he should NOT be able to view Dependent's claim records due to Omnibus restrictions",
+            "enrolleeId" : "000561219902",
+            "PersonId"   : "5107000004050672",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0005612199 and person 5107000004226957",
+                "status"             : 401
+            }
+        },
+        "Data 17": {
+            "testCaseDes": "Omnibus - GIVEN Primary Member with PHI Flag enabled, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information",
+            "enrolleeId" : "004578460902",
+            "PersonId"   : "5047000004555079",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045784609 and person 5047000004566430",
+                "status"             : 401
+            }
+        },
+        "Data 18": {
+            "testCaseDes": "Omnibus - GIVEN a Dependent with PHI Flag enabled, WHEN requesting to view Primary Enrollee's claim records, THEN s/he should NOT be able to view any information becuase of Omnibus restrictions",
+            "enrolleeId" : "001065669701",
+            "PersonId"   : "5100000001758311",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0010656697 and person 5100000001602301",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-654"
+        },
+        "Data 19": {
+            "testCaseDes": "PHI, Omnibus Bug - To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denial message for Dependent-1's claims records (Dependent 1 has denied permission)",
+            "enrolleeId" : "114284598902",
+            "PersonId"   : "5057000005158214",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 1142845989 and person 5057000004698196",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-677"
+        },
+        "Data 20": {
+            "testCaseDes": "PHI, Omnibus Bug - To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-2's claims records (Dependent 2 has denied permission)",
+            "enrolleeId" : "114284598903",
+            "PersonId"   : "5057000005158214",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 1142845989 and person 5057000005162905",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-677"
+        },
+        "Data 21": {
+            "testCaseDes": "PHI, Omnibus Bug - To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-1's claims records (Dependent 1 has denied permission)",
+            "enrolleeId" : "001060129102",
+            "PersonId"   : "5100000001241590",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0010601291 and person 5100000001271271",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-677"
+        },
+        "Data 22": {
+            "testCaseDes": "PHI, Omnibus Bug - To test the fix for Bug # CXCORETECH-677 where the Primary Enrollee was getting a PHI message when trying to access both the Dependent's claims eventhough there was no PHI enabled for both the Dependents. This test validated if the Primary Enrollee is able to see ominubus denail message for Dependent-2's claims records (Dependent 2 has denied permission)",
+            "enrolleeId" : "001060129103",
+            "PersonId"   : "5100000001241590",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS010",
+                "shortDescription"   : "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0010601291 and person 5100000001270527",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-677"
+        }
+    },
+    "Set2": {
+        "test21": {
+            "testCaseDes": "Test 21: Given a PRIMARY member, WHEN requesting to view other Adult member who is not part of the same contract as PRIMARY, THEN s/he should NOT be allowed to view claim records and indicate the person is not part of the contract",
+            "enrolleeId" : "100487194004",
+            "PersonId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-385"
+        },
+        "test22": {
+            "testCaseDes": "Test 22: Given Adult member, WHEN requesting to view other members NOT in this current contract & THEN should NOT be allowed to view claim records and should raise security alert.",
+            "enrolleeId" : "100487795003",
+            "PersonId"   : "0002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-385"
+        },
+        "test23": {
+            "testCaseDes": "Test 23: Invalid Person ID or Enrollee ID",
+            "enrolleeId" : "00487795003",
+            "PersonId"   : "1002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-386"
+        },
+        "test24": {
+            "testCaseDes": "Test 24: Person ID mandatory scenario",
+            "enrolleeId" : "100487795003",
+            "PersonId"   : "1",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS006",
+                "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-386"
+        },
+        "test25": {
+            "testCaseDes": "Test 25: Enrollee ID mandatory scenario",
+            "enrolleeId" : "1",
+            "PersonId"   : "0002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "errorCode"          : "CLAIMS001",
+                "shortDescription"   : "General Exception",
+                "detailedDescription": "General Exception",
+                "status"             : 401
+            },
+            "bugNumber": "CXCORETECH-386"
+        }
+    }
+}

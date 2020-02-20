@@ -1,0 +1,24 @@
+{  
+   "Scenarios":{  
+      "Scenario1-CXCORETECH-265- Recent Claims API: Claim Status coming as Null":{  
+         "request":{  
+            "enrollee-id":"117274915905"
+         },
+         "headers":{  
+            "personId":"0933010812301600",
+            "ClientKey":"12345"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":500
+            },
+            "TC-2":{  
+                  "errorCode": "CLAIMS006",
+				  "shortDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+				  "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+				  "stackTrace": null
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,1679 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long":
+        {
+            "params":
+            {
+                "lat": 37,
+                "long": -122,
+                "distance": 5,
+                "per_page": 2,
+                "max": 1500
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                          "providerKey": "GRP240618729240618729001PRV24067485720",
+					      "firstName": "Mark",
+					      "middleName": "W",
+					      "lastName": "Joiner",
+					      "fullName": "Mark Joiner",
+					      "specialty": "Orthodontist",
+					      "officeName": "Mark Joiner Orthodontics",
+					      "practiceLocationNumber": "240618729001",
+					      "officePhone": "(831) 475-5500",
+					      "facilityId": null,
+                        "address":
+                        {
+                            "addressLine": "1773 Dominican Way",
+					        "city": "Santa Cruz",
+					        "state": "CA",
+					        "zipcode": "95065-1526",
+					        "latitude": 36.9910965,
+					        "longitude": -121.9815674
+                        },
+                        "providerNetworks": [
+                        {
+                              "networkId": "2PREMIER",
+					          "networkName": "Delta Dental Premier",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+                        }]
+                    },
+                    {
+                          "providerKey": "GRP240004852240004852001PRV24000812910",
+					      "firstName": "Chien",
+					      "middleName": "Y",
+					      "lastName": "Cheng",
+					      "fullName": "Chien Cheng",
+					      "specialty": "Oral Surgeon",
+					      "officeName": "Santa Cruz Oral & Maxillofacial Surgery",
+					      "practiceLocationNumber": "240004852001",
+					      "officePhone": "(831) 475-0221",
+					      "facilityId": null,
+                        "address":
+                        {
+                                "addressLine": "1663 Dominican Way Ste 112, ",
+						        "city": "Santa Cruz",
+						        "state": "CA",
+						        "zipcode": "95065-1579",
+						        "latitude": 36.990551,
+						        "longitude": -121.9808884
+                        },
+                        "providerNetworks": [
+					                        {
+					          "networkId": "2PPO",
+					          "networkName": "Delta Dental PPO",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        },
+					        {
+					          "networkId": "2PREMIER",
+					          "networkName": "Delta Dental Premier",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        }]
+                    }]
+                },
+                "TC-3":
+                {
+                    "providerQuality": [
+                    {
+                        "providerKey": "GRP240618729240618729001PRV24067485720",
+                        "yelp":
+                        {
+                              "yelpId": "mark-joiner-and-team-orthodontics-santa-cruz",
+					          "yelpUrl": "https://www.yelp.com/biz/mark-joiner-and-team-orthodontics-santa-cruz?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+					          "yelpReviewCount": 22,
+					          "yelpRating": 4.5,
+					          "yelpDeltaDentalId": null
+					        },
+					        "pandRDental": {
+					          "profilingRating": 0,
+					          "clinicalCompetencyRating": 0,
+					          "adherenceToTreatmentProtocolsRating": 0,
+					          "customerSatisfactionRating": 0,
+					          "costAndUtilizationRating": 0,
+					          "overallRating": 0,
+					          "overallGrade": null,
+					          "overallAbuseGrade": null,
+					          "reliabilityScore": null,
+					          "pandrProviderQualityUrl": null
+                        }
+                    },
+                    {
+                        "providerKey": "GRP240004852240004852001PRV24000812910",
+                        "yelp":
+                        {
+                              "yelpId": "IVVxsx7xvnQAQXxNk7RwJg",
+					          "yelpUrl": "https://www.yelp.com/biz/santa-cruz-oral-and-maxillofacial-surgery-santa-cruz?adjust_creative=CEYLdeFm-ZCbM2th0XE_xw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=CEYLdeFm-ZCbM2th0XE_xw",
+					          "yelpReviewCount": 20,
+					          "yelpRating": 4.5,
+					          "yelpDeltaDentalId": null
+					        },
+					        "pandRDental": {
+					          "profilingRating": 0,
+					          "clinicalCompetencyRating": 0,
+					          "adherenceToTreatmentProtocolsRating": 0,
+					          "customerSatisfactionRating": 0,
+					          "costAndUtilizationRating": 0,
+					          "overallRating": 0,
+					          "overallGrade": null,
+					          "overallAbuseGrade": null,
+					          "reliabilityScore": null,
+					          "pandrProviderQualityUrl": null
+                        }
+                    }]
+                },
+                "TC-4":
+                {
+                    "isOpen": true
+                },
+                "TC-5":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 37,
+                        "longitude": -122
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode":
+        {
+            "params":
+            {
+                "zipcode": 91321,
+                "distance": 5,
+                "per_page": 2,
+                "max": 1500
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                          "providerKey": "GRP240618679240618679001PRV24066886600",
+					      "firstName": "Mark",
+					      "middleName": "I",
+					      "lastName": "Uyehara",
+					      "fullName": "Mark Uyehara",
+					      "specialty": "General Dentist",
+					      "officeName": "Mark I Uyehara",
+					      "practiceLocationNumber": "240618679001",
+					      "officePhone": "(818) 362-1563",
+					      "facilityId": null,
+                        "address":
+                        {
+                            "addressLine": "15989 Yarnell St",
+					        "city": "Sylmar",
+					        "state": "CA",
+					        "zipcode": "91342-1052",
+					        "latitude": 34.3213921,
+					        "longitude": -118.4791946
+                        },
+                        "providerNetworks": [
+                        {
+                              "networkId": "2PREMIER",
+					          "networkName": "Delta Dental Premier",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+                        }]
+                    },
+                    {
+                         "providerKey": "GRP240001239240001239086PRV63900110620",
+					      "firstName": "Ryan",
+					      "middleName": "Jacob",
+					      "lastName": "Haimof",
+					      "fullName": "Ryan Haimof",
+					      "specialty": "Orthodontist",
+					      "officeName": "Western Dental Services Inc",
+					      "practiceLocationNumber": "240001239086",
+					      "officePhone": "(661) 260-3200",
+					      "facilityId": "059013",
+                        "address":
+                        {
+	                        "addressLine": "23130 Lyons Ave",
+					        "city": "Santa Clarita",
+					        "state": "CA",
+					        "zipcode": "91321-2631",
+					        "latitude": 34.3801041,
+					        "longitude": -118.5368271
+                        },
+                        "providerNetworks": [
+                        {
+                              "networkId": "2DELTACARE",
+					          "networkName": "DeltaCare USA",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        },
+					        {
+					          "networkId": "2PPO",
+					          "networkName": "Delta Dental PPO",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        },
+					        {
+					          "networkId": "2PREMIER",
+					          "networkName": "Delta Dental Premier",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        }]
+                    }]
+                },
+                "TC-3":
+                {
+                    "providerQuality": [
+                    {
+                        "providerKey": "GRP240618679240618679001PRV24066886600",
+                        "yelp":
+                        {
+                              "yelpId": "uyehara-mark-dds-sylmar-2",
+					          "yelpUrl": "https://www.yelp.com/biz/uyehara-mark-dds-sylmar-2?adjust_creative=AnVUNzYPjXUxWF65_UdWtA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AnVUNzYPjXUxWF65_UdWtA",
+					          "yelpReviewCount": 3,
+					          "yelpRating": 5,
+					          "yelpDeltaDentalId": null
+					        },
+					        "pandRDental": {
+					          "profilingRating": 0,
+					          "clinicalCompetencyRating": 0,
+					          "adherenceToTreatmentProtocolsRating": 0,
+					          "customerSatisfactionRating": 0,
+					          "costAndUtilizationRating": 0,
+					          "overallRating": 0,
+					          "overallGrade": null,
+					          "overallAbuseGrade": null,
+					          "reliabilityScore": null,
+					          "pandrProviderQualityUrl": null
+                        }
+                    },
+                    {
+                        "providerKey": "GRP240001239240001239086PRV63900110620",
+                        "yelp":
+                        {
+                              "yelpId": "7c532M44rrFGnu4q928d1w",
+					          "yelpUrl": "https://www.yelp.com/biz/western-dental-and-orthodontics-santa-clarita-2?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+					          "yelpReviewCount": 57,
+					          "yelpRating": 2,
+					          "yelpDeltaDentalId": null
+					        },
+					        "pandRDental": {
+					          "profilingRating": 0,
+					          "clinicalCompetencyRating": 0,
+					          "adherenceToTreatmentProtocolsRating": 0,
+					          "customerSatisfactionRating": 0,
+					          "costAndUtilizationRating": 0,
+					          "overallRating": 0,
+					          "overallGrade": null,
+					          "overallAbuseGrade": null,
+					          "reliabilityScore": null,
+					          "pandrProviderQualityUrl": null
+                        }
+                    }]
+                },
+                "TC-4":
+                {
+                    "isOpen": true
+                },
+                "TC-5":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": []
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "91321",
+                        "latitude": 34.3677169,
+                        "longitude": -118.4747173
+                    }
+                }
+            }
+        }
+    },
+    "ProviderNetworkScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_SourceNetwork_Is_CustomNetwork_And_TargetNetwork_Is_ProviderNetwork":
+        {
+            "params":
+            {
+                "zipcode": 91761,
+                "distance": 5,
+                "per_page": 2,
+                "max": 1500,
+                "sourceNetwork": "2CPPHFP",
+                "targetNetwork": "2PPO"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP385552671385552671001PRV91160261200",
+                        "providerNetworks": [
+                        {
+                              "networkId": "2PPO",
+					          "networkName": "Delta Dental PPO",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+                        },
+                        {
+                              "networkId": "2PREMIER",
+					          "networkName": "Delta Dental Premier",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+                        }]
+                    },
+                    {
+                        "providerKey": "GRP240634196240634196004PRV77956429115",
+                        "providerNetworks": [
+                        
+                        {
+                              "networkId": "2PPO",
+					          "networkName": "Delta Dental PPO",
+					          "acceptsNewPatients": "N",
+					          "suppressed": false
+                        }]
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "91761",
+                        "latitude": 34.0348144,
+                        "longitude": -117.5848025
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_SourceNetwork_Is_CustomNetwork_And_TargetNetwork_Is_CustomNetwork":
+        {
+            "params":
+            {
+                "zipcode": 91761,
+                "distance": 5,
+                "per_page": 2,
+                "max": 1500,
+                "sourceNetwork": "2CPPHFP",
+                "targetNetwork": "2CPPHFP"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP385552671385552671001PRV91160261200",
+                        "providerNetworks": [
+                         {
+					          "networkId": "2PPO",
+					          "networkName": "Delta Dental PPO",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        },
+					        {
+					          "networkId": "2PREMIER",
+					          "networkName": "Delta Dental Premier",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        },
+					        {
+					          "networkId": "2BOEING",
+					          "networkName": "",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        },
+					        {
+					          "networkId": "2CPPHFP",
+					          "networkName": "",
+					          "acceptsNewPatients": "Y",
+					          "suppressed": false
+					        }]
+                    },
+                    {
+                        "providerKey": "GRP240634196240634196004PRV77956429115",
+                        "providerNetworks": [
+                        {
+				          "networkId": "2CPPHFP",
+				          "networkName": "CPP Healthy Families",
+				          "acceptsNewPatients": "Y",
+				          "suppressed": false
+				        }]
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "91761",
+                        "latitude": 34.0348144,
+                        "longitude": -117.5848025
+                    }
+                }
+            }
+        }
+
+    },
+    "boardCertifiedScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_boardCertified_Empty":
+        {
+            "params":
+            {
+                "zipcode": 93705,
+                "distance": 5,
+                "per_page": 2,
+                "max": 1500
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP240001239240001239044PRV79159238020",
+                        "boardCertified": false
+                    },
+                    {
+                        "providerKey": "GRP240001239240001239044PRV24000757100",
+                        "boardCertified": false
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "93705",
+                        "latitude": 36.789028,
+                        "longitude": -119.829443
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_boardCertified_True":
+        {
+            "params":
+            {
+                "zipcode": 93705,
+                "distance": 5,
+                "per_page": 2,
+                "max": 1500,
+                "boardCertified": true
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+
+                        {
+                            "providerKey": "GRP240001239240001239044PRV09538388520",
+                            "boardCertified": true
+                        },
+                        {
+                            "providerKey": "GRP240625706240625706001PRV24001428140",
+                            "boardCertified": true
+                        }
+                    ]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "93705",
+                        "latitude": 36.789028,
+                        "longitude": -119.829443
+                    }
+                }
+            }
+        }
+
+    },
+    "specialtyScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_With_Single_Specialty":
+        {
+            "params":
+            {
+                "zipcode": 19124,
+                "distance": 6,
+                "per_page": 6,
+                "max": 1500,
+                "specialty": ["General dentist"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP240629158240629158003PRV98440439700",
+                        "specialty": "General Dentist"
+                    },
+                    {
+                        "providerKey": "GRP240629158240629158001PRV98440439700",
+                        "specialty": "General Dentist"
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+                            "General dentist"
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "19124",
+                        "latitude": 40.0149445,
+                        "longitude": -75.0903154
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_And_Multiple_Specialty":
+        {
+            "params":
+            {
+                "lat": 37,
+                "long": -122,
+                "distance": 6,
+                "per_page": 10,
+                "max": 1500,
+                "specialty": ["General dentist", "Oral Surgeon"]
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+
+                       
+                        {
+                            "providerKey": "GRP470094363470094363002PRV24001417100",
+                            "specialty": "General Dentist"
+                        },
+                        {
+                            "providerKey": "GRP240004852240004852001PRV24000812910",
+                            "specialty": "Oral Surgeon"
+                        }
+                    ]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+                            "General dentist",
+                            "Oral Surgeon"
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 37,
+                        "longitude": -122
+                    }
+                }
+            }
+        }
+
+    },
+    "networkScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_With_Single_Network":
+        {
+            "params":
+            {
+                "lat": 37,
+                "long": -122,
+                "distance": 6,
+                "per_page": 6,
+                "max": 1500,
+                "network": ["2PPO"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "networks": ["2PPO"]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 37,
+                        "longitude": -122
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_And_Multiple_Networks":
+        {
+            "params":
+            {
+                "lat": 37,
+                "long": -122,
+                "distance": 6,
+                "per_page": 10,
+                "max": 1500,
+                "network": ["2PPO", "2PREMIER"]
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "networks": ["2PPO", "2PREMIER"]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 37,
+                        "longitude": -122
+                    }
+                }
+            }
+        }
+
+    },
+    "languageScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_With_Single_Language":
+        {
+            "params":
+            {
+                "lat": 37,
+                "long": -122,
+                "distance": 6,
+                "per_page": 2,
+                "max": 1500,
+                "language": ["English"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "languages": ["English"]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 37,
+                        "longitude": -122
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_And_Multiple_Languages":
+        {
+            "params":
+            {
+                "lat": 34.0869331,
+                "long": -117.4355698,
+                "distance": 6,
+                "per_page": 2,
+                "max": 1500,
+                "language": ["English", "Spanish"]
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "languages": ["English", "Spanish"]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 34.0869331,
+                        "longitude": -117.4355698
+                    }
+                }
+            }
+        }
+
+    },
+    "officehoursScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnSaturday":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_hours": ["saturday"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    
+                    "providers": [
+                    {
+                        "providerKey": "GRP240637776240637776003PRV91101533710",
+                        "openOnSaturday": true
+                    },
+                    {
+                        "providerKey": "GRP240593998240593998001PRV24067821600",
+                        "openOnSaturday": true
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "94105",
+                        "latitude": 37.7890183,
+                        "longitude": -122.3915063
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnSunday":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_hours": ["sunday"]
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    
+                    "providers": [
+                    {
+                        "providerKey": "GRP240635889240635889001PRV24069252900",
+                        "openOnSunday": true
+                    },
+                    {
+                        "providerKey": "GRP240004545240004545001PRV24001065230",
+                        "openOnSunday": true
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "94105",
+                        "latitude": 37.7890183,
+                        "longitude": -122.3915063
+                    }
+                }
+            }
+        },
+        "Scenario3-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnEvening":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_hours": ["evening"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP240637776240637776003PRV91101533710",
+                        "openLateEvening": true
+                    },
+                    {
+                        "providerKey": "GRP240595310240595310001PRV24073451510",
+                        "openLateEvening": true
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "94105",
+                        "latitude": 37.7890183,
+                        "longitude": -122.3915063
+                    }
+                }
+            }
+        },
+        "Scenario4-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnMorning":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_hours": ["morning"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP911640788911640788005PRV65861004520",
+                        "openEarlyMorning": true
+                    },
+                    {
+                        "providerKey": "GRP221264893221264893001PRV90504212010",
+                        "openEarlyMorning": true
+                    }]
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "94105",
+                        "latitude": 37.7890183,
+                        "longitude": -122.3915063
+                    }
+                }
+            }
+        }
+
+},
+"metadataScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_MetaData_True":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "meta_data": true
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+
+                "TC-2":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                            "numberOfProviders": 7834,
+						    "numberOfFacilities": 610,
+						    "numberOfOffices": 4287
+                    },
+                    "query":
+                    {
+                        "zipcode": "94105",
+                        "latitude": 37.7890183,
+                        "longitude": -122.3915063
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_MetaData_False":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "meta_data": false
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": "94105",
+                        "latitude": 37.7890183,
+                        "longitude": -122.3915063
+                    }
+                }
+            }
+        }
+
+    },
+    "sortByFieldAndOrderScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_SortField_Distance_SortOrder_ASC":
+        {
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "distance": "60",
+                "per_page": "20",
+                "max": "1500",
+                "sort_field": "distance",
+                "sort_order": "asc"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "sortorder": "asc"
+                },
+
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 40.7491951,
+                        "longitude": -73.993927
+                    }
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing__Lat_Long_SortField_Distance_SortOrder_DESC":
+        {
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "distance": "60",
+                "per_page": "20",
+                "max": "1500",
+                "sort_field": "distance",
+                "sort_order": "desc"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "sortorder": "desc"
+                },
+                "TC-3":
+                {
+                    "generatedFilters":
+                    {
+                        "specialty": [
+
+                        ]
+                    },
+                    "metaData":
+                    {
+                        "numberOfProviders": 0,
+                        "numberOfFacilities": 0,
+                        "numberOfOffices": 0
+                    },
+                    "query":
+                    {
+                        "zipcode": null,
+                        "latitude": 40.7491951,
+                        "longitude": -73.993927
+                    }
+                }
+            }
+        }
+
+    },
+    "firstNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_FirstName_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "per_page": "10",
+                "max": "1500",
+                "free_text": "richard",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "free_text": "Richard"
+                }
+            }
+        }
+
+    },
+    "lastNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_LastName_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "free_text": "Salameh-Punch",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "Salameh-Punch"
+                }
+            }
+        }
+
+    },
+    "alphanumericInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_AlphaNumeric_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "10013",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "3CK",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "3CK"
+                }
+            }
+        }
+
+    },
+    "npiInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_NPI_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94568",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "1376627687",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "1376627687"
+                }
+            }
+        }
+
+    },
+    "officeNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_OfficeName_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "O'Connor",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "O'Connor"
+                }
+            }
+        }
+
+    },
+    "languageInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_Language_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "2",
+                "max": "60000",
+                "free_text": "English",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "English"
+                }
+            }
+        }
+
+    },
+    "licenseNumberInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_licenseNumber_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "48130",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "48130"
+                }
+            }
+        }
+
+    },
+    "providerNetworkInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_providerNetwork_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "60000",
+                "free_text": "2PPO",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "2PPO"
+                }
+            }
+        }
+
+    },
+    "facilityNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_facilityName_In_FreeText":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "1",
+                "max": "60000",
+                "free_text": "Western",
+                "specialty": "GENERAL DENTIST"
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "free_text": "Western"
+                }
+            }
+        }
+
+    },
+    "officeAccessScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_free_parking":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_access":["free_parking"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "providers": [
+                    {
+                        "providerKey": "GRP810824437810824437001PRV99267447310",
+                        "freeParking": "Yes"
+                    },
+                    {
+                        "providerKey": "GRP810824437810824437001PRV19450418810",
+                        "freeParking": "Yes"
+                    }]
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_wheel_chair_access":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_access":["wheel_chair_access"]
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+
+                    "providers": [
+                    {
+                        "providerKey": "GRP841324779841324779001PRV69754080310",
+                        "wheelChairAccess": "Yes"
+                    },
+                    {
+                        "providerKey": "GRP841324779841324779001PRV24067084210",
+                        "wheelChairAccess": "Yes"
+                    }]
+                }
+            }
+        },
+        "Scenario3-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_public_transit_access":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_access":["public_transit_access"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP841324779841324779001PRV24067084210",
+                        "publicTransitAccess": "Yes"
+                    },
+                    {
+                        "providerKey": "GRP841324779841324779001PRV69754080310",
+                        "publicTransitAccess": "Yes"
+                    }]
+                }
+            }
+        },
+        "Scenario4-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_internet_access":
+        {
+            "params":
+            {
+                "zipcode": 94105,
+                "distance": 60,
+                "per_page": 2,
+                "max": 1500,
+                "office_access":["internet_access"]
+
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                        "providerKey": "GRP841324779841324779001PRV69754080310",
+                        "internetAccess": "Yes"
+                    },
+                    {
+                        "providerKey": "GRP841324779841324779001PRV24067084210",
+                        "internetAccess": "Yes"
+                    }]
+                }
+            }
+        }
+    }
+}

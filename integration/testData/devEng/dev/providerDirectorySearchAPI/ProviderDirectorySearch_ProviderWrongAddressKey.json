@@ -1,0 +1,20 @@
+{
+	"Scenarios": {
+		"Scenario1-Retrieve_The_Provider_Details_Error_For_Given_Wrong_Address": {
+			"request": {},
+			"params": {
+				"address": "Tajganj Agra"
+			},
+			"verify": {
+				"TC-1": {
+					"statuscode": 400
+				},
+				"TC-2": {
+					"errorCode": "PDS002",
+					"shortDescription": "Google api returns error. Check your zipcode - null",
+					"detailedDescription": "Google api returns error. Check your zipcode - null"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{  
+   "Scenarios":{  
+      "Scenario1-CXCORETECH-1490:Future_Effective_Dates_Changes":{  
+         "TC-1":"Given PersonId with effective contract date in the near future, WHEN requesting to view his contracts & THEN the contract should show flag activeInFuture as true and note that the active flag will show as false",
+         "TC-2":"Validation of Contract Details with active & activeInFuture flags"
+      },
+      "Scenario2-CXCORETECH-1518:Future Effective Date issue":{  
+         "TC-1":"Given PersonId with effective contract date in the near future, WHEN requesting to view his contracts & THEN the contract should show flag activeInFuture as true and that the active flag will show as false",
+         "TC-2":"Validation of Contract Details with active & activeInFuture flags"
+      }
+   }
+}

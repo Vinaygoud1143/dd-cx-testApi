@@ -1,0 +1,163 @@
+{
+   "Scenarios":{
+      "Scenario1-Invalid_Contract_ID":{
+         "request":{
+            "contractId":"10048719589",
+            "params":{
+               "group-id":"03005",
+               "division-id":"00002"
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER006",
+               "shortDescription":"Unable to retrieve enrollee details for the given contract id:10048719589",
+               "detailedDescription":"Unable to retrieve enrollee details for the given contract id:10048719589"
+            }
+         }
+      },
+      "Scenario2-Invalid_Group_ID":{
+         "request":{
+            "contractId":"1004871950",
+            "params":{
+               "group-id":"0300512",
+               "division-id":"00002"
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER006",
+               "shortDescription":"Unable to retrieve enrollee details for the given contract id:1004871950",
+               "detailedDescription":"Unable to retrieve enrollee details for the given contract id:1004871950"
+            }
+         }
+      },
+      "Scenario3-Invalid_Division_ID":{
+         "request":{
+            "contractId":"1004871950",
+            "params":{
+               "group-id":"03005",
+               "division-id":"00002123"
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER006",
+               "shortDescription":"Unable to retrieve enrollee details for the given contract id:1004871950",
+               "detailedDescription":"Unable to retrieve enrollee details for the given contract id:1004871950"
+            }
+         }
+      },
+      "Scenario4-Empty_Division_ID":{
+         "request":{
+            "contractId":"1004871950",
+            "params":{
+               "group-id":"03005",
+               "division-id":""
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER006",
+               "shortDescription":"Unable to retrieve enrollee details for the given contract id:1004871950",
+               "detailedDescription":"Unable to retrieve enrollee details for the given contract id:1004871950"
+            }
+         }
+      },
+      "Scenario5-Empty_Group_ID":{
+         "request":{
+            "contractId":"1004871950",
+            "params":{
+               "group-id":"",
+               "division-id":"00002"
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER006",
+               "shortDescription":"Unable to retrieve enrollee details for the given contract id:1004871950",
+               "detailedDescription":"Unable to retrieve enrollee details for the given contract id:1004871950"
+            }
+         }
+      },
+      "Scenario6-Empty_Contract_ID":{
+         "request":{
+            "params":{
+               "group-id":"03005",
+               "division-id":"00002"
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":404
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER006",
+               "shortDescription":"Unable to retrieve enrollee details for the given contract id:undefined",
+               "detailedDescription":"Unable to retrieve enrollee details for the given contract id:undefined"
+            }
+         }
+      },
+      "Scenario7-Invalid_ClientKey":{
+         "request":{
+            "contractId":"1004871950",
+            "params":{
+               "group-id":"03005",
+               "division-id":"00002123"
+            }
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":"1234567"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "error":"Unauthorized",
+               "message":"Security violation. Invalid Client Key"
+            }
+         }
+      }
+   }
+}

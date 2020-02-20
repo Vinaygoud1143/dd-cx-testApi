@@ -1,0 +1,47 @@
+{
+    "Set1": {
+        "Scenario 1": {
+            "testCaseDes": "GIVEN a profile with Primary Member. When the Primary member is requesting to view his or her claim records, verify if all the valid claims are returned by the API: "
+        },
+        "Scenario 2": {
+            "testCaseDes": "GIVEN an Adult Member, WHEN requesting to view his or her claim records, verify if all the valid claims are returned by the API: "
+        },
+        "Scenario 3": {
+            "testCaseDes": "GIVEN Child Member, WHEN requesting to view his or her claim records, verify if all the valid claims are returned by the API: "
+        },
+        "Scenario 4": {
+            "testCaseDes": "Omnibus Rule - GIVEN a Primary Member, WHEN requesting to view his or her Child's claim records, verify if all the valid claims are returned by the API: "
+        },
+        "Scenario 5": {
+            "testCaseDes": "Omnibus Rule - Given Primary member AND an Adult Dependent, who has granted permission. WHEN Primary member requests to view other Adult member's claim records, verify if all the valid claims belonging to Adult Dependent are returned by the API: "
+        },
+        "Scenario 6": {
+            "testCaseDes": "Omnibus Rule - Given Primary member AND an Adult Dependent, who has granted permission.  WHEN Primary member requests to view other Adult member's claim records, verify if all the valid claims belonging to Adult Dependent are returned by the API: "
+        },
+        "Scenario 7": {
+            "testCaseDes": "Omnibus Rule - Given Primary member AND an Adult Dependent, who has granted permission.  WHEN Primary member requests to view other Adult member's claim records, verify if all the valid claims belonging to Adult Dependent are returned by the API: "
+        },
+        "Scenario 8": {
+            "testCaseDes": "PHI - GIVEN an ADULT member With PHI Flag disabled, WHEN requesting to his/her own claim records, THEN verify if all the valid claims are returned by the API: "
+        },
+        "Scenario 9": {
+            "testCaseDes": "PHI - GIVEN Primary Member With PHI Flag disabled, WHEN requesting to view his or her claim records, THEN verify if all the valid claims are returned by the API: "
+        },
+        "Scenario 10": {
+            "testCaseDes": "PHI - GIVEN a Dependent with PHI Flag enabled, WHEN requesting to view his/her claim records, verify if all the valid claims are returned by the API: ",
+            "bugNumber"  : "CXCORETECH-654"
+        },
+        "Scenario 11": {
+            "testCaseDes": "PHI - GIVEN Primary Member with PHI Flag disabled, WHEN requesting to view his/her claim records, verify if all the valid claims are returned by the API: ",
+            "bugNumber"  : "CXCORETECH-659"
+        },
+        "Scenario 12": {
+            "testCaseDes": "Bug, PHI - GIVEN a Profile with 1 Primary and 2 Dependents with 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view his/her claim records, THEN  verify if all the valid claims are returned by the API AND the PHI flag for 2nd Dependent does NOT block the Primary from viewing this information: ",
+            "bugNumber"  : "CXCORETECH-671"
+        },
+        "Scenario 13": {
+            "testCaseDes": "Bug, PHI - GIVEN a Profile with 1 Primary and 2 Dependents with the 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view 1st Dependent's claim records (PHI flag disabled),  verify if all the valid claims belonging to 1st Dependent are returned by the API AND the PHI flag for 2nd Dependent should NOT block Primary Member from viewing this information: ",
+            "bugNumber"  : "CXCORETECH-671"
+        }
+    }
+}

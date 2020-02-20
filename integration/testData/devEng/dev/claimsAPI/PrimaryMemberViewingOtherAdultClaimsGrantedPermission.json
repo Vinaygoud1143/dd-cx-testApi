@@ -1,0 +1,32 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Primary_Member_Viewing_Other_Adult_Claims_Granted_Permission(Omnibus rule)": 
+        {
+            "request": 
+            {
+                "enrollee-id": "100487195002"
+            },
+            "headers": 
+            {
+                "personId" : "0358980916542245",
+                "ClientKey": "12345"
+            },
+            "verify": 
+            {
+                "TC-1": 
+                {
+                    "statuscode": 200
+                },
+                "TC-2": 
+                {
+                      "claimId": [
+                   "20172196068993",
+                   "20172222405227",
+                   "20171716085033"
+                   ]
+                }
+            }
+        }
+    }
+}

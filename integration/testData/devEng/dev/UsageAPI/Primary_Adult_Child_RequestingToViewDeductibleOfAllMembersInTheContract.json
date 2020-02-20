@@ -1,0 +1,314 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Requesting_To_View_Deductibles_Utilization_Of_All_Members":
+        {
+            "request":
+            {
+                "contract-id": "1008746146"
+            },
+            "headers":
+            {
+                "personId": "0308120913240120",
+                "ClientKey": "12345"
+            },
+            "params":
+            {
+                "benefit-package-id": "P0091620"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "memberInfo":
+                    {
+                        "personId": "0308120913240120",
+
+                        "deductiblesInfo": [
+                        {
+                            "benefitDetails":
+                            {
+                                "benefitType": "MBCYDEDN",
+                                "accumPeriodStartDate": "01/01/2018",
+                                "accumPeriodEndDate": "12/31/2018",
+                                "benefitDescription": "MEMBER CALENDAR YEAR DEDUCTIBLE"
+                            },
+                            "networksAllowed": [
+                                "##PPO",
+                                "##NP",
+                                "##PMR"
+                            ],
+                            "servicesAllowed": [
+                                "Periodontics",
+                                "Restorative",
+                                "Oral & Maxillofacial Surgery",
+                                "Diagnostic",
+                                "Preventative",
+                                "TMJ",
+                                "Adjunctive General Services",
+                                "Maxillofacial Prosthetics",
+                                "Cosmetic Services",
+                                "Endodontics",
+                                "Implant Services",
+                                "Prosthodontics; Fixed",
+                                "Prosthodontics; Removable"
+                            ],
+                            "amounts":
+                            {
+                                "maxAllowedAmt": 50,
+                                "totalUsedAmt": 50,
+                                "remainingAmt": 0
+                            }
+                        },
+                        {
+                            "benefitDetails":
+                            {
+                                "benefitType": "FMCYDEDN",
+                                "accumPeriodStartDate": "01/01/2018",
+                                "accumPeriodEndDate": "12/31/2018",
+                                "benefitDescription": "FAMILY CALENDAR YEAR DEDUCTIBLE"
+                            },
+                            "networksAllowed": [
+                                "##PPO",
+                                "##NP",
+                                "##PMR"
+                            ],
+                            "servicesAllowed": [
+                                "Periodontics",
+                                "Restorative",
+                                "Oral & Maxillofacial Surgery",
+                                "Diagnostic",
+                                "Preventative",
+                                "TMJ",
+                                "Adjunctive General Services",
+                                "Maxillofacial Prosthetics",
+                                "Cosmetic Services",
+                                "Endodontics",
+                                "Implant Services",
+                                "Prosthodontics; Fixed",
+                                "Prosthodontics; Removable"
+                            ],
+                            "amounts":
+                            {
+                                "maxAllowedAmt": 150,
+                                "totalUsedAmt": 50,
+                                "remainingAmt": 100
+                            }
+                        }]
+
+                    }
+                }
+            }
+        },
+        "Scenario2-Adult_Member_Requesting_To_View_Deductibles_Utilization_Of_All_Members":
+        {
+            "request":
+            {
+                "contract-id": "1008746146"
+            },
+            "headers":
+            {
+                "personId": "0171720913240156",
+                "ClientKey": "12345"
+            },
+            "params":
+            {
+                "benefit-package-id": "P0091620"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "memberInfo":
+                    {
+                        "personId": "0171720913240156",
+
+                        "deductiblesInfo": [
+                        {
+                            "benefitDetails":
+                            {
+                                "benefitType": "MBCYDEDN",
+                                "accumPeriodStartDate": "01/01/2018",
+                                "accumPeriodEndDate": "12/31/2018",
+                                "benefitDescription": "MEMBER CALENDAR YEAR DEDUCTIBLE"
+                            },
+                            "networksAllowed": [
+                                "##PPO",
+                                "##NP",
+                                "##PMR"
+                            ],
+                            "servicesAllowed": [
+                                "Periodontics",
+                                "Restorative",
+                                "Oral & Maxillofacial Surgery",
+                                "Diagnostic",
+                                "Preventative",
+                                "TMJ",
+                                "Adjunctive General Services",
+                                "Maxillofacial Prosthetics",
+                                "Cosmetic Services",
+                                "Endodontics",
+                                "Implant Services",
+                                "Prosthodontics; Fixed",
+                                "Prosthodontics; Removable"
+                            ],
+                            "amounts":
+                            {
+                                "maxAllowedAmt": 50,
+                                "totalUsedAmt": 0,
+                                "remainingAmt": 50
+                            }
+                        },
+                        {
+                            "benefitDetails":
+                            {
+                                "benefitType": "FMCYDEDN",
+                                "accumPeriodStartDate": "01/01/2018",
+                                "accumPeriodEndDate": "12/31/2018",
+                                "benefitDescription": "FAMILY CALENDAR YEAR DEDUCTIBLE"
+                            },
+                            "networksAllowed": [
+                                "##PPO",
+                                "##NP",
+                                "##PMR"
+                            ],
+                            "servicesAllowed": [
+                                "Periodontics",
+                                "Restorative",
+                                "Oral & Maxillofacial Surgery",
+                                "Diagnostic",
+                                "Preventative",
+                                "TMJ",
+                                "Adjunctive General Services",
+                                "Maxillofacial Prosthetics",
+                                "Cosmetic Services",
+                                "Endodontics",
+                                "Implant Services",
+                                "Prosthodontics; Fixed",
+                                "Prosthodontics; Removable"
+                            ],
+                            "amounts":
+                            {
+                                "maxAllowedAmt": 150,
+                                "totalUsedAmt": 50,
+                                "remainingAmt": 100
+                            }
+                        }]
+
+                    }
+                }
+            }
+        },
+        "Scenario3-Child_Member_Requesting_To_View_Deductibles_Utilization_Of_All_Members":
+        {
+            "request":
+            {
+                "contract-id": "1008746146"
+            },
+            "headers":
+            {
+                "personId": "0886920913240178",
+                "ClientKey": "12345"
+            },
+            "params":
+            {
+                "benefit-package-id": "P0091620"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "memberInfo":
+                    {
+                        "personId": "0886920913240178",
+
+                        "deductiblesInfo": [
+                        {
+                            "benefitDetails":
+                            {
+                                "benefitType": "MBCYDEDN",
+                                "accumPeriodStartDate": "01/01/2018",
+                                "accumPeriodEndDate": "12/31/2018",
+                                "benefitDescription": "MEMBER CALENDAR YEAR DEDUCTIBLE"
+                            },
+                            "networksAllowed": [
+                                "##PPO",
+                                "##NP",
+                                "##PMR"
+                            ],
+                            "servicesAllowed": [
+                                "Periodontics",
+                                "Restorative",
+                                "Oral & Maxillofacial Surgery",
+                                "Diagnostic",
+                                "Preventative",
+                                "TMJ",
+                                "Adjunctive General Services",
+                                "Maxillofacial Prosthetics",
+                                "Cosmetic Services",
+                                "Endodontics",
+                                "Implant Services",
+                                "Prosthodontics; Fixed",
+                                "Prosthodontics; Removable"
+                            ],
+                            "amounts":
+                            {
+                                "maxAllowedAmt": 50,
+                                "totalUsedAmt": 0,
+                                "remainingAmt": 50
+                            }
+                        },
+                        {
+                            "benefitDetails":
+                            {
+                                "benefitType": "FMCYDEDN",
+                                "accumPeriodStartDate": "01/01/2018",
+                                "accumPeriodEndDate": "12/31/2018",
+                                "benefitDescription": "FAMILY CALENDAR YEAR DEDUCTIBLE"
+                            },
+                            "networksAllowed": [
+                                "##PPO",
+                                "##NP",
+                                "##PMR"
+                            ],
+                            "servicesAllowed": [
+                                "Periodontics",
+                                "Restorative",
+                                "Oral & Maxillofacial Surgery",
+                                "Diagnostic",
+                                "Preventative",
+                                "TMJ",
+                                "Adjunctive General Services",
+                                "Maxillofacial Prosthetics",
+                                "Cosmetic Services",
+                                "Endodontics",
+                                "Implant Services",
+                                "Prosthodontics; Fixed",
+                                "Prosthodontics; Removable"
+                            ],
+                            "amounts":
+                            {
+                                "maxAllowedAmt": 150,
+                                "totalUsedAmt": 50,
+                                "remainingAmt": 100
+                            }
+                        }]
+
+                    }
+                }
+            }
+        }
+    }
+}

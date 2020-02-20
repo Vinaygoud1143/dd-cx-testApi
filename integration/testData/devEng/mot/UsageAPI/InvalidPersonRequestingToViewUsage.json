@@ -1,0 +1,28 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Person_Requesting_To_View_Usages":
+        {
+          
+         "request":{  
+            "contract-id":"1004571940"
+         },
+         "headers":{  
+            "personId":"1002580916542260",
+            "ClientKey":"9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+         },
+         "verify":{  
+            
+            "TC-1":{  
+               "statuscode":500
+            },
+                "TC-2":
+                {
+                    "errorCode": "USAGE008",
+				    "shortDescription": "Business Rules error.",
+				    "detailedDescription": "Rules error - Unable to retrieve business rules for the given contract:1004571940, error:404 "
+                }
+            }
+        }
+    }
+}

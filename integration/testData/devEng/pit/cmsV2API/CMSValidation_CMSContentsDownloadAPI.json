@@ -1,0 +1,62 @@
+{
+    "Scenariospositive":
+    {
+        "Scenario1-Download_The_CMS_Details_By_Providing_Valid_ApplicationNameContentTypeTenantNameAndCriteria":
+        {
+            "request":
+            {
+                "criteria": ["issuer=COSTCO", "state=TX"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "dental",
+                "CONTENT_TYPE": "procedure",
+                "TENANT_NAME": "dentegra"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                }
+
+            }
+        }
+    },
+    "Scenariosnegative":
+    {
+         "Scenario1-Download_The_CMS_Details_By_Providing_Valid_emptyApplicationNameContentTypeTenantNameAndCriteria":
+        {
+            "request":
+            {
+                "criteria": ["issuer=COSTCO", "state=TX"]
+            },
+            "headers":
+            {
+                "APPLICATION_NAME": "",
+                "CONTENT_TYPE": "procedure",
+                "TENANT_NAME": "dentegra"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+            "TC-2":{ 
+          
+               "errorCode":"CMS012",
+               "shortDescription":null
+               
+            }
+
+            }
+        }
+
+    }
+
+}

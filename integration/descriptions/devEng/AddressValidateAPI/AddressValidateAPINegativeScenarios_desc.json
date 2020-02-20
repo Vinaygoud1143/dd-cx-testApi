@@ -1,0 +1,35 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Invalid_AddressLine(Empty Apartment Number)": 
+        {
+            "TC-1": "GIVEN Empty Apartment number",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario2-Empty_Zipcode": 
+        {
+            "TC-1": "GIVEN Empty Zipcode number",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario3-Empty_AddressLine": 
+        {
+            "TC-1": "GIVEN Empty AddressLine",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario4-Empty_City": 
+        {
+            "TC-1": "GIVEN Empty City name",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario5-Empty_State": 
+        {
+            "TC-1": "GIVEN Empty State name",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario6-Invalid_AddressLine": 
+        {
+            "TC-1": "Given Invalid AddressLine",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }
+    }  
+}

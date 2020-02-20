@@ -1,0 +1,23 @@
+{
+   "Scenarios":{
+      "Scenario1-Primary_Adult_Member_Viewing_Child_Claims":{
+         "request":{
+            "enrollee-id":"116379857503"
+         },
+         "headers":{
+            "personId":"0709841316550733",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+                   "claimId": [                  
+                    "20172566038192"
+                            ]
+                }
+         }
+      }
+   }
+}

@@ -1,0 +1,23 @@
+{
+   "Scenarios":{
+      "Scenario1-Group_Member_Viewing_His_Own_Contracts":{
+         "request":{
+            "personId":"0358980916542245"
+         },
+         "headers":{
+            "personId":"0358980916542245",
+            "ClientKey":"27feb576-ba4b-4379-a3c1-a53f21d34514"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "groupTypeId":[
+                  "GROUP"
+               ]
+            }
+         }
+      }
+   }
+}

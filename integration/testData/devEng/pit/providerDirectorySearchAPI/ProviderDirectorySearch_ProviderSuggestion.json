@@ -1,0 +1,500 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Suggestion_Details_For_Given_FullName":
+        {
+            "request":
+            {
+                "text": "rasmi"
+            },
+            "params":
+            {
+                "text": "rasmi",
+                "lat": 38.6616801,
+                "long": -90.6188333
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providers": [
+                    {
+                         "term": "RASMI PATURU",
+					      "weight": 0,
+					      "providerKey": "GRP679481778679481778002PRV17602157200",
+					      "firstName": "RASMI",
+					      "middleName": null,
+					      "lastName": "PATURU",
+					      "specialty": "General Dentist",
+					      "address": {
+					        "addressLine": "132 CHESTERFIELD TOWNE CENTRE",
+					        "city": "CHESTERFIELD",
+					        "state": "MO",
+					        "zipcode": "63005",
+					        "latitude": 38.6616801,
+					        "longitude": -90.6188333
+                        }
+                    },
+                    {
+                          "term": "RASMI PATURU",
+					      "weight": 0,
+					      "providerKey": "GRP324700018324700018010PRV17602157200",
+					      "firstName": "RASMI",
+					      "middleName": null,
+					      "lastName": "PATURU",
+					      "specialty": "General Dentist",
+					      "address": {
+					        "addressLine": "627 SOUTH TRUMAN BLVD",
+					        "city": "FESTUS",
+					        "state": "MO",
+					        "zipcode": "63028",
+					        "latitude": 38.2139736,
+					        "longitude": -90.3897773
+                        }
+                    },
+                    {
+                          "term": "RASMI PATURU",
+					      "weight": 0,
+					      "providerKey": "GRP324700018324700018014PRV17602157200",
+					      "firstName": "RASMI",
+					      "middleName": null,
+					      "lastName": "PATURU",
+					      "specialty": "General Dentist",
+					      "address": {
+					        "addressLine": "4016 LEMAY FERRY RD",
+					        "city": "SAINT LOUIS",
+					        "state": "MO",
+					        "zipcode": "63129",
+					        "latitude": 38.5051269,
+					        "longitude": -90.326101
+                        }
+                    },
+                    {
+                          "term": "RASMI PATURU",
+					      "weight": 0,
+					      "providerKey": "GRP324700018324700018011PRV17602157200",
+					      "firstName": "RASMI",
+					      "middleName": null,
+					      "lastName": "PATURU",
+					      "specialty": "General Dentist",
+					      "address": {
+					        "addressLine": "5212 NORTH SERVICE RD",
+					        "city": "SAINT PETERS",
+					        "state": "MO",
+					        "zipcode": "63376",
+					        "latitude": 38.8002435,
+					        "longitude": -90.613057
+                        }
+                    },
+                    {
+                          "term": "RASMI PATURU",
+					      "weight": 0,
+					      "providerKey": "GRP324700018324700018013PRV17602157200",
+					      "firstName": "RASMI",
+					      "middleName": null,
+					      "lastName": "PATURU",
+					      "specialty": "General Dentist",
+					      "address": {
+					        "addressLine": "1200 BIG BILL RD",
+					        "city": "ARNOLD",
+					        "state": "MO",
+					        "zipcode": "63010",
+					        "latitude": 38.4429519,
+					        "longitude": -90.3772184
+                        }
+                    }]
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Suggestion_Details_For_Given_FacilityName":
+        {
+            "request":
+            {
+                "text": "Western"
+            },
+            "params":
+            {
+                "text": "Western"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "practiceLocations": [
+                  {
+			      "term": "<b>Western</b> Dental Services Inc",
+			      "weight": 0,
+			      "practiceLocationNumber": "240001239015",
+			      "address": {
+			        "addressLine": "1565 S Western Ave",
+			        "city": "Los Angeles",
+			        "state": "CA",
+			        "zipcode": "90006-4233",
+			        "latitude": 34.0439873,
+			        "longitude": -118.309021
+			      },
+			      "officeName": "Western Dental Services Inc"
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Services Inc.",
+			      "weight": 0,
+			      "practiceLocationNumber": "240001239205",
+			      "address": {
+			        "addressLine": "1200 Saviers Rd",
+			        "city": "Oxnard",
+			        "state": "CA",
+			        "zipcode": "93033-1732",
+			        "latitude": 34.1883159,
+			        "longitude": -119.1770584
+			      },
+			      "officeName": "Western Dental Services Inc."
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Services Inc",
+			      "weight": 0,
+			      "practiceLocationNumber": "240001239131",
+			      "address": {
+			        "addressLine": "11299 San Pablo Ave Ste A",
+			        "city": "El Cerrito",
+			        "state": "CA",
+			        "zipcode": "94530-2166",
+			        "latitude": 37.9200172,
+			        "longitude": -122.3156052
+			      },
+			      "officeName": "Western Dental Services Inc"
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Services Inc",
+			      "weight": 0,
+			      "practiceLocationNumber": "240001239161",
+			      "address": {
+			        "addressLine": "5680 Calle Real, ",
+			        "city": "Goleta",
+			        "state": "CA",
+			        "zipcode": "93117-2317",
+			        "latitude": 34.4411697,
+			        "longitude": -119.8221436
+			      },
+			      "officeName": "Western Dental Services Inc"
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Services Inc",
+			      "weight": 0,
+			      "practiceLocationNumber": "240001239040",
+			      "address": {
+			        "addressLine": "9906 Imperial Hwy",
+			        "city": "Downey",
+			        "state": "CA",
+			        "zipcode": "90242-3207",
+			        "latitude": 33.9169273,
+			        "longitude": -118.1163254
+			      },
+			      "officeName": "Western Dental Services Inc"
+			    }
+			  ],
+			  "facilities": [
+			    {
+			      "term": "<b>Western</b> Dental Services",
+			      "weight": 0,
+			      "facilityId": "039636",
+			      "facilityName": "Western Dental Services",
+			      "address": {
+			        "addressLine": "1565 S Western Ave",
+			        "city": "Los Angeles",
+			        "state": "CA",
+			        "zipcode": "90006-4233",
+			        "latitude": 34.0439873,
+			        "longitude": -118.309021
+			      }
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Services",
+			      "weight": 0,
+			      "facilityId": "036291",
+			      "facilityName": "Western Dental Services",
+			      "address": {
+			        "addressLine": "11299 San Pablo Ave Ste A",
+			        "city": "El Cerrito",
+			        "state": "CA",
+			        "zipcode": "94530-2166",
+			        "latitude": 37.9200172,
+			        "longitude": -122.3156052
+			      }
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Center Inc",
+			      "weight": 0,
+			      "facilityId": "057107",
+			      "facilityName": "Western Dental Center",
+			      "address": {
+			        "addressLine": "5680 Calle Real, ",
+			        "city": "Goleta",
+			        "state": "CA",
+			        "zipcode": "93117-2317",
+			        "latitude": 34.4411697,
+			        "longitude": -119.8221436
+			      }
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Services Inc",
+			      "weight": 0,
+			      "facilityId": "057107",
+			      "facilityName": "Western Dental Center",
+			      "address": {
+			        "addressLine": "5680 Calle Real, ",
+			        "city": "Goleta",
+			        "state": "CA",
+			        "zipcode": "93117-2317",
+			        "latitude": 34.4411697,
+			        "longitude": -119.8221436
+			      }
+			    },
+			    {
+			      "term": "<b>Western</b> Dental Center Inc",
+			      "weight": 0,
+			      "facilityId": "057107",
+			      "facilityName": "Western Dental Center",
+			      "address": {
+			        "addressLine": "5680 Calle Real, ",
+			        "city": "Goleta",
+			        "state": "CA",
+			        "zipcode": "93117-2317",
+			        "latitude": 34.4411697,
+			        "longitude": -119.8221436
+			      }
+                    }]
+                }
+            }
+        },
+        "Scenario3-Retrieve_The_Suggestion_Details_For_Given_OfficeName":
+        {
+            "request":
+            {
+                "text": "Western Dental Services Inc"
+            },
+            "params":
+            {
+                "text": "Western Dental Services Inc"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "practiceLocations": [
+			 {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "practiceLocationNumber": "240001239103",
+				      "address": {
+				        "addressLine": "320 S Cherokee Ln",
+				        "city": "Lodi",
+				        "state": "CA",
+				        "zipcode": "95240-4266",
+				        "latitude": 38.1304817,
+				        "longitude": -121.2602768
+				      },
+				      "officeName": "Western Dental Services Inc"
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "practiceLocationNumber": "240001239147",
+				      "address": {
+				        "addressLine": "1350 Churn Creek Rd Ste F1, ",
+				        "city": "Redding",
+				        "state": "CA",
+				        "zipcode": "96003-4168",
+				        "latitude": 40.5871124,
+				        "longitude": -122.351387
+				      },
+				      "officeName": "Western Dental Services Inc"
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "practiceLocationNumber": "240001239196",
+				      "address": {
+				        "addressLine": "1400 W Olive Ave Ste 201",
+				        "city": "Burbank",
+				        "state": "CA",
+				        "zipcode": "91506-2416",
+				        "latitude": 34.1695953,
+				        "longitude": -118.3201792
+				      },
+				      "officeName": "Western Dental Services Inc"
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "practiceLocationNumber": "240001239020",
+				      "address": {
+				        "addressLine": "9755 Alondra Blvd",
+				        "city": "Bellflower",
+				        "state": "CA",
+				        "zipcode": "90706-3677",
+				        "latitude": 33.8894958,
+				        "longitude": -118.1256256
+				      },
+				      "officeName": "Western Dental Services Inc"
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "practiceLocationNumber": "240001239136",
+				      "address": {
+				        "addressLine": "921 S Main St # A, ",
+				        "city": "Salinas",
+				        "state": "CA",
+				        "zipcode": "93901-2435",
+				        "latitude": 36.663044,
+				        "longitude": -121.656662
+				      },
+				      "officeName": "Western Dental Services Inc"
+				    }
+				  ],
+				  "facilities": [
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "facilityId": "046702",
+				      "facilityName": "Western Dental Services Inc",
+				      "address": {
+				        "addressLine": "9755 Alondra Blvd",
+				        "city": "Bellflower",
+				        "state": "CA",
+				        "zipcode": "90706-3677",
+				        "latitude": 33.8894958,
+				        "longitude": -118.1256256
+				      }
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "facilityId": "046702",
+				      "facilityName": "Western Dental Services Inc",
+				      "address": {
+				        "addressLine": "9755 Alondra Blvd",
+				        "city": "Bellflower",
+				        "state": "CA",
+				        "zipcode": "90706-3677",
+				        "latitude": 33.8894958,
+				        "longitude": -118.1256256
+				      }
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "facilityId": "046655",
+				      "facilityName": "Western Dental Services Inc",
+				      "address": {
+				        "addressLine": "3055 Mowry Ave",
+				        "city": "Fremont",
+				        "state": "CA",
+				        "zipcode": "94538-1613",
+				        "latitude": 37.5562325,
+				        "longitude": -121.9822693
+				      }
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "facilityId": "057833",
+				      "facilityName": "Western Dental Services Inc",
+				      "address": {
+				        "addressLine": "10321 Folsom Blvd Ste A",
+				        "city": "Rancho Cordova",
+				        "state": "CA",
+				        "zipcode": "95670-3518",
+				        "latitude": 38.5873299,
+				        "longitude": -121.3071213
+				      }
+				    },
+				    {
+				      "term": "<b>Western Dental Services Inc</b>",
+				      "weight": 0,
+				      "facilityId": "057833",
+				      "facilityName": "Western Dental Services Inc",
+				      "address": {
+				        "addressLine": "10321 Folsom Blvd Ste A",
+				        "city": "Rancho Cordova",
+				        "state": "CA",
+				        "zipcode": "95670-3518",
+				        "latitude": 38.5873299,
+				        "longitude": -121.3071213
+				      }
+                    }]
+                }
+            }
+        },
+        "Scenario4-Retrieve_The_Suggestion_Details_For_Given_Specialty":
+        {
+            "request":
+            {
+                "text": "Orthodontist"
+            },
+            "params":
+            {
+                "text": "Orthodontist"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "specialties": [
+                    {
+				      "term": "<b>Orthodontist</b>",
+				      "weight": 0,
+				      "specialty": "Orthodontist"
+				    }
+				  ],
+				  "practiceLocations": [
+				    {
+				      "term": "<b>Orthodontist</b>s Of Maryland PA",
+				      "weight": 0,
+				      "practiceLocationNumber": "240612417001",
+				      "address": {
+				        "addressLine": "7935 Crain Hwy S, ",
+				        "city": "Glen Burnie",
+				        "state": "MD",
+				        "zipcode": "21061-4934",
+				        "latitude": 39.1326599,
+				        "longitude": -76.6315079
+				      },
+				      "officeName": "Orthodontists Of Maryland PA"
+				    },
+				    {
+				      "term": "<b>Orthodontist</b>s Of Maryland PA",
+				      "weight": 0,
+				      "practiceLocationNumber": "240612417002",
+				      "address": {
+				        "addressLine": "409 Main St",
+				        "city": "Reisterstown",
+				        "state": "MD",
+				        "zipcode": "21136-1905",
+				        "latitude": 39.459465,
+				        "longitude": -76.8268814
+				      },
+				      "officeName": "Orthodontists Of Maryland PA"
+    
+                    }]
+                }
+            }
+        }
+    }
+}

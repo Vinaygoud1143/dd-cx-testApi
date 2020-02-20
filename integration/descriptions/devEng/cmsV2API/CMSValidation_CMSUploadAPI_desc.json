@@ -1,0 +1,8 @@
+{
+   "Scenarios":{
+      "Scenario1-Upload_The_CMS_Details_By_Providing_Valid_Excel_File":{
+         "TC-1":"GIVEN Valid applicationName,contentType,tenantName And Excel Data File,WHEN requesting to upload the data Then should respond the true without any error.",
+         "TC-2": "Validation of CMS Upload Details true in the response"         
+      }
+   }
+}

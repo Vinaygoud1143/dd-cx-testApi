@@ -1,0 +1,141 @@
+{
+    "positive_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "invoiceNumber": "BE002756565"
+            },
+            "response":
+            {
+                "status": 200,
+                "customerType": "GROUPDDIC",
+                "invoiceNumber": "BE002756565",
+                "invoiceGenerationDate":"04/01/2018",
+                "internalReferenceId":"BE002756565-2018-04-04-19:14:45",
+                "invoiceCreationDate":null,
+                "invoiceSubType":null,
+                "invoiceType":null,
+                "lastReleaseDate":null,
+                "lastUpdatedDate":null,
+                "perMemberPerMonthBilling":"Regular",
+                "publisherName":"DDIC",
+                "purchaseOrderNumber":"",
+                "statementTypeIdentifier":"DDIC-Premium",
+                "underWritingState":"19",
+                
+                "billingAddress":
+                    {
+                        "addressLine1":"BEN STILLER",
+                        "addressLine2":" ",
+                        "addressLine3":"P.O. BOX 18771",
+                        "city":null,
+                        "state":null,
+                        "zipCode":null
+                    },
+                "billingAnalystCode":"A6",
+                "billToDivisionNumber":"00000",
+                "billToGroupNumber":"R120033",
+                "coverageEndDate":"04/30/2018",
+                "coverageStartDate":"04/01/2018",
+                "dualChoice":false,
+                "financialCompanyName":"DDIC"
+
+            }
+        }
+    },
+    "negative_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "invoiceNumber": ""
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "invoiceNumber": "123"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "INVOICE_003",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Invoice data not found by given details 123."
+
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "invoiceNumber": "!@#$"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "INVOICE_003",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Invoice data not found by given details !@."
+
+            }
+        },
+        "scenario4":
+        {
+            "request":
+            {
+                "invoiceNumber": "<script>alert('XSS')</script>"
+            },
+            "response":
+            {
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available"
+
+            }
+        },
+        "scenario5":
+        {
+            "request":
+            {
+                "invoiceNumber": "test"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "INVOICE_003",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Invoice data not found by given details test."
+
+            }
+        },
+        "scenario6":
+        {
+            "request":
+            {
+                "invoiceNumber": " "
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "INVOICE_003",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Invoice data not found by given details  ."
+
+
+            }
+        }
+
+    }
+}

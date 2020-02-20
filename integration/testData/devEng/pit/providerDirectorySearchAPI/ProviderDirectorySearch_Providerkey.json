@@ -1,0 +1,139 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Provider_Details_By_Passing_The_ProviderKey":
+        {
+            "request":
+            {
+                "providerKey": "GRP240001239240001239086PRV22407502200"
+            },
+            "params":
+            {
+                "lat": 37.7931023,
+                "long": -122.3924255
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providerKey": "GRP240001239240001239086PRV22407502200",
+                    "fullName": "Tavinder Bassi",
+                    "specialty": "General Dentist",
+                    "officeName": "Western Dental Services Inc",
+                    "practiceLocationNumber": null,
+                    "npi": "1427202308",
+					  "license": {
+					    "licenseNumber": "57864",
+					    "licenseState": "CA"
+                    }
+                },
+                "TC-3":
+                {
+                    "yelp":
+                    {
+                        "yelpId": "7c532M44rrFGnu4q928d1w",
+					    "yelpUrl": "https://www.yelp.com/biz/western-dental-and-orthodontics-santa-clarita-2?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+					    "yelpReviewCount": 57,
+					    "yelpRating": 2,
+					    "yelpDeltaDentalId": null
+                    },
+                    "pandRDental":
+                    {
+                          "profilingRating": 0,
+					      "clinicalCompetencyRating": 0,
+					      "adherenceToTreatmentProtocolsRating": 0,
+					      "customerSatisfactionRating": 0,
+					      "costAndUtilizationRating": 0,
+					      "overallRating": 0,
+					      "overallGrade": null,
+					      "overallAbuseGrade": null,
+					      "reliabilityScore": null,
+					      "pandrProviderQualityUrl": null
+                    }
+                },
+                "TC-4":
+                {
+                    "providerNetworks": [
+                    {
+                          "networkId": "2DELTACARE",
+					      "networkName": "DeltaCare USA",
+					      "acceptsNewPatients": "Y",
+					      "suppressed": false
+                    }]
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Provider_Details_By_Passing_The_ProviderKey_And_CustomProviderNetworks_In_Source_TargetNetwork":
+        {
+            "request":
+            {
+                "providerKey": "GRP240001239240001239086PRV22407502200"
+            },
+            "params":
+            {
+                "lat": 37.7931023,
+                "long": -122.3924255,
+                "sourceNetwork": "2CPPHFP",
+                "targetNetwork": "2CPPHFP"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "providerKey": "GRP240001239240001239086PRV22407502200",
+                    "fullName": "Tavinder Bassi",
+                    "specialty": "General Dentist",
+                    "officeName": "Western Dental Services Inc",
+                    "practiceLocationNumber": "240001239086",
+                    "npi": "1427202308",
+					"license": {
+					    "licenseNumber": "57864",
+					    "licenseState": "CA"
+                    }
+                },
+                "TC-3":
+                {
+                    "yelp":
+                    {
+                          "yelpId": "7c532M44rrFGnu4q928d1w",
+					      "yelpUrl": "https://www.yelp.com/biz/western-dental-and-orthodontics-santa-clarita-2?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+					      "yelpReviewCount": 57,
+					      "yelpRating": 2,
+					      "yelpDeltaDentalId": null
+                    },
+                    "pandRDental":
+                    {
+                          "profilingRating": 0,
+					      "clinicalCompetencyRating": 0,
+					      "adherenceToTreatmentProtocolsRating": 0,
+					      "customerSatisfactionRating": 0,
+					      "costAndUtilizationRating": 0,
+					      "overallRating": 0,
+					      "overallGrade": null,
+					      "overallAbuseGrade": null,
+					      "reliabilityScore": null,
+					      "pandrProviderQualityUrl": null
+                    }
+                },
+                "TC-4":
+                {
+                    "providerNetworks": [
+                    {
+                              "networkId": "2DELTACARE",
+						      "networkName": "DeltaCare USA",
+						      "acceptsNewPatients": "Y",
+						      "suppressed": false
+                    }]
+                }
+            }
+        }
+    }
+}

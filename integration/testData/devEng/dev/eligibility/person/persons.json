@@ -1,0 +1,218 @@
+{
+    "positive_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates"
+                },
+                "dateOfBirth": "10/28/1955"
+
+            },
+            "response":
+            {
+                "status": 200,
+                "personId": "6543210987654321",
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates",
+                    "suffix": "III"
+                },
+                "dateOfBirth": "10/28/1955",
+                "ssn": 123456789
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "ssn": 123456789
+            },
+            "response":
+            {
+                "status": 200,
+                "personId": "6543210987654321",
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates",
+                    "suffix": "III"
+                },
+                "dateOfBirth": "10/28/1955",
+                "ssn": 123456789
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "ssn": 123456789
+            },
+            "response":
+            {
+                "status": 200,
+                "personId": "6543210987654321",
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates"
+                },
+                "dateOfBirth": "10/28/1955",
+                "ssn": 123456789
+            }
+        }
+    },
+    "negative_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "PERSON_002",
+                "shortDescription": "Empty/Invalid SSN OR Invalid FirstName | LastName | DOB In Request",
+                "detailedDescription": "Problem occurred while invoke Person Service with input request"
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "",
+                    "middleName": "Henry",
+                    "lastName": "Gates"
+                },
+                "dateOfBirth": "10/28/1955"
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "PERSON_002",
+                "shortDescription": "Empty/Invalid SSN OR Invalid FirstName | LastName | DOB In Request",
+                "detailedDescription": "Problem occurred while invoke Person Service with input request"
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "",
+                    "lastName": ""
+                },
+                "dateOfBirth": "10/28/1955"
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "PERSON_002",
+                "shortDescription": "Empty/Invalid SSN OR Invalid FirstName | LastName | DOB In Request",
+                "detailedDescription": "Problem occurred while invoke Person Service with input request"
+            }
+        },
+        "scenario4":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "",
+                    "lastName": "Gates"
+                },
+                "dateOfBirth": ""
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "PERSON_002",
+                "shortDescription": "Empty/Invalid SSN OR Invalid FirstName | LastName | DOB In Request",
+                "detailedDescription": "Problem occurred while invoke Person Service with input request"
+            }
+        },
+        "scenario5":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "",
+                    "middleName": "",
+                    "lastName": ""
+                },
+                "dateOfBirth": "10/28/1955"
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "PERSON_002",
+                "shortDescription": "Empty/Invalid SSN OR Invalid FirstName | LastName | DOB In Request",
+                "detailedDescription": "Problem occurred while invoke Person Service with input request"
+            }
+        },
+        "scenario6":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "",
+                    "middleName": "",
+                    "lastName": ""
+                },
+                "dateOfBirth": ""
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "PERSON_002",
+                "shortDescription": "Empty/Invalid SSN OR Invalid FirstName | LastName | DOB In Request",
+                "detailedDescription": "Problem occurred while invoke Person Service with input request"
+            }
+        },
+        "scenario7":
+        {
+            "request":
+            {
+                "name":
+                {
+                    "firstName": "William",
+                    "middleName": "Henry",
+                    "lastName": "Gates"
+                },
+                "dateOfBirth": "10/28/1956"
+            },
+            "response":
+            {
+                "status": 404,
+                "errorCode": "PERSON_006",
+                "shortDescription": "Data not found.",
+                "detailedDescription": "Person data not found by given details Person"
+            }
+        }
+
+    }
+}

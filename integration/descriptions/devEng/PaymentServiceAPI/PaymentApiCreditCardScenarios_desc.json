@@ -1,0 +1,24 @@
+{
+   "Scenarios":{
+      "Scenario1-D2C_CreditCard_Payment":{
+         "TC-1":"GIVEN Valid Credit-Card Details,WHEN requesting to make Payment THEN should get Successfully Processed Payment.",
+         "TC-2":"Validation of EnrolleeId & RequestReferenceId Status in the response."
+      },
+      "Scenario2-D2C_CreditCard_Payment_With_Visa_Type":{
+         "TC-1":"GIVEN Valid Visa Type Credit-Card Details,WHEN requesting to make Payment THEN should get Successfully Processed Payment.",
+         "TC-2":"Validation of EnrolleeId & RequestReferenceId Status in the response."
+      },
+      "Scenario3-D2C_CreditCard_Payment_With_MasterCard_Type":{
+         "TC-1":"GIVEN Valid MasterCard Type Credit-Card Details,WHEN requesting to make Payment THEN should get Successfully Processed Payment.",
+         "TC-2":"Validation of EnrolleeId & RequestReferenceId Status in the response."
+      },
+      "Scenario4-D2C_CreditCard_Payment_With_Discover_Type":{
+         "TC-1":"GIVEN Valid Discover Type Credit-Card Details,WHEN requesting to make Payment THEN should get Successfully Processed Payment.",
+         "TC-2":"Validation of EnrolleeId & RequestReferenceId Status in the response."
+      },
+      "Scenario5-D2C_CreditCard_Payment_With_AMEX_Type":{
+         "TC-1":"GIVEN Valid AMEX Type Credit-Card Details,WHEN requesting to make Payment THEN should get Successfully Processed Payment.",
+         "TC-2":"Validation of EnrolleeId & RequestReferenceId Status in the response."
+      }
+   }
+}

@@ -1,0 +1,162 @@
+
+
+RD /S /Q C:\jenkins\slave_home\workspace\testJob_pipeline_ClaimsApiOnly\dd-cx-testApi
+
+
+
+:FileBegin
+rem @echo off
+REM =================================================================
+REM  # Set Parameters
+REM 11/27/18 ClaimsApiOnly Job
+
+REM reminder  !!!!  none of the log file that redirect into dd-cx-testApi will work until after the clone !!!!
+
+      for /f "tokens=2-8 delims=/:. " %%A in ("%date%:%time%: =0%%") do set "TIMESTAMP=%%C%%A%%B-%%D%%E"
+
+     set this_Project_Directory=testJob_pipeline_ClaimsApiOnly
+     set cxReportsStorage=\\SACAPPSEID01\CX_Rpt_Root
+     set testAutomationInitiatedRecord=testAutomationJobs_ExecutionRecord.txt
+     set testLaunchCapture=%cxReportsStorage%\%testAutomationInitiatedRecord%
+     set workspacePath=c:\jenkins\slave_home\workspace
+     set repo=dd-cx-testApi
+     set logFile=API_Build_Initiated__LOG.txt
+     set debugFile=API_DebugTest__LOG.txt
+     set pathToRepo=%workspacePath%\%this_Project_Directory%\%repo%
+
+  
+     set loggingDest=%workspacePath%\%this_Project_Directory%\%repo%\%logFile%
+     set loggingDebug=%workspacePath%\%this_Project_Directory%\%repo%\%debugFile%
+
+     REM echo "------------------------------------------------------------------"    
+     REM echo "------------  Initial Reporting  -------------------------------------"    
+     REM echo "--- We have started the Jenkins BATCH Environment for API ----"   
+
+
+REM # check for and delete a special reporting file.  we use to capture grep failure results.json
+REM =================================================================
+REM #  add that elusive variable that makes readyWait work along with other local additions
+
+     set PATH=%PATH%;C:\jenkins\slave_home\workspace\%this_Project_Directory%\%repo%\node_modules\.bin;c:\bin
+
+
+REM REM =================================================================
+REM REM # set a starting file system location. This sets up for the upcoming git clone call
+
+
+REM REM =================================================================
+REM REM #  The following two lines echo >> to a file so I can check the path value of this job.
+
+REM REM =================================================================
+REM # The following is a HACK !!!!!  
+REM # I've had to put it in because there is soooooo much problem with GIT dropping its knowledge of who I am.
+
+     set GIT_SSL_NO_VERIFY=true
+     call git clone -b dev https://ca34081:d6b27697be89a0c710ef18415ea428ee934fcf2f@rc-lx842.ut.dentegra.lab/DEVPROJECTS/dd-cx-testApi.git  
+     REM call git clone -b dev https://rc-lx842.ut.dentegra.lab/DEVPROJECTS/dd-cx-testApi.git
+
+REM -----------------------------------------------------------------
+REM  Test looking for repo directory and fail if not found 
+
+if exist C:\jenkins\slave_home\workspace\testJob_pipeline_ClaimsApiOnly\dd-cx-testApi\package.json (
+  REM  Special do nothing operation
+    ) else (
+     echo Huston we've got a problem >> %workspacePath%\specialCloneFailureLoggingFile.txt 2>&1
+     echo We didn't find %pathToRepo%  >>  %workspacePath%\specialCloneFailureLoggingFile.txt 2>&1
+     echo "We are exiting with exit 2"   >>  %workspacePath%\specialCloneFailureLoggingFile.txt 2>&1
+     exit 2
+)
+
+REM  End of if not exist repo  fail
+REM -------------------------------------------------------------------
+
+
+
+echo %TIMESTAMP% First Opportunity to log to this file >> %loggingDebug% 2>&1
+
+REM REM =================================================================
+REM REM #  start logging to a file in the repo directory now that cloning has finished
+
+REM REM =================================================================
+REM REM #  record success to this point.
+
+
+
+REM =================================================================
+REM # Move to the node_modules directory and unpack the zip file
+
+   call cd c:\jenkins\slave_home\workspace\%this_Project_Directory%\%repo%\node_modules
+   call "c:\Program Files\7-Zip\7z.exe" x node_modules.zip
+
+
+echo %TIMESTAMP% Second Opportunity to log to this file >> %loggingDebug% 2>&1
+
+REM ================================================================= 
+REM  Move to the Repository Root directory in preparation to start
+     cd c:\jenkins\slave_home\workspace\%this_Project_Directory%\%repo%
+
+
+REM =================================================================
+REM # >                               START TEST                                        <
+
+     cmd /c npm run enrollClaimApidit -- --suite=devAuto3  >> %loggingDest% 2>&1
+
+
+
+echo %TIMESTAMP% Third Opportunity to log to this file >> %loggingDebug% 2>&1
+
+REM REM =================================================================
+REM REM #    >                           Move & Rename Report                         <
+
+
+
+
+REM =================================================================
+REM # Evaluate results.json :  Looking for passes === false
+
+echo %TIMESTAMP% Fourth Opportunity starting to look at result.json >> %loggingDebug% 2>&1
+
+     cd c:\jenkins\slave_home\workspace\%this_Project_Directory%\%repo%
+
+     grep "\"passed\": false," results.json > testFileForFailureOutput.txt
+
+     echo %TIMESTAMP% Fifth Opportunity after GREP >> %loggingDebug% 2>&1
+
+     set size=0
+
+     for /f %%i in ("testFileForFailureOutput.txt") do set size=%%~zi
+
+     echo %TIMESTAMP% Sixth Opportunity after setting the Shizzle  >> %loggingDebug% 2>&1
+    
+     echo %TIMESTAMP% Seventh and final Opportunity to echo the size variable >> %loggingDebug% 2>&1
+     echo which is: %size% >> %loggingDebug% 2>&1
+     echo %TIMESTAMP% Seventh Opportunity after echoing the Shizzle  >> %loggingDebug% 2>&1
+
+     set testSize=6400
+
+     if %size% gtr %testSize% ( 
+       echo "TestFileForFailureOutput was GREATER than %TestSize%: We found failure"  >> %loggingDebug% 2>&1
+       type testFileForFailureOutput.txt   >> %loggingDebug% 2>&1
+       goto Exit_1
+     ) ELSE (
+      echo "TestFileForFailureOutput was found to be Less than %size% :  No Failure Found   >> %loggingDebug% 2>&1
+       type testFileForFailureOutput.txt   >> %loggingDebug% 2>&1
+       goto Exit_0
+ )
+
+
+REM REM =================================================================
+
+
+REM REM =================================================================
+REM REM #  From above exit setting pass fail status of this job.
+
+:Exit_1
+echo Taking the Exit One (1)  Route >> %loggingDebug%
+ Exit 1
+
+:Exit_0
+echo Taking the Exit Zero (0) Route >> %loggingDebug% 
+Exit /B 0
+
+:FileEnd

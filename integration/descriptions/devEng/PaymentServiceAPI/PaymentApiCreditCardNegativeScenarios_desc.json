@@ -1,0 +1,64 @@
+{
+   "PaymentNegativeScenariosWithCreditCard":{
+      "Scenario1-Payment_ServiceAPI_CreditCard_With_Empty_Amount":{
+         "TC-1":"GIVEN Payment details with Empty Amount,WHEN requesting to view payment response THEN should get Payment Amount is Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario2-Payment_ServiceAPI_CreditCard_With_Empty_CardNumber":{
+         "TC-1":"GIVEN Payment details with Empty CardNumber,WHEN requesting to view payment response THEN should get Credit Card Number is Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario3-Payment_ServiceAPI_CreditCard_With_Invalid_ExpirationDate":{
+         "TC-1":"GIVEN Payment details with Invalid ExpirationDate,WHEN requesting to view payment response THEN should get Invalid/Missed ExpirationDate",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario4-Payment_ServiceAPI_CreditCard_With_Empty_PaymentType":{
+         "TC-1":"GIVEN Payment details with Empty PaymentType,WHEN requesting to view payment response THEN should get Missed PaymentType In Request",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario5-Payment_ServiceAPI_CreditCard_With_Null_NameOnCard":{
+         "TC-1":"GIVEN Payment details with Null NameOnCard,WHEN requesting to view payment response THEN should get Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario6-Payment_ServiceAPI_CreditCard_With_Negative_Amount":{
+         "TC-1":"GIVEN Payment details with Negative Amount,WHEN requesting to view payment response THEN should get Payment Amount Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario7-Payment_ServiceAPI_CreditCard_With_Null_Amount":{
+         "TC-1":"GIVEN Payment details with Null Amount,WHEN requesting to view payment response THEN should get Payment Amount Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario8-Payment_ServiceAPI_CreditCard_With_Null_PaymentType":{
+         "TC-1":"GIVEN Payment details with Null PaymentType,WHEN requesting to view payment response THEN should get Unsupported Payment Type ",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario9-Payment_ServiceAPI_CreditCard_With_PaymentType_As_CreditCardToken":{
+         "TC-1":"GIVEN Payment details with PaymentType As CreditCardToken,WHEN requesting to view payment response THEN should get Credit Card Information Invalid ",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario10-Payment_ServiceAPI_CreditCard_With_Empty_NameOnCard":{
+         "TC-1":"GIVEN Payment details with Empty NameOnCard,WHEN requesting to view payment response THEN should get Credit Card Request Invalid ",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario11-Payment_ServiceAPI_CreditCard_With_Empty_ExpirationDate":{
+         "TC-1":"GIVEN Payment details with Empty ExpirationDate,WHEN requesting to view payment response THEN should get Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario12-Payment_ServiceAPI_CreditCard_With_Empty_EnrolleeId":{
+         "TC-1":"GIVEN Payment details with Empty EnrolleeId,WHEN requesting to view payment response THEN should get Not Found Error",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario13-Payment_ServiceAPI_CreditCard_With_Wrong_ClientKey":{
+         "TC-1":"GIVEN Payment details with Wrong ClientKey,WHEN requesting to view payment response THEN should get Unauthorized Error",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario14-Payment_ServiceAPI_CreditCard_With_Empty_ClientKey":{
+         "TC-1":"GIVEN Payment details with Empty ClientKey,WHEN requesting to view payment response THEN should get Bad Request",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario15-Payment_ServiceAPI_CreditCard_With_Invalid_PersonId":{
+         "TC-1":"GIVEN Payment details with Invalid PersonId,WHEN requesting to view payment response THEN should get Invalid PersonId",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      }
+   }
+}

@@ -1,0 +1,63 @@
+{
+    "Scenarios": {
+        "Scenario1-CXCORETECH-192- Recent Claims API Issues": {
+            "request": {
+                "enrollee-id": "111990448502"
+            },
+            "headers": {
+                "personId": "0019491317250405",
+                "ClientKey": "12345"
+            },
+            "verify": {
+                "TC-1": {
+                    "statuscode": 200
+                },
+                "TC-2": {
+                    "enrolleeId": "111990448502",
+                    "enrolleeName": "Pearline STILLMAN",
+                    "enrolleeType": "Dependent"
+                },
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ],
+                "procedureDetails": [{
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }
+                ]
+
+
+            }
+        }
+    }
+}

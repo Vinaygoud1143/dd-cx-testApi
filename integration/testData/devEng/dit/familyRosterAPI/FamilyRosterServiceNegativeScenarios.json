@@ -1,0 +1,76 @@
+{
+   "Scenarios":{
+      "Scenario1-Invalid_Person_Id":{
+         "request":{
+            "personId":"1223455h7890"
+         },
+         "headers":{
+            "personId":"1223455h7890",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":403
+            },
+            "TC-2":{
+               "errorCode":"FAMILYROSTER007",
+               "shortDescription":"Invalid person id"
+            }
+         }
+      },
+      "Scenario2-Invalid_ClientKey":{
+         "request":{
+            "personId":"6107000007143442"
+         },
+         "headers":{
+            "personId":"6107000007143442",
+            "ClientKey":"123456"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":401
+            },
+            "TC-2":{
+               "message":"Security violation. Invalid Client Key",
+               "error":"Unauthorized"
+            }
+         }
+      },
+      "Scenario3-Empty_Person_Id_In_Header":{
+         "request":{
+            "personId":"0598821214041280"
+         },
+         "headers":{
+            "personId":"",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      },
+      "Scenario4-Empty_ClientKey_In_Header":{
+         "request":{
+            "personId":"0598821214041280"
+         },
+         "headers":{
+            "personId":"0598821214041280",
+            "ClientKey":""
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "error":"Bad Request",
+               "message":"Security violation. Expected security headers are missing."
+            }
+         }
+      }
+   }
+}

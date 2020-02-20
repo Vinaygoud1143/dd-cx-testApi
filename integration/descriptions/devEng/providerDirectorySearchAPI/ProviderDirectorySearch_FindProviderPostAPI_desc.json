@@ -1,0 +1,255 @@
+{
+   "LatLongZipcodeScenarios":{
+      "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long":{
+         "TC-1":"GIVEN Valid Lat and Long, WHEN requesting to view Providers details THEN able to view providers details",
+         "TC-2":"Validating basic details of Providers from find Providers API",
+         "TC-3":"Validating providers providerQuality",
+         "TC-4":"Validating isOpen of practiceHours in find Providers API",
+         "TC-5":"Validating generatedFilters,query and metaData"
+      },
+      "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode":
+        {
+            "TC-1": "GIVEN Valid Zipcode, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating basic details of Providers from find Providers API",
+            "TC-3": "Validating providers providerQuality",
+            "TC-4": "Validating isOpen of practiceHours in find Providers API",
+            "TC-5": "Validating generatedFilters,query and metaData"
+        }
+   },
+    "ProviderNetworkScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_SourceNetwork_Is_CustomNetwork_And_TargetNetwork_Is_ProviderNetwork":
+        {
+            "TC-1": "GIVEN Valid Zipcode, SourceNetwork and TargetNetwork, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating Network details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_SourceNetwork_Is_CustomNetwork_And_TargetNetwork_Is_CustomNetwork":
+        {
+            "TC-1": "GIVEN Valid Zipcode, SourceNetwork and TargetNetwork, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating Network details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "BoardCertifiedScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_boardCertified_false":
+        {
+            "TC-1": "GIVEN Valid Zipcode and boardCertified, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating boardCertified details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_boardCertified_True":
+        {
+            "TC-1": "GIVEN Valid Zipcode and boardCertified, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating boardCertified details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "SpecialtyScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_With_Single_Specialty":
+        {
+            "TC-1": "GIVEN Valid Zipcode and specialty, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating specialty details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_And_Multiple_Specialty":
+        {
+            "TC-1": "GIVEN Valid Lat, Long and specialty, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating specialty details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "NetworkScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_With_Single_Network":
+        {
+            "TC-1": "GIVEN Valid Lat, Long and Network, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating Network details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_And_Multiple_Networks":
+        {
+            "TC-1": "GIVEN Valid Lat, Long and Networks, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating Networks details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "LanguageScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_With_Single_Language":
+        {
+            "TC-1": "GIVEN Valid Lat, Long and Language, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating practiceLocationLanguages details from find Provider API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_And_Multiple_Languages":
+        {
+            "TC-1": "GIVEN Valid Lat, Long and Languages, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating practiceLocationLanguages details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "OfficehoursScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnSaturday":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officehours_OnSaturday, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officeHours details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnSunday":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officehours_OnSunday, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officehours details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario3-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnEvening":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officehours_OnEvening, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officehours details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+        ,
+        "Scenario4-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officehours_OnMorning":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officehours_OnMorning, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officehours details from find Providers API",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "MetadataScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_MetaData_True":
+        {
+            "TC-1": "GIVEN Valid Zipcode and Metadata is true, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_MetaData_False":
+        {
+            "TC-1": "GIVEN Valid Zipcode and Metadata is false, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "SortByFieldAndOrderScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Lat_Long_SortField_Distance_SortOrder_ASC":
+        {
+            "TC-1": "GIVEN Valid Lat, Long, Sortfield by distance and sort order is asc, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the order of the distance",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing__Lat_Long_SortField_Distance_SortOrder_DESC":
+        {
+            "TC-1": "GIVEN Valid Zipcode Lat, Long, Sortfield by distance and sort order is desc, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the order of the distance",
+            "TC-3": "Validating generatedFilters,query and metaData"
+        }
+    },
+    "OfficeAccessScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_free_parking":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officeAccess_free_parking, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officeAccess details from find Providers API"
+            
+        },
+        "Scenario2-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_wheel_chair_access":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officeAccess_wheel_chair_access, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officeAccess details from find Providers API"
+        },
+        "Scenario3-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_public_transit_access":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officeAccess_public_transit_access, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officeAccess details from find Providers API"
+        }
+        ,
+        "Scenario4-Retrieve_The_Providers_Detail_By_Providing_Zipcode_officeAccess_internet_access":
+        {
+            "TC-1": "GIVEN Valid Zipcode and officeAccess_internet_access, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating officeAccess details from find Providers API"
+        }
+    },
+    "FirstNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_FirstName_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and FirstName in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the FirstName in the providers details"
+        }
+    },
+    "LastNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_LastName_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and LastName in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the LastName in the providers details"
+        }
+    },
+    "AlphanumericInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_AlphaNumeric_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and AlphaNumeric in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the AlphaNumeric in the providers details"
+        }
+    },
+    "NpiInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_NPI_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and NPI in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the NPI in the providers details"
+        }
+    },
+    "OfficeNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_OfficeName_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and OfficeName in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the OfficeName in the providers details"
+        }
+    },
+     "OfficeNameWithSpecialCharatersInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_OfficeName_With_SpecialCharacters_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and OfficeName with special character in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the OfficeName in the providers details"
+        }
+    },
+    "LanguageInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_Language_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and Language in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the Language in the providers details"
+        }
+    },
+    "LicenseNumberInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_licenseNumber_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and licenseNumber in FreeText, WHEN requesting to view Providers details THEN able to view providers details"
+        }
+    },
+    "ProviderNetworkInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_providerNetwork_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and providerNetwork in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the providerNetwork in the providers details"
+        }
+    }
+    ,
+    "FacilityNameInFreeTextScenarios":
+    {
+        "Scenario1-Retrieve_The_Providers_Detail_By_Providing_Zipcode_And_facilityName_In_FreeText":
+        {
+            "TC-1": "GIVEN Valid Zipcode and facilityName in FreeText, WHEN requesting to view Providers details THEN able to view providers details",
+            "TC-2": "Validating the facilityName in the providers details"
+        }
+    }
+}

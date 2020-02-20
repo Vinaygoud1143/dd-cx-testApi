@@ -1,0 +1,59 @@
+{
+   "Scenarios":{
+      "Scenario1-CXCORETECH-847-Incorrect message shown for a person having PHI against his account":{
+         "request":{
+            "contract-id":"0045793778"
+         },
+         "headers":{
+            "personId":"5047000004566430",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":[
+               {
+                  "memberInfo":{
+                     "personId":"5047000004566430",
+                     "memberId":"01",
+                     "enrolleeId":"004579377801",
+                     "contractId":"0045793778",
+                     "memberName":"COLE FORTIN"
+                  },
+                  "planInfo":null,
+                  "usageInfo":null,
+                  "ruleInfo":null,
+                  "lastCalculatedDate":null
+               },
+               {
+                  "memberInfo":{
+                     "personId":"5047000004555079",
+                     "memberId":"02",
+                     "enrolleeId":"004579377802",
+                     "contractId":"0045793778",
+                     "memberName":"PEARLINE FORTIN"
+                  },
+                  "planInfo":null,
+                  "usageInfo":null,
+                  "ruleInfo":null,
+                  "lastCalculatedDate":null
+               },
+               {
+                  "memberInfo":{
+                     "personId":"5047000004753793",
+                     "memberId":"03",
+                     "enrolleeId":"004579377803",
+                     "contractId":"0045793778",
+                     "memberName":"LINN FORTIN"
+                  },
+                  "planInfo":null,
+                  "usageInfo":null,
+                  "ruleInfo":null,
+                  "lastCalculatedDate":null
+               }
+            ]
+         }
+      }
+   }
+}

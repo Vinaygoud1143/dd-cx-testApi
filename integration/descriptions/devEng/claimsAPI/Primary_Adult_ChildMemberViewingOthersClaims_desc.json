@@ -1,0 +1,16 @@
+{
+    "Scenarios": 
+    {
+        
+         "Scenario1-Adult_Member_Viewing_Other_Adult_Claims": 
+        {
+            "TC-1": "Given an ADULT dependent (Omnibus rule) WHEN requesting to view other Adult member claims THEN should NOT be allowed to view claim records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }  ,
+        "Scenario2-Child_Member_Viewing_Other_Child_Claims":
+        {
+            "TC-1": "GIVEN Child Member WHEN requesting to view other Child's claim records THEN should NOT be allowed to view other child's claim record",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }  
+    }  
+}

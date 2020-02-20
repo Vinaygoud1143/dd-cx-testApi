@@ -1,0 +1,25 @@
+{  
+   "Scenarios":{  
+      "Scenario1-Requesting_To_View_With_Valid_Costco_Member_Details":{  
+         "request":{  
+            "member-id":"302122687041"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "memberNumber":"302122687041",
+               "firstName":"CAROLINE",
+               "lastName":"BOOTH",
+               "statusCode":"Inactive",
+               "memberType":"Complimentary",
+               "membershipCode":"REG",
+               "enrollmentDate":"03/05/1999",
+               "effectiveStartDate":"01/01/0001",
+               "effectiveEndDate":"11/14/2011"
+            }
+         }
+      }
+   }
+}

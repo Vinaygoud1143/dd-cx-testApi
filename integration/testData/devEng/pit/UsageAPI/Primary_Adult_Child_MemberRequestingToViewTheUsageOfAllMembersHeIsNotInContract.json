@@ -1,0 +1,74 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Requesting_To_View_The_Usage_Of_All_Members_He_Is_Not_In_Contract":
+        {
+          
+         "request":{  
+            "contract-id":"1004571940"
+         },
+         "headers":{  
+            "personId":"0358980916542245",
+            "ClientKey":"27feb576-ba4b-4379-a3c1-a53f21d34514"
+         },
+         "verify":{  
+            
+            "TC-1":{  
+               "statuscode":500
+            },
+                "TC-2":
+                {
+		               "errorCode": "USAGE008",
+					   "shortDescription": "Business Rules error.",
+					   "detailedDescription": "Rules error - Unable to retrieve business rules for the given contract:1004571940, error:404 "
+                }
+            }
+        },
+         "Scenario2-Adult_Member_Requesting_To_View_The_Usage_Of_All_Members_He_Is_Not_In_Contract":
+        {
+          
+         "request":{  
+            "contract-id":"1004571940"
+         },
+         "headers":{  
+            "personId":"0002580916542268",
+            "ClientKey":"27feb576-ba4b-4379-a3c1-a53f21d34514"
+         },
+         "verify":{  
+            
+            "TC-1":{  
+               "statuscode":500
+            },
+                "TC-2":
+                {
+                    "errorCode": "USAGE008",
+				    "shortDescription": "Business Rules error.",
+				    "detailedDescription": "Rules error - Unable to retrieve business rules for the given contract:1004571940, error:404 "
+                }
+            }
+        },
+         "Scenario3-Child_Member_Requesting_To_View_The_Usage_Of_All_Members_He_Is_Not_In_Contract":
+        {
+          
+         "request":{  
+            "contract-id":"1004571940"
+         },
+         "headers":{  
+            "personId":"0656241316550777",
+            "ClientKey":"27feb576-ba4b-4379-a3c1-a53f21d34514"
+         },
+         "verify":{  
+            
+            "TC-1":{  
+               "statuscode":500
+            },
+                "TC-2":
+                {
+                    "errorCode": "USAGE008",
+				    "shortDescription": "Business Rules error.",
+				    "detailedDescription": "Rules error - Unable to retrieve business rules for the given contract:1004571940, error:404 "
+                }
+            }
+        }
+    }
+}

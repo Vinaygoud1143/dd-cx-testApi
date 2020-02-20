@@ -1,0 +1,132 @@
+
+
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds":{
+         "request":{
+            "facility_ids":[
+               "043457",
+               "036326"
+            ]
+         },
+         "params":{
+
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "isOpen":true
+            },
+            "TC-3":[
+               {
+                  "facilityId":"036326",
+                  "name":"Western Dental Services",
+                  "address":{
+                     "addressLine":"1407 W March Ln",
+                     "city":"Stockton",
+                     "state":"CA",
+                     "zipcode":"95207-6111",
+                     "latitude":37.9892883,
+                     "longitude":-121.3224792
+                  },
+                  "phone":"(209) 473-4000",
+                  "emailAddress":null,
+                  "faxNumber":"(209) 473-1574",
+                  "website":null,
+                  "practiceLocation":{
+                     "practiceLocationNumber":"240001239078",
+                     "officeName":"Western Dental Services Inc"
+                  }
+               },
+               {
+                  "facilityId":"043457",
+                  "name":"Element Dental",
+                  "address":{
+                     "addressLine":"103 N Brentwood Ste 400",
+                     "city":"Lufkin",
+                     "state":"TX",
+                     "zipcode":"75904-7147",
+                     "latitude":31.2982941,
+                     "longitude":-94.7296906
+                  },
+                  "phone":"(936) 639-4867",
+                  "emailAddress":"elementlufkin@mb2dental.com",
+                  "faxNumber":"(936) 639-4868",
+                  "website":"http://www.myelementdental.com",
+                  "practiceLocation":{
+                     "practiceLocationNumber":"965034351001",
+                     "officeName":"Element Dental - Lufkin"
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "AMGENSCENARIOS":{
+      "Scenario1-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds, sourceNetwork (2NYPPO) & targetNetwork (2PPO) - AMGEN SCENARIOS":{
+         "request":{
+            "facility_ids":[
+               "026971",
+               "030987"
+            ]
+         },
+         "params":{
+            "sourceNetwork":"2NYPPO",
+            "targetNetwork":"2PPO"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "networkIdToBePresentInProviderNetworks":"2PPO",
+               "targetNetwork":"2PPO"
+            }
+         }
+      },
+      "Scenario2-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds, sourceNetwork (2NYPPO) & targetNetwork (2PREMIER) - AMGEN SCENARIOS":{
+         "request":{
+            "facility_ids":[
+               "026971",
+               "030987"
+            ]
+         },
+         "params":{
+            "sourceNetwork":"2NYPPO",
+            "targetNetwork":"2PREMIER"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "networkIdToBePresentInProviderNetworks":"2PREMIER",
+               "targetNetwork":"2PREMIER"
+            }
+         }
+      },
+      "Scenario3-Retrieve_The_Multiple_Facilities_Details_By_Providing_FacilityIds, sourceNetwork (2NYPPO) & targetNetwork (2DELTACARE) - AMGEN SCENARIOS":{
+         "request":{
+            "facility_ids":[
+               "026971",
+               "030987"
+            ]
+         },
+         "params":{
+            "sourceNetwork":"2NYPPO",
+            "targetNetwork":"2DELTACARE"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "networkIdToBePresentInProviderNetworks":"2DELTACARE",
+               "targetNetwork":"2DELTACARE"
+            }
+         }
+      }
+   }
+}

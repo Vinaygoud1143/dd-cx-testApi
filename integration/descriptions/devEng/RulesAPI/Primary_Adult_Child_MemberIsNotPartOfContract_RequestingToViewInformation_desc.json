@@ -1,0 +1,19 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Primary_Member_Not_Part_Of_Contract_Trying_View_Information_Of_All_Members": 
+        {
+            "TC-1": "Given PRIMARY member, WHEN requesting to view the information of all members in the contract that he/she is NOT part of THEN should NOT be allowed to view members records and indicate the person is not part of the contract.",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }, 
+        "Scenario2-Adult_Member_Not_Part_Of_Contract_Trying_View_Information_Of_All_Members": {
+            "TC-1": "Given an ADULT member, WHEN requesting to view the information of all members in the contract that he/she is NOT part of THEN should NOT be allowed to view members records and indicate the person is not part of the contract.",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario3-Child_Member_Not_Part_Of_Contract_Trying_View_Information_Of_All_Members": 
+        {
+            "TC-1": "Given an CHILD member,WHEN requesting to view the information of all members in the contract that he/she is NOT part of THEN should NOT be allowed to view members records and indicate the person is not part of the contract.",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }   
+    }  
+}

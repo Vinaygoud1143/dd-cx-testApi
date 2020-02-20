@@ -1,0 +1,1982 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDes": "Test 1: GIVEN a PRIMARY member, WHEN requesting to view the usage of all members in the contract that he is part of, THEN s/he should be allowed to view usage records of members only if the permission is granted",
+            "contractId" : "1004871950",
+            "personId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0358980916542245",
+                        "memberId"  : "01",
+                        "enrolleeId": "100487195001",
+                        "contractId": "1004871950",
+                        "memberName": "Mary Speed"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/16/2018 12:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0002580916542268",
+                        "memberId"  : "02",
+                        "enrolleeId": "100487195002",
+                        "contractId": "1004871950",
+                        "memberName": "Steven Speed"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/16/2018 12:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0055480916542294",
+                        "memberId"  : "03",
+                        "enrolleeId": "100487195003",
+                        "contractId": "1004871950",
+                        "memberName": "Cari Speed"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/16/2018 12:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0374780916542310",
+                        "memberId"  : "04",
+                        "enrolleeId": "100487195004",
+                        "contractId": "1004871950",
+                        "memberName": "Kellie Speed"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test2": {
+            "testCaseDes": "Test 2: GIVEN an ADULT member, WHEN requesting to view the usage of all members in the contract that s/he is part of, THEN should be allowed to view usage records of members based on the Omnibus rule",
+            "contractId" : "1004871950",
+            "personId"   : "0002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0358980916542245",
+                        "memberId"  : "01",
+                        "enrolleeId": "100487195001",
+                        "contractId": "1004871950",
+                        "memberName": "Mary Speed"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0002580916542268",
+                        "memberId"  : "02",
+                        "enrolleeId": "100487195002",
+                        "contractId": "1004871950",
+                        "memberName": "Steven Speed"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/16/2018 02:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0055480916542294",
+                        "memberId"  : "03",
+                        "enrolleeId": "100487195003",
+                        "contractId": "1004871950",
+                        "memberName": "Cari Speed"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0374780916542310",
+                        "memberId"  : "04",
+                        "enrolleeId": "100487195004",
+                        "contractId": "1004871950",
+                        "memberName": "Kellie Speed"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test3": {
+            "testCaseDes": "Test 3: GIVEN a CHILD member, WHEN requesting to view the usage of all members in the contract that s/he is part of, THEN should be allowed to view usage records of members based on the Omnibus rule",
+            "contractId" : "1163798575",
+            "personId"   : "0431041316550753",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0709841316550733",
+                        "memberId"  : "01",
+                        "enrolleeId": "116379857501",
+                        "contractId": "1163798575",
+                        "memberName": "Jacqueline Remy"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0661141316550746",
+                        "memberId"  : "02",
+                        "enrolleeId": "116379857502",
+                        "contractId": "1163798575",
+                        "memberName": "Vince Remy"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0431041316550753",
+                        "memberId"  : "03",
+                        "enrolleeId": "116379857503",
+                        "contractId": "1163798575",
+                        "memberName": "Dallas Remy"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/16/2018 03:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0785941316550767",
+                        "memberId"  : "04",
+                        "enrolleeId": "116379857504",
+                        "contractId": "1163798575",
+                        "memberName": "Daxton Remy"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0656241316550777",
+                        "memberId"  : "05",
+                        "enrolleeId": "116379857505",
+                        "contractId": "1163798575",
+                        "memberName": "Mckenna Remy"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0682641316550784",
+                        "memberId"  : "06",
+                        "enrolleeId": "116379857506",
+                        "contractId": "1163798575",
+                        "memberName": "Mya Remy"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test4": {
+            "testCaseDes": "Test 4: Given a PRIMARY member WHEN requesting to view the usage in the contract that he is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId" : "1004571940",
+            "personId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "status": 401
+            }
+        },
+        "test5": {
+            "testCaseDes": "Test 5: Given an ADULT member WHEN requesting to view the usage in the contract that he/she is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId" : "1004571940",
+            "personId"   : "0002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "status": 401
+            }
+        },
+        "test6": {
+            "testCaseDes": "Test 6: Given an CHILD member WHEN requesting to view the usage in the contract that he/she is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId" : "1004571940",
+            "personId"   : "0656241316550777",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "status": 401
+            }
+        },
+        "test7": {
+            "testCaseDes": "Test 7: Invalid Person ID",
+            "contractId" : "1004571940",
+            "personId"   : "1002580916542268",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "status": 401
+            }
+        },
+        "test8": {
+            "testCaseDes": "Test 8: GIVEN a Primary ONLY profile with PHI flag disabled  AND 0 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "1158822783",
+            "personId"   : "0434620217130408",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0434620217130408",
+                        "memberId"  : "01",
+                        "enrolleeId": "115882278301",
+                        "contractId": "1158822783",
+                        "memberName": "Mary George"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 10:08"
+                }
+            ]
+        },
+        "test9": {
+            "testCaseDes": "Test 9: GIVEN a Primary ONLY profile with PHI flag disabled AND 0 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0010686772",
+            "personId"   : "5100000001629551",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001629551",
+                        "memberId"  : "01",
+                        "enrolleeId": "001068677201",
+                        "contractId": "0010686772",
+                        "memberName": "Krista Norman"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test10": {
+            "testCaseDes": "Test 10: GIVEN a Primary ONLY profile with PHI flag disabled AND 1 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "1159948005",
+            "personId"   : "0096121212280110",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0096121212280110",
+                        "memberId"  : "01",
+                        "enrolleeId": "115994800501",
+                        "contractId": "1159948005",
+                        "memberName": "Michael Sel"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test11": {
+            "testCaseDes": "Test 11: GIVEN a Primary ONLY profile with PHI flag disabled AND 1 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0009204409",
+            "personId"   : "0894250909204438",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0894250909204438",
+                        "memberId"  : "01",
+                        "enrolleeId": "000920440901",
+                        "contractId": "0009204409",
+                        "memberName": "Byron Ponce Greenwood"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test12": {
+            "testCaseDes": "Test 12: GIVEN a Primary ONLY profile with PHI flag disabled AND 0 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0010600682",
+            "personId"   : "5100000001240777",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001240777",
+                        "memberId"  : "01",
+                        "enrolleeId": "001060068201",
+                        "contractId": "0010600682",
+                        "memberName": "Carlos Lewis"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test13": {
+            "testCaseDes": "Test 13: GIVEN a Primary ONLY profile with PHI flag disabled AND 0 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0061601817",
+            "personId"   : "5060000001241990",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5060000001241990",
+                        "memberId"  : "01",
+                        "enrolleeId": "006160181701",
+                        "contractId": "0061601817",
+                        "memberName": "Denise Decker"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test14": {
+            "testCaseDes": "Test 14: GIVEN a Primary ONLY profile with PHI flag disabled AND 0 used cleanings in a Calendar Year, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0010603105",
+            "personId"   : "5100000001243609",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001243609",
+                        "memberId"  : "01",
+                        "enrolleeId": "001060310501",
+                        "contractId": "0010603105",
+                        "memberName": "Michael Landry"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test15": {
+            "testCaseDes": "Test 15: GIVEN a Primary ONLY profile with PHI flag disabled AND 1 used cleanings in a 12-month period, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0021601247",
+            "personId"   : "5020000001241292",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5020000001241292",
+                        "memberId"  : "01",
+                        "enrolleeId": "002160124701",
+                        "contractId": "0021601247",
+                        "memberName": "Clarence Mitchell"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "RODY",
+                        "planStartDate"      : "08/08/2017",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "EFFECTIVE DATE BACKWARDS 12 ROLLING MONTHS"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "DY",
+                                    "unit"        : "364",
+                                    "planYearType": "RO"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346,D4355,D4910 2/12M",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 12:08"
+                }
+            ]
+        },
+        "test16": {
+            "testCaseDes": "Test 16: GIVEN a Primary ONLY profile with PHI flag disabled AND 1 used cleanings in a 12-month period, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0021601247",
+            "personId"   : "5020000001241292",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5020000001242490",
+                        "memberId"  : "01",
+                        "enrolleeId": "002160226801",
+                        "contractId": "0021602268",
+                        "memberName": "Greta Myles"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "RODY",
+                        "planStartDate"      : "08/08/2017",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "EFFECTIVE DATE BACKWARDS 12 ROLLING MONTHS"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "DY",
+                                    "unit"        : "364",
+                                    "planYearType": "RO"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346,D4355,D4910 2/12M",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 01:08"
+                }
+            ]
+        },
+        "test17": {
+            "testCaseDes": "Test 17: GIVEN a Primary ONLY profile with PHI flag disabled AND 1 used cleanings in a 12-month period, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "0143462529",
+            "personId"   : "0666942313462546",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0666942313462546",
+                        "memberId"  : "01",
+                        "enrolleeId": "014346252901",
+                        "contractId": "0143462529",
+                        "memberName": "James Pol"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "RODY",
+                        "planStartDate"      : "08/08/2017",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "EFFECTIVE DATE BACKWARDS 12 ROLLING MONTHS"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "DY",
+                                    "unit"        : "364",
+                                    "planYearType": "RO"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346,D4355,D4910 2/12M",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 01:08"
+                }
+            ]
+        },
+        "test18": {
+            "testCaseDes": "Test 18: GIVEN a Primary ONLY profile with PHI flag disabled AND 2 used cleanings in a Contract Period, WHEN the Primary member is requesting to view his/her usage information, THEN he/she should be allowed to view the correct usage information",
+            "contractId" : "1128967422",
+            "personId"   : "0233890217575824",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0233890217575824",
+                        "memberId"  : "01",
+                        "enrolleeId": "112896742201",
+                        "contractId": "1128967422",
+                        "memberName": "Jerry Morgan"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "DVYR",
+                        "planStartDate"      : "09/01/2017",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "FROM THE DIVISION EFF DATE IN CONTRACT YR"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 2,
+                                "totalRemaining"            : 0,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "DV"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CN",
+                                        "totalUsed"                 : 2
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/20/2018 01:08"
+                }
+            ]
+        },
+        "test19": {
+            "testCaseDes": "Test 19: This is a profile with a Primary member and 4 Dependents. Primary member has PHI and member 02 is an Adult Dependent who has NOT given permission to Primary. Everyone else in the plan are Child Dependents and no one has used any cleaning in a Calendar Year. This test verifies that the Primary is blocked from seeing his/her own usage information (PHI restrictions) and the Adult Dependent's usage information (Omnibus restrictions), BUT is able to view the correct usage information for everyone else.",
+            "contractId" : "0005612199",
+            "personId"   : "5107000004050672",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004050672",
+                        "memberId"  : "01",
+                        "enrolleeId": "000561219901",
+                        "contractId": "0005612199",
+                        "memberName": "Christina Kensell"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004226957",
+                        "memberId"  : "02",
+                        "enrolleeId": "000561219902",
+                        "contractId": "0005612199",
+                        "memberName": "Timothy Kensell"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004227113",
+                        "memberId"  : "03",
+                        "enrolleeId": "000561219903",
+                        "contractId": "0005612199",
+                        "memberName": "Timothy Kensell"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 11:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004256089",
+                        "memberId"  : "04",
+                        "enrolleeId": "000561219904",
+                        "contractId": "0005612199",
+                        "memberName": "Chloe Kensell"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 11:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0825912713074645",
+                        "memberId"  : "05",
+                        "enrolleeId": "000561219905",
+                        "contractId": "0005612199",
+                        "memberName": "Andrew Kensell"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 11:08"
+                }
+            ]
+        },
+        "test20": {
+            "testCaseDes": "Test 20: This is a profile with a Primary member and 4 Dependents. Primary member has PHI and member 02 is an Adult Dependent. Everyone else in the plan are Child Dependents and no one has used any cleaning in a Calendar Year. This test verifies that the Adult Dependent is blocked from seeing everyone else's information in the plan because of Omnibus Restrictions and Primary's PHI has no effect on this rule",
+            "contractId" : "0005612199",
+            "personId"   : "5107000004050672",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004050672",
+                        "memberId"  : "01",
+                        "enrolleeId": "000561219901",
+                        "contractId": "0005612199",
+                        "memberName": "Christina Kensell"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004226957",
+                        "memberId"  : "02",
+                        "enrolleeId": "000561219902",
+                        "contractId": "0005612199",
+                        "memberName": "Timothy Kensell"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 02:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004227113",
+                        "memberId"  : "03",
+                        "enrolleeId": "000561219903",
+                        "contractId": "0005612199",
+                        "memberName": "Timothy Kensell"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5107000004256089",
+                        "memberId"  : "04",
+                        "enrolleeId": "000561219904",
+                        "contractId": "0005612199",
+                        "memberName": "Chloe Kensell"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0825912713074645",
+                        "memberId"  : "05",
+                        "enrolleeId": "000561219905",
+                        "contractId": "0005612199",
+                        "memberName": "Andrew Kensell"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test21": {
+            "testCaseDes": "Test 21: This is a profile with a Primary member and 2 Dependents. Member 02 is a Child Dependent and 03 has Inactive Contract. Both Primary and Member 02 have used 1 Cleaning in Calendar Year. This test verifies that the Primary Enrollee can see the correct usage information of all the members who have active contracts and the API does not include any information about member 03 (who has an Inactive Contract)",
+            "contractId" : "1128831771",
+            "personId"   : "0722682113254492",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0722682113254492",
+                        "memberId"  : "01",
+                        "enrolleeId": "112883177101",
+                        "contractId": "1128831771",
+                        "memberName": "Olga Rivera"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D1110",
+                                    "D1120"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346, 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 02:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0664582113254531",
+                        "memberId"  : "02",
+                        "enrolleeId": "112883177102",
+                        "contractId": "1128831771",
+                        "memberName": "Perfecto Rivera"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D1110",
+                                    "D1120"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346, 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 02:08"
+                }
+            ]
+        },
+        "test22": {
+            "testCaseDes": "Test 22: This is a profile with a Primary member and 2 Dependents. Member 02 is a Child Dependent and 03 is an Adult Dependent but has an Inactive Contract. This test verifies that member 03 can see the correct usage information of all the other members who have active contracts (restricted by Omnibus Rules) and the API does not include any information about member 03.",
+            "contractId" : "1128831771",
+            "personId"   : "0722682113254492",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "0722682113254492",
+                        "memberId"  : "01",
+                        "enrolleeId": "112883177101",
+                        "contractId": "1128831771",
+                        "memberName": "Olga Rivera"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0664582113254531",
+                        "memberId"  : "02",
+                        "enrolleeId": "112883177102",
+                        "contractId": "1128831771",
+                        "memberName": "Perfecto Rivera"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test23": {
+            "testCaseDes": "Test 23: For an Inactive Contract, Validate that a 404 error is shown for a Primary Member in the Plan",
+            "contractId" : "0010650652",
+            "personId"   : "5100000001595317",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "status": 404
+            }
+        },
+        "test24": {
+            "testCaseDes": "Test 24: For an Inactive Contract, Validate that a 404 error is shown for a Dependent in the Plan",
+            "contractId" : "0010650652",
+            "personId"   : "5100000001595317",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "status": 404
+            }
+        },
+        "test25": {
+            "testCaseDes": "Test 25: This is a profile with a Primary member and 2 Adult Dependents. Both the Adult Dependents have PHI enabled and have NOT given access to Primary Enrollee. The Procedure Codes covered for this profiles are ONLY: D1110, D1120 and D4346. This test verifies that Primary is able to see his/her own usage information and is restricted by Omnibus Rules when viewing Dependents usage information. Dependents' PHI flags should have no effect on Primary's access to their information.",
+            "contractId" : "0010643966",
+            "personId"   : "5100000001588829",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001588829",
+                        "memberId"  : "01",
+                        "enrolleeId": "001064396601",
+                        "contractId": "0010643966",
+                        "memberName": "Anna Lopez"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 1,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D1110",
+                                    "D1120"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346, 2/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/21/2018 03:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001748066",
+                        "memberId"  : "02",
+                        "enrolleeId": "001064396602",
+                        "contractId": "0010643966",
+                        "memberName": "Breanna Lopez"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0591920214460346",
+                        "memberId"  : "03",
+                        "enrolleeId": "001064396603",
+                        "contractId": "0010643966",
+                        "memberName": "Ron Lopez"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test26": {
+            "testCaseDes": "Test 26: This is a profile with a Primary member and 2 Adult Dependents. Both the Adult Dependents have PHI enabled. The Procedure Codes covered for this profiles are ONLY: D1110, D1120 and D4346. This test verifies that member 02 is NOT able to see his/her usage information (because of PHI restrictions). Member 02 should also be restricted by Omnibus Rules when viewing others' usage information in the plan. Member 03's PHI flags should have no effect on Member 02's access to his/her information (But will be restricted by Omnibus).",
+            "contractId" : "0010643966",
+            "personId"   : "5100000001748066",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001588829",
+                        "memberId"  : "01",
+                        "enrolleeId": "001064396601",
+                        "contractId": "0010643966",
+                        "memberName": "Anna Lopez"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001748066",
+                        "memberId"  : "02",
+                        "enrolleeId": "001064396602",
+                        "contractId": "0010643966",
+                        "memberName": "Breanna Lopez"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0591920214460346",
+                        "memberId"  : "03",
+                        "enrolleeId": "001064396603",
+                        "contractId": "0010643966",
+                        "memberName": "Ron Lopez"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test27": {
+            "testCaseDes": "Test 27: This is a profile with a Primary member and 1 Adult Dependent. Primary Enrollee has PHI enabled and Adult Dependent has granted permission to Primary Enrollee. The Procedure Codes covered for this profile are ONLY: D1110, D1120 and D4346.This test verifies that the Primary Enrollee is NOT able to see his/her usage information because of PHI restrictions, BUT is able see Adult Dependent's usage information in a Claendar Year. Primary Enrollee's PHI flag should have no effect on his/her access to Adult Dependent's information.",
+            "contractId" : "0010656697",
+            "personId"   : "5100000001602301",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001602301",
+                        "memberId"  : "01",
+                        "enrolleeId": "001065669701",
+                        "contractId": "0010656697",
+                        "memberName": "David Linville"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001758311",
+                        "memberId"  : "02",
+                        "enrolleeId": "001065669702",
+                        "contractId": "0010656697",
+                        "memberName": "Gayle Linville"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D1110",
+                                    "D1120"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 12:08"
+                }
+            ]
+        },
+        "test28": {
+            "testCaseDes": "Test 28: This is a profile with a Primary member and 2 Dependents. Member 03 is inactive and Member 02 has not granted permission to Primary Enrollee. The Procedure Codes covered for this profile are ONLY: D1110, D1120 and D4346.This test verifies that the Primary Enrollee is able to see only his/her usage information because of Omnibus restrictions on Member 02's information. This test also verifies that the API returns nothing for the Inactive Member.",
+            "contractId" : "0010656697",
+            "personId"   : "5100000001758311",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001241590",
+                        "memberId"  : "01",
+                        "enrolleeId": "001060129101",
+                        "contractId": "0010601291",
+                        "memberName": "Dwight Lebeouf"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 01:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001271271",
+                        "memberId"  : "02",
+                        "enrolleeId": "001060129102",
+                        "contractId": "0010601291",
+                        "memberName": "Patty Lebeouf"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        },
+        "test29": {
+            "testCaseDes": "Test 29: This is a profile with a Primary member and 4 Dependents. Member 02 is an Adult Dependent who has not granted permisson to Primary Enrollee. Every member in this Contract has 4 Cleaning allowed per Calendar Year. This test verifies that the Primary Enrollee is able to see everyone's correct usage information based on Omnibus restrictions.",
+            "contractId" : "0010600456",
+            "personId"   : "5100000001240679",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001240679",
+                        "memberId"  : "01",
+                        "enrolleeId": "001060045601",
+                        "contractId": "0010600456",
+                        "memberName": "Brian Lewis"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 4,
+                                "totalUsed"                 : 1,
+                                "totalRemaining"            : 3,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": [
+                                    {
+                                        "procedureCode"             : "D1110",
+                                        "procedureDescription"      : "PROPHYLAXIS (CLEANING) - ADULT",
+                                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 4/CY",
+                                        "totalUsed"                 : 1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 01:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001268954",
+                        "memberId"  : "02",
+                        "enrolleeId": "001060045602",
+                        "contractId": "0010600456",
+                        "memberName": "Danna Lewis"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001269254",
+                        "memberId"  : "03",
+                        "enrolleeId": "001060045603",
+                        "contractId": "0010600456",
+                        "memberName": "Eastan Lewis"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 4,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 4,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 01:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5100000001269252",
+                        "memberId"  : "04",
+                        "enrolleeId": "001060045604",
+                        "contractId": "0010600456",
+                        "memberName": "Evan Lewis"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 4,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 4,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 01:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "0986220318574932",
+                        "memberId"  : "05",
+                        "enrolleeId": "001060045605",
+                        "contractId": "0010600456",
+                        "memberName": "Eden Lewis"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 4,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 4,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 01:08"
+                }
+            ]
+        },
+        "test30": {
+            "testCaseDes": "Test 30: This is a profile with a Primary member and 2 Dependents. Member 02 is a Child Dependent and Member 03 is an Adult Dependent who has not granted permisson to Primary Enrollee. This test verifies that the Primary Enrollee is able to see everyone's correct usage information based on Omnibus restrictions.",
+            "contractId" : "1647595497",
+            "personId"   : "5060000001246612",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : [
+                {
+                    "memberInfo": {
+                        "personId"  : "5060000001246612",
+                        "memberId"  : "01",
+                        "enrolleeId": "164759549701",
+                        "contractId": "1647595497",
+                        "memberName": "Stephen White"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 02:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5060000001275300",
+                        "memberId"  : "02",
+                        "enrolleeId": "164759549702",
+                        "contractId": "1647595497",
+                        "memberName": "Nicholas White"
+                    },
+                    "planInfo": {
+                        "planYearType"       : "CAYR",
+                        "planStartDate"      : "01/01/2018",
+                        "planEndDate"        : "12/31/2018",
+                        "planYearDescription": "Eff Date In a Calendar Year"
+                    },
+                    "usageInfo": {
+                        "procedureDetail": [
+                            {
+                                "procedureName"             : "Prophylaxis",
+                                "totalAllowed"              : 2,
+                                "totalUsed"                 : 0,
+                                "totalRemaining"            : 2,
+                                "contributingProcedureCodes": [
+                                    "D4346",
+                                    "D4355",
+                                    "D1110",
+                                    "D1120",
+                                    "D4910"
+                                ],
+                                "planFrequency": {
+                                    "unitType"    : "YR",
+                                    "unit"        : "1",
+                                    "planYearType": "CA"
+                                },
+                                "procedureCodes": []
+                            }
+                        ]
+                    },
+                    "ruleInfo"          : null,
+                    "lastCalculatedDate": "08/27/2018 02:08"
+                },
+                {
+                    "memberInfo": {
+                        "personId"  : "5060000001278639",
+                        "memberId"  : "03",
+                        "enrolleeId": "164759549703",
+                        "contractId": "1647595497",
+                        "memberName": "Ali White"
+                    },
+                    "planInfo" : null,
+                    "usageInfo": null,
+                    "ruleInfo" : {
+                        "permissionGranted": false,
+                        "message"          : "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "lastCalculatedDate": null
+                }
+            ]
+        }
+    }
+}

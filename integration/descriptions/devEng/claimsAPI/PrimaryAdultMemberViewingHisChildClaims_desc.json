@@ -1,0 +1,11 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Adult_Member_Viewing_Child_Claims":
+        {
+            "TC-1": "GIVEN Primary Adult Member WHEN requesting to view his or her Child's claim records THEN should be able to view all his claim records",
+            "TC-2": "Validation of Claim Details in the response"
+           
+        }     
+    }
+}

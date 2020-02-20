@@ -1,0 +1,64 @@
+{
+  "ValidateCreditCardAPIScenarios":{
+      "Scenario1-Validate_VISA_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "TC-1":"GIVEN VISA type CreditCard Details with Invalid CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Number is Invalid (5000)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario2-Validate_MasterCard_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Number is Invalid (5000)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario3-Validate_Discover_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Number is Invalid (5000)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario4-Validate_AMEX_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Number is Invalid (5000)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario5-Validate_InternationalVISA_Type_CreditCard_with_Invalid_CreditCardNumber":{
+         "TC-1":"GIVEN InternationalVISA type CreditCard Details with Invalid CardNumber WHEN requesting for CreditCard validation THEN should get Credit Card Number is Invalid (5000)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario6-Validate_VISA_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "TC-1":"GIVEN VISA type CreditCard Details with Invalid ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Expiry Date is Invalid (5001)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario7-Validate_MasterCard_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Expiry Date is Invalid (5001)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario8-Validate_Discover_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Expiry Date is Invalid (5001)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario9-Validate_AMEX_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Expiry Date is Invalid (5001)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario10-Validate_InternationalVISA_Type_CreditCard_with_Invalid_ExpiryDate":{
+         "TC-1":"GIVEN InternationalVISA type CreditCard Details with Invalid ExpiryDate WHEN requesting for CreditCard validation THEN should get Credit Card Expiry Date is Invalid (5001)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario11-Validate_VISA_Type_CreditCard_with_Invalid_CVV":{
+         "TC-1":"GIVEN VISA type CreditCard Details with Invalid CVV WHEN requesting for CreditCard validation THEN should get Invalid Credit Card CVV (5021)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario12-Validate_MasterCard_Type_CreditCard_with_Invalid_CVV":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid CVV WHEN requesting for CreditCard validation THEN should get Invalid Credit Card CVV (5021)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario13-Validate_Discover_Type_CreditCard_with_Invalid_CVV":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid CVV WHEN requesting for CreditCard validation THEN should get Invalid Credit Card CVV (5021)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario14-Validate_AMEX_Type_CreditCard_with_Invalid_CVV":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid CVV WHEN requesting for CreditCard validation THEN should get Invalid Credit Card CVV (5021)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario15-Validate_InternationalVISA_Type_CreditCard_with_Invalid_CVV":{
+         "TC-1":"GIVEN InternationalVISA type CreditCard Details with Invalid CVV WHEN requesting for CreditCard validation THEN should get Invalid Credit Card CVV (5021)",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      }  
+  }
+}

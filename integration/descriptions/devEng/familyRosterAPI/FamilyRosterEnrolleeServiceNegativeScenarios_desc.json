@@ -1,0 +1,41 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Contract_ID":
+        {
+            "TC-1": "Given Invalid Contract ID WHEN requesting to view Enrollee informarion THEN should not return any enrollee records ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        },
+        "Scenario2-Invalid_Group_ID":
+        {
+            "TC-1": "Given Invalid Group ID WHEN requesting to view Enrollee informarion  THEN should not return any enrollee records ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+         "Scenario3-Invalid_Division_ID":
+        {
+            "TC-1": "Given Invalid Division ID WHEN requesting to view Enrollee informarion  THEN should not return any enrollee records ",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }  ,
+         "Scenario4-Empty_Division_ID":
+        {
+            "TC-1": "Given Empty Division ID WHEN requesting to view Enrollee informarion  THEN Message should be displayed that Division ID is mandatory",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+         "Scenario5-Empty_Group_ID":
+        {
+            "TC-1": "Given Empty Group ID WHEN requesting to view Enrollee informarion  THEN Message should be displayed that Group ID is mandatory",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+         "Scenario6-Empty_Contract_ID":
+        {
+            "TC-1": "Given Empty Contract ID WHEN requesting to view Enrollee informarion  THEN Message should be displayed that Contract ID is mandatory",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+         "Scenario7-Invalid_ClientKey":
+        {
+            "TC-1": "Given Invalid ClientKey WHEN requesting to view Enrollee informarion THEN Security Violation Message should be displayed",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }
+                       
+  }
+}

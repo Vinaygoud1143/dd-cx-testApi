@@ -1,0 +1,27 @@
+{
+   "Scenarios":{
+      "Scenario1-Accounts&Billing-Delete Payment method for PaymentMethodId":{
+         "TC-1":"GIVEN Valid PaymentMethodId,EnrolleeId, PersonId & ClientKey WHEN requesting to DELETE PaymentMethodId THEN should able to PaymentMethodId "
+      },
+      "Scenario2-Accounts&Billing-Delete Payment method with Invalid PaymentMethodId":{
+         "TC-1":"GIVEN Invalid PaymentMethodId WHEN requesting to DELETE PaymentMethodId THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario3-Accounts&Billing-Delete Payment method with Empty EnrolleeId":{
+         "TC-1":"GIVEN Empty EnrolleeId WHEN requesting to DELETE PaymentMethodId THEN should get Not Found.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario4-Accounts&Billing-Delete Payment method with Invalid ClientKey":{
+         "TC-1":"GIVEN Invalid ClientKey WHEN requesting to DELETE PaymentMethodId THEN should get Unauthorized Error.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario5-Accounts&Billing-Delete Payment method with Empty ClientKey":{
+         "TC-1":"GIVEN Empty ClientKey WHEN requesting to DELETE PaymentMethodId THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario6-Accounts&Billing-Delete Payment method with Empty PersonId":{
+         "TC-1":"GIVEN Empty PersonId WHEN requesting to DELETE PaymentMethodId THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      }
+   }
+}

@@ -1,0 +1,53 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Broker_Details_By_Providing_Valid_BrokerId":
+        {
+            "request":
+            {
+                "brokerId": "2012836"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 404
+                },
+                "TC-2":
+                {
+                 "errorCode": "BROKER002",
+                 "shortDescription": "Unable to retrieve Broker  details",
+                 "detailedDescription": "Internal error. Unable to retrieve Broker details for the given tax Id:2012836"
+                }
+            }
+        }
+    },
+    "negativetestdata":
+    {
+        "Scenario1-Invalid_BrokerId":
+        {
+
+            "request":
+            {
+                "brokerId": "20128545"
+            },
+            "params":
+            {},
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 404
+                },
+                "TC-2":
+                {
+                    "errorCode": "BROKER002",
+                    "shortDescription": "Unable to retrieve Broker  details",
+                    "detailedDescription": "Internal error. Unable to retrieve Broker details for the given tax Id:20128545"
+                }
+            }
+        }
+    }
+}

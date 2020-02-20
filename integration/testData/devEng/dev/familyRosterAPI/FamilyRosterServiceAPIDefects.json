@@ -1,0 +1,39 @@
+{  
+   "Scenarios":{  
+      "Scenario1-CXCORETECH-1259-Benefit Package ID mismatch":{  
+         "request":{  
+            "personId":"5100000001588829"
+         },
+         "headers":{  
+            "personId":"5100000001588829",
+            "ClientKey":"12345"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "benefitId":"PDN05648",
+               "bl7Flag":"PPO"
+            }
+         }
+      },
+      "Scenario2-CXCORETECH-1197-Network ID Mismatch":{
+         "request":{
+            "personId":"5107000004051326"
+         },
+         "headers":{
+            "personId":"5107000004051326",
+            "ClientKey":"12345"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "bl7Flag":"1N12FQLT"
+            }
+         }
+      }
+   }
+}

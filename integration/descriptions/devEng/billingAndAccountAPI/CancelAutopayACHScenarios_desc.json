@@ -1,0 +1,33 @@
+{
+   "Scenarios":{
+      "Scenario1-Accounts&Billing-Cancel AutoPay ACH":{
+         "TC-1":"GIVEN Valid PaymentMethodId,EnrolleeId, PersonId & ClientKey WHEN requesting to CANCEL PaymentMethodId THEN should able to PaymentMethodId "
+      },
+      "Scenario2-Accounts&Billing-Cancel AutoPay ACH with Invalid PaymentMethodId":{
+         "TC-1":"GIVEN Invalid PaymentMethodId WHEN requesting to CANCEL PaymentMethodId THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario3-Accounts&Billing-CANCEL AUTOPAY ACH with Empty EnrolleeId":{
+         "TC-1":"GIVEN Empty EnrolleeId WHEN requesting to CANCEL PaymentMethodId THEN should get Not Found.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario4-Accounts&Billing-CANCEL AUTOPAY ACH with Invalid ClientKey":{
+         "TC-1":"GIVEN Invalid ClientKey WHEN requesting to CANCEL PaymentMethodId THEN should get Unauthorized Error.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario5-Accounts&Billing-CANCEL AUTOPAY ACH with Empty ClientKey":{
+         "TC-1":"GIVEN Empty ClientKey WHEN requesting to CANCEL PaymentMethodId THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      },
+      "Scenario6-Accounts&Billing-CANCEL AUTOPAY ACH with Empty PersonId":{
+         "TC-1":"GIVEN Empty PersonId WHEN requesting to CANCEL PaymentMethodId THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCodes and Accounts Details in the response."
+      }
+   },
+   "ACCOUNTS_API_SCENARIOS":{
+      "Scenario1-ACH_AUTOPAY_CANCEL":{
+         "TC-1":"GIVEN Valid ACH Details, WHEN requesting to Billing Service THEN should return HTTPSTATUS OK.",
+         "TC-2":"Validation of Accounts Details in the response."
+      }
+   }
+}

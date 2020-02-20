@@ -1,0 +1,164 @@
+{
+    "Set1": {
+        "Data 1": {
+            "testCaseDes": "GIVEN a profile with Primary Member. When the Primary member is requesting to view his or her claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "100487195001",
+            "PersonId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "100487195001",
+                "enrolleeName": "Mary Speed",
+                "enrolleeType": "Primary",
+                "status": 200
+            }
+        },
+        "Data 2": {
+            "testCaseDes": "GIVEN an Adult Member, WHEN requesting to view his or her claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "239973584302",
+            "PersonId"   : "7997000007699287",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "239973584302",
+                "enrolleeName": "Thomas Porter",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 3": {
+            "testCaseDes": "GIVEN Child Member, WHEN requesting to view his or her claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "116379857503",
+            "PersonId"   : "0431041316550753",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "116379857503",
+                "enrolleeName": "Dallas Remy",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 4": {
+            "testCaseDes": "Omnibus Rule - GIVEN a Primary Member, WHEN requesting to view his or her Child's claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to the Child being requested for: ",
+            "enrolleeId" : "116379857503",
+            "PersonId"   : "0709841316550733",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "116379857503",
+                "enrolleeName": "Dallas Remy",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 5": {
+            "testCaseDes": "Omnibus Rule - Given Primary member AND an Adult Dependent, who has granted permission. WHEN Primary member requests to view other Adult member's claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to Adult Dependent: ",
+            "enrolleeId" : "100487195002",
+            "PersonId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "100487195002",
+                "enrolleeName": "Steven Speed",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 6": {
+            "testCaseDes": "Omnibus Rule - Given Primary member AND an Adult Dependent, who has granted permission.  WHEN Primary member requests to view other Adult member's claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to Adult Dependent: ",
+            "enrolleeId" : "100487195003",
+            "PersonId"   : "0358980916542245",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "100487195003",
+                "enrolleeName": "Cari Speed",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 7": {
+            "testCaseDes": "Omnibus Rule - Given Primary member AND an Adult Dependent, who has granted permission.  WHEN Primary member requests to view other Adult member's claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to Adult Dependent: ",
+            "enrolleeId" : "239964610302",
+            "PersonId"   : "7997000007729429",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "239964610302",
+                "enrolleeName": "TRUDY PREUSS",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 8": {
+            "testCaseDes": "PHI - GIVEN an ADULT member With PHI Flag disabled, WHEN requesting to his/her own claim records, ThEN verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "004579377802",
+            "PersonId"   : "5047000004555079",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "004579377802",
+                "enrolleeName": "Robert Conrad",
+                "enrolleeType": "Dependent",
+                "status": 200
+            }
+        },
+        "Data 9": {
+            "testCaseDes": "PHI - GIVEN Primary Member With PHI Flag disabled, WHEN requesting to view his or her claim records, THEN verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "004578460901",
+            "PersonId"   : "5047000004555079",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "004578460901",
+                "enrolleeName": "Robert Conrad",
+                "enrolleeType": "Primary",
+                "status": 200
+            }
+        },
+        "Data 10": {
+            "testCaseDes": "PHI - GIVEN a Dependent with PHI Flag enabled, WHEN requesting to view his/her claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "001065669702",
+            "PersonId"   : "5100000001758311",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "001065669702",
+                "enrolleeName": "Gayle Linville",
+                "enrolleeType": "Dependent",
+                "status": 200
+            },
+            "bugNumber": "CXCORETECH-654"
+        },
+        "Data 11": {
+            "testCaseDes": "PHI - GIVEN Primary Member with PHI Flag disabled, WHEN requesting to view his/her claim records, verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her: ",
+            "enrolleeId" : "114262595201",
+            "PersonId"   : "0938661113434711",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "114262595201",
+                "enrolleeName": "Stephen Duplechin",
+                "enrolleeType": "Primary",
+                "status": 200
+            },
+            "bugNumber": "CXCORETECH-659"
+        },
+        "Data 12": {
+            "testCaseDes": "Bug, PHI - GIVEN a Profile with 1 Primary and 2 Dependents with 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view his/her claim records, THEN verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to him/her AND the PHI flag for 2nd Dependent does NOT block the Primary from viewing this information: ",
+            "enrolleeId" : "535040012501",
+            "PersonId"   : "0052611011512994",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "535040012501",
+                "enrolleeName": "Michael Parido",
+                "enrolleeType": "Primary",
+                "status": 200
+            },
+            "bugNumber": "CXCORETECH-671"
+        },
+        "Data 13": {
+            "testCaseDes": "Bug, PHI - GIVEN a Profile with 1 Primary and 2 Dependents with the 2nd Dependent having PHI flag enabled, WHEN the Primary requests to view 1st Dependent's claim records (PHI flag disabled), verify if enrolleeId, enrolleeName and enrolleeType in the API response belongs to 1st Dependent AND the PHI flag for 2nd Dependent should NOT block Primary Member from viewing this information: ",
+            "enrolleeId" : "535040012502",
+            "PersonId"   : "0052611011512994",
+            "ClientKey"  : "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "verify"     : {
+                "enrolleeId"  : "535040012502",
+                "enrolleeName": "Morrison Parido",
+                "enrolleeType": "Dependent",
+                "status": 200
+            },
+            "bugNumber": "CXCORETECH-671"
+        }
+    }
+}

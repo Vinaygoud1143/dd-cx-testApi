@@ -1,0 +1,112 @@
+{  
+   "Scenarios":{  
+      "Scenario1-Invalid_AddressLine(Empty Apartment Number)":{  
+         "request":{  
+            "addressLine":"1150 K St NW Apt",
+            "city":"Washington",
+            "state":"DC",
+            "zipcode":"20005"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":400
+            },
+            "TC-2":{  
+                  "errorCode": "ADDRESS_4000",
+				  "shortDescription": "Input parameters to the service were incorrect",
+				  "detailedDescription": "US Postal Service records show multiple units at this address. Is there an apartment, floor or suite number?"
+            }
+         }
+      },
+      "Scenario2-Empty_Zipcode":{  
+         "request":{  
+            "addressLine":"1150 K St NW Apt 809",
+            "city":"Washington",
+            "state":"DC",
+            "zipcode":""
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":400
+            },
+            "TC-2":{  
+               "errorCode": "ADDRESS_004",
+			  "shortDescription": "Invalid zipcode",
+			  "detailedDescription": "Invalid zipcode - "
+            }
+         }
+      },
+      "Scenario3-Empty_AddressLine":{  
+         "request":{  
+            "addressLine":"",
+            "city":"Washington",
+            "state":"DC",
+            "zipcode":"20005"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":400
+            },
+            "TC-2":{  
+               "errorCode": "ADDRESS_001",
+			  "shortDescription": "Invalid address line",
+			  "detailedDescription": "Invalid address line - "
+            }
+         }
+      },
+      "Scenario4-Empty_City":{  
+         "request":{  
+            "addressLine":"1150 K St NW Apt 809",
+            "city":"",
+            "state":"DC",
+            "zipcode":"20005"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":400
+            },
+            "TC-2":{  
+               "errorCode": "ADDRESS_002",
+			  "shortDescription": "Invalid city",
+			  "detailedDescription": "Invalid city - "
+            }
+         }
+      },
+      "Scenario5-Empty_State":{  
+         "request":{  
+            "addressLine":"1150 K St NW Apt 809",
+            "city":"Washington",
+            "state":"",
+            "zipcode":"20005"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":400
+            },
+            "TC-2":{  
+               "errorCode": "ADDRESS_003",
+				  "shortDescription": "Invalid state",
+				  "detailedDescription": "Invalid state - "
+            }
+         }
+      },
+      "Scenario6-Invalid_AddressLine":{  
+         "request":{  
+            "addressLine":"108 Mt. Welcome Ea",
+            "city":"St. Croix",
+            "state":"VA",
+            "zipcode":"00820"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":400
+            },
+            "TC-2":{  
+              "errorCode": "ADDRESS_3030",
+			  "shortDescription": "Input parameters to the service were incorrect",
+			  "detailedDescription": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Provider_Details_Error_For_Given_Wrong_Address":
+        {
+            "TC-1": "GIVEN Address, WHEN requesting to view Provider details THEN  error comes for given wrong address",
+            "TC-2": "Validation of the provider with API error response"
+        }
+    }
+}

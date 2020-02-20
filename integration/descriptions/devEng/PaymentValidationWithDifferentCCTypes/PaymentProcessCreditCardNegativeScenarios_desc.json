@@ -1,0 +1,64 @@
+{
+  "PaymentNegativeScenariosWithCreditCard":{
+      "Scenario1-Payment_With_VISA_Type_CreditCard_with_Invalid_Amount_0.51":{
+         "TC-1":"GIVEN VISA type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario2-Payment_With_VISA_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "TC-1":"GIVEN VISA type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario3-Payment_With_VISA_Type_CreditCard_with_Invalid_Amount_0.43":{
+         "TC-1":"GIVEN VISA type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario4-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.07":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario5-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.41":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario6-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario7-Payment_With_MasterCard_Type_CreditCard_with_Invalid_Amount_0.74":{
+         "TC-1":"GIVEN MasterCard type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario8-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.07":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario9-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.13":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario10-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario11-Payment_With_AMEX_Type_CreditCard_with_Invalid_Amount_0.78":{
+         "TC-1":"GIVEN AMEX type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario12-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.21":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario13-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.14":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario14-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.54":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario15-Payment_With_Discover_Type_CreditCard_with_Invalid_Amount_0.78":{
+         "TC-1":"GIVEN Discover type CreditCard Details with Invalid Amount WHEN requesting for CreditCard validation THEN should get Error Or ErrorCode",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      }  
+  }
+}

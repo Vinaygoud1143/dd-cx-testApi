@@ -1,0 +1,56 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Primary_Member_Viewing_Other_Adult_Claims_Not_Part_Of_Same_Contract": 
+        {
+            "request": 
+            {
+                "enrollee-id": "100487194004"
+            },
+            "headers": 
+            {
+                "personId" : "0358980916542245",
+                "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+            },
+            "verify": 
+            {
+                "TC-1": 
+                {
+                    "statuscode": 500
+                },
+                "TC-2": 
+                {
+                    "errorCode"          : "CLAIMS006",
+                    "shortDescription"   : "Error in retrieving enrollee summary for the given enrollee Id.",
+                    "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id."
+                }
+            }
+        },
+
+          "Scenario2-Adult_Member_Viewing_Other_Member_Claims_Not_In_Same_Contract":
+        {
+            "request":
+            {
+                "enrollee-id": "100487795003"
+            },
+            "headers":
+            {
+                "personId": "0002580916542268",
+                "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 500
+                },
+                "TC-2":
+                {
+                    "errorCode": "CLAIMS006",
+                    "shortDescription": "Error in retrieving enrollee summary for the given enrollee Id.",
+                    "detailedDescription": "Error in retrieving enrollee summary for the given enrollee Id."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,416 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Enrollee_270960029101_Viewing_His_Family_Information":
+        {
+            "request":
+            {
+                "contractId": "2709600291",
+                "params":
+                {
+                    "group-id": "70116",
+                    "division-id": "00007"
+                }
+            },
+            "headers":
+            {
+                "personId": "6107000007143442",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2": [
+                {
+	                    "age": "54",
+	                    "enrolleeId": "270960029101",
+					    "memberId": "01",
+					    "email": "aafingurs@gmail.com",
+					    "firstName": "Abel",
+					    "middleName": "",
+					    "lastName": "Lopez",
+					    "language": "Not Provided",
+					    "personId": "6107000007143442",
+					    "officePhone": null,
+					    "homePhone": null,
+					    "mobilePhone": null,
+					    "otherPhone": "2135704212",
+					    "gender": "Male",
+					    "inGracePeriod": false,
+					    "primaryIndicator": "Y",
+					    "phiFlag": false,
+					    "relationShip": "Primary",
+					    "relationShipCode": "10",
+					    "primary": true,
+					    "divisionId": "00007",
+					    "groupId": "70116"
+                }]
+            }
+        },
+        "Scenario2-Enrollee_114373445401_Viewing_His_Family_Information":
+        {
+            "request":
+            {
+                "contractId": "1143734454",
+                "params":
+                {
+                    "group-id": "03859",
+                    "division-id": "06305"
+                }
+            },
+            "headers":
+            {
+                "personId": "0956473113365658",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2": [
+                {
+                    "age": "63",
+                    "enrolleeId": "114373445401",
+				    "memberId": "01",
+				    "email": "masumim@gmail.com",
+				    "firstName": "Masumi",
+				    "middleName": "",
+				    "lastName": "Minx",
+				    "language": "Not Provided",
+				    "personId": "0956473113365658",
+				    "officePhone": null,
+				    "homePhone": "9497167109",
+				    "mobilePhone": null,
+				    "otherPhone": null,
+				    "gender": "Female",
+				    "inGracePeriod": false,
+				    "primaryIndicator": "Y",
+				    "phiFlag": false,
+				    "relationShip": "Primary",
+				    "relationShipCode": "10",
+				    "primary": true,
+				    "divisionId": "06305",
+				    "groupId": "03859"
+                }]
+            }
+        },
+        "Scenario3-Enrollee_115967434801_Viewing_His_Family_Information":
+        {
+            "request":
+            {
+                "contractId": "1159674348",
+                "params":
+                {
+                    "group-id": "50250",
+                    "division-id": "10004"
+                }
+            },
+            "headers":
+            {
+                "personId": "0956473113365658",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2": [
+                {
+                    "age": "63",
+                    "enrolleeId": "115967434801",
+				    "memberId": "01",
+				    "email": "masumim@gmail.com",
+				    "firstName": "Masumi",
+				    "middleName": "",
+				    "lastName": "Minx",
+				    "language": "Not Provided",
+				    "personId": "0956473113365658",
+				    "officePhone": null,
+				    "homePhone": "9497167109",
+				    "mobilePhone": null,
+				    "otherPhone": null,
+				    "gender": "Female",
+				    "inGracePeriod": false,
+				    "primaryIndicator": "Y",
+				    "phiFlag": false,
+				    "relationShip": "Primary",
+				    "relationShipCode": "10",
+				    "primary": true,
+				    "divisionId": "10004",
+				    "groupId": "50250"
+               }]
+            }
+        },
+        "Scenario4-Enrollee_100487195001_Viewing_His_Family_Information":
+        {
+            "request":
+            {
+                "contractId": "1004871950",
+                "params":
+                {
+                    "group-id": "09161",
+                    "division-id": "00103"
+                }
+            },
+            "headers":
+            {
+                "personId": "0358980916542245",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2": [
+                    {
+                        "age": "56",
+                        "enrolleeId": "100487195001",
+					    "memberId": "01",
+					    "email": "MARY.SPEED@GLATFELTER.COM",
+					    "firstName": "Mary",
+					    "middleName": "L",
+					    "lastName": "Speed",
+					    "language": "Not Provided",
+					    "personId": "0358980916542245",
+					    "officePhone": "7405421843",
+					    "homePhone": "5138581141",
+					    "mobilePhone": null,
+					    "otherPhone": null,
+					    "gender": "Female",
+					    "inGracePeriod": false,
+					    "primaryIndicator": "Y",
+					    "phiFlag": false,
+					    "relationShip": "Primary",
+					    "relationShipCode": "10",
+					    "primary": true,
+					    "divisionId": "00103",
+					    "groupId": "09161"
+                    },
+
+                    {
+                        "age": "62",
+                        "enrolleeId": "100487195002",
+					    "memberId": "02",
+					    "email": null,
+					    "firstName": "Steven",
+					    "middleName": "J",
+					    "lastName": "Speed",
+					    "language": "Not Provided",
+					    "personId": "0002580916542268",
+					    "officePhone": null,
+					    "homePhone": null,
+					    "mobilePhone": null,
+					    "otherPhone": null,
+					    "gender": "Male",
+					    "inGracePeriod": false,
+					    "primaryIndicator": "N",
+					    "phiFlag": false,
+					    "relationShip": "Spouse",
+					    "relationShipCode": "20",
+					    "primary": false,
+					    "divisionId": "00103",
+					    "groupId": "09161"
+                    },
+
+                    {
+                        "age": "23",
+                        "enrolleeId": "100487195003",
+					    "memberId": "03",
+					    "email": null,
+					    "firstName": "Cari",
+					    "middleName": "J",
+					    "lastName": "Speed",
+					    "language": "Not Provided",
+					    "personId": "0055480916542294",
+					    "officePhone": null,
+					    "homePhone": null,
+					    "mobilePhone": null,
+					    "otherPhone": null,
+					    "gender": "Female",
+					    "inGracePeriod": false,
+					    "primaryIndicator": "N",
+					    "phiFlag": false,
+					    "relationShip": "Child",
+					    "relationShipCode": "30",
+					    "primary": false,
+					    "divisionId": "00103",
+					    "groupId": "09161"
+                    },
+                    {
+                        "age": "21",
+					    "enrolleeId": "100487195004",
+					    "memberId": "04",
+					    "email": null,
+					    "firstName": "Kellie",
+					    "middleName": "D",
+					    "lastName": "Speed",
+					    "language": "Not Provided",
+					    "personId": "0374780916542310",
+					    "officePhone": null,
+					    "homePhone": null,
+					    "mobilePhone": null,
+					    "otherPhone": null,
+					    "gender": "Female",
+					    "inGracePeriod": false,
+					    "primaryIndicator": "N",
+					    "phiFlag": false,
+					    "relationShip": "Child",
+					    "relationShipCode": "30",
+					    "primary": false,
+					    "divisionId": "00103",
+					    "groupId": "09161"
+                    }
+                ]
+            }
+        },
+        "Scenario5-Enrollee_100088996605_Viewing_His_Family_Information":{
+   "request":{
+      "contractId":"1000889966",
+      "params":{
+         "group-id":"05660",
+         "division-id":"00202"
+      }
+   },
+   "headers":{
+      "personId":"0598821214041280",
+      "ClientKey":"27feb576-ba4b-4379-a3c1-a53f21d34514"
+   },
+   "verify":{
+      "TC-1":{
+         "statuscode":200
+      },
+      "TC-2":[
+         {
+            "age":"12",
+            "enrolleeId": "100088996605",
+		    "memberId": "05",
+		    "email": null,
+		    "firstName": "Nathan",
+		    "middleName": "A",
+		    "lastName": "Takacs",
+		    "language": "Not Provided",
+		    "personId": "0598821214041280",
+		    "officePhone": null,
+		    "homePhone": null,
+		    "mobilePhone": null,
+		    "otherPhone": null,
+		    "gender": "Male",
+		    "inGracePeriod": false,
+		    "primaryIndicator": "N",
+		    "phiFlag": false,
+		    "relationShip": "Child",
+		    "relationShipCode": "30",
+		    "primary": false,
+		    "divisionId": "00202",
+		    "groupId": "05660"
+         },
+         {
+            "age":"47",
+            "enrolleeId": "100088996601",
+		    "memberId": "01",
+		    "email": null,
+		    "firstName": "Scott",
+		    "middleName": "J",
+		    "lastName": "Takacs",
+		    "language": "Not Provided",
+		    "personId": "0869921214035362",
+		    "officePhone": null,
+		    "homePhone": null,
+		    "mobilePhone": null,
+		    "otherPhone": null,
+		    "gender": "Male",
+		    "inGracePeriod": false,
+		    "primaryIndicator": "Y",
+		    "phiFlag": false,
+		    "relationShip": "Primary",
+		    "relationShipCode": "10",
+		    "primary": true,
+		    "divisionId": "00202",
+		    "groupId": "05660"
+         },
+         {
+            "age":"46",
+            "enrolleeId": "100088996602",
+            "memberId": "02",
+		    "email": null,
+		    "firstName": "Rebecca",
+		    "middleName": "L",
+		    "lastName": "Takacs",
+		    "language": "Not Provided",
+		    "personId": "0804621214035845",
+		    "officePhone": null,
+		    "homePhone": null,
+		    "mobilePhone": null,
+		    "otherPhone": null,
+		    "gender": "Female",
+		    "inGracePeriod": false,
+		    "primaryIndicator": "N",
+		    "phiFlag": false,
+		    "relationShip": "Spouse",
+		    "relationShipCode": "20",
+		    "primary": false,
+		    "divisionId": "00202",
+		    "groupId": "05660"
+         },
+         {
+            "age":"12",
+            "enrolleeId": "100088996603",
+		    "memberId": "03",
+		    "email": null,
+		    "firstName": "Andrew",
+		    "middleName": "J",
+		    "lastName": "Takacs",
+		    "language": "Not Provided",
+		    "personId": "0441921214040322",
+		    "officePhone": null,
+		    "homePhone": null,
+		    "mobilePhone": null,
+		    "otherPhone": null,
+		    "gender": "Male",
+		    "inGracePeriod": false,
+		    "primaryIndicator": "N",
+		    "phiFlag": false,
+		    "relationShip": "Child",
+		    "relationShipCode": "30",
+		    "primary": false,
+		    "divisionId": "00202",
+		    "groupId": "05660"
+         },
+         {   
+            "age":"14",
+            "enrolleeId": "100088996604",
+		    "memberId": "04",
+		    "email": null,
+		    "firstName": "Joseph",
+		    "middleName": "S",
+		    "lastName": "Takacs",
+		    "language": "Not Provided",
+		    "personId": "0174421214040799",
+		    "officePhone": null,
+		    "homePhone": null,
+		    "mobilePhone": null,
+		    "otherPhone": null,
+		    "gender": "Male",
+		    "inGracePeriod": false,
+		    "primaryIndicator": "N",
+		    "phiFlag": false,
+		    "relationShip": "Child",
+		    "relationShipCode": "30",
+		    "primary": false,
+		    "divisionId": "00202",
+		    "groupId": "05660"
+         }
+      ]
+   }
+}
+    }
+}

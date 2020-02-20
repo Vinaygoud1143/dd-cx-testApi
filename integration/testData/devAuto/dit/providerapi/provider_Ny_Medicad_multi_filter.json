@@ -1,0 +1,242 @@
+{
+    "OfficeHours_OfficeAccess": {
+        "Data 1": {
+            "params": {
+                "zipcode"      : "10950",
+                "distance"     : "2",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_hours" : "saturday",
+                "office_access": "free_parking",
+                "meta_data"    : false
+            }
+        },
+        "Data 2": {
+            "params": {
+                "zipcode"      : "10950",
+                "distance"     : "15",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_hours" : "sunday",
+                "office_access": "internet_access",
+                "meta_data"    : false
+            }
+        },
+        "Data 3": {
+            "params": {
+                "zipcode"      : "10950",
+                "distance"     : "2",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_hours" : "evening",
+                "office_access": "wheel_chair_access",
+                "meta_data"    : false
+            }
+        },
+        "Data 4": {
+            "params": {
+                "zipcode"      : "10950",
+                "distance"     : "2",
+                "page"         : "0",
+                "per_page"     : "60000",
+                "max"          : "60000",
+                "office_hours" : "morning",
+                "office_access": "public_transit_access",
+                "meta_data"    : false
+            }
+        }
+    },
+    "OfficeHours_2_OfficeAccess": {
+        "Data 1": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "saturday",
+                    "evening"
+                ],
+                "office_access": "free_parking",
+                "meta_data"    : false
+            }
+        },
+        "Data 2": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "sunday",
+                    "morning"
+                ],
+                "office_access": "internet_access",
+                "meta_data"    : false
+            }
+        },
+        "Data 3": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "saturday",
+                    "morning"
+                ],
+                "office_access": "wheel_chair_access",
+                "meta_data"    : false
+            }
+        },
+        "Data 4": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "saturday",
+                    "sunday"
+                ],
+                "office_access": "public_transit_access",
+                "meta_data"    : false
+            }
+        }
+    },
+    "OfficeHours_2_OfficeAccess_2": {
+        "Data 1": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "saturday",
+                    "evening"
+                ],
+                "office_access": [
+                    "free_parking",
+                    "internet_access"
+                ],
+                "meta_data": false
+            }
+        },
+        "Data 2": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "sunday",
+                    "morning"
+                ],
+                "office_access": [
+                    "internet_access",
+                    "wheel_chair_access"
+                ],
+                "meta_data": false
+            }
+        },
+        "Data 3": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "saturday",
+                    "morning"
+                ],
+                "office_access": [
+                    "wheel_chair_access",
+                    "public_transit_access"
+                ],
+                "meta_data": false
+            }
+        },
+        "Data 4": {
+            "params": {
+                "zipcode"     : "10950",
+                "distance"    : "2",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "office_hours": [
+                    "saturday",
+                    "sunday"
+                ],
+                "office_access": [
+                    "public_transit_access",
+                    "internet_access"
+                ],
+                "meta_data": false
+            }
+        }
+    },
+    "OfficeHours_OfficeAccess_AcceptingNewPatients": {
+        "Data 1": {
+            "params": {
+                "zipcode"            : "10950",
+                "distance"           : "2",
+                "page"               : "0",
+                "per_page"           : "60000",
+                "max"                : "60000",
+                "office_hours"       : "saturday",
+                "office_access"      : "public_transit_access",
+                "accept_new_patients": "true",
+                "meta_data"          : false
+            }
+        },
+        "Data 2": {
+            "params": {
+                "zipcode"            : "10950",
+                "distance"           : "15",
+                "page"               : "0",
+                "per_page"           : "60000",
+                "max"                : "60000",
+                "office_hours"       : "sunday",
+                "office_access"      : "free_parking",
+                "accept_new_patients": "true",
+                "meta_data"          : false
+            }
+        },
+        "Data 3": {
+            "params": {
+                "zipcode"            : "10950",
+                "distance"           : "2",
+                "page"               : "0",
+                "per_page"           : "60000",
+                "max"                : "60000",
+                "office_hours"       : "evening",
+                "office_access"      : "internet_access",
+                "accept_new_patients": "true",
+                "meta_data"          : false
+            }
+        },
+        "Data 4": {
+            "params": {
+                "zipcode"            : "10950",
+                "distance"           : "2",
+                "page"               : "0",
+                "per_page"           : "60000",
+                "max"                : "60000",
+                "office_hours"       : "morning",
+                "office_access"      : "wheel_chair_access",
+                "accept_new_patients": "true",
+                "meta_data"          : false
+            }
+        }
+    }
+}

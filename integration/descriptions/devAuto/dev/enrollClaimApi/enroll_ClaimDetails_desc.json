@@ -1,0 +1,25 @@
+{
+    "Scenarios":
+    {
+        "Scenario-1":
+        {
+            "TC-1": "Hit the REST API, check for a valid response status code and convert the response in JSON format:",
+            "TC-2": "GIVEN a profile with Primary Member. When the Primary member is requesting to view his or her claim records, verify if all the valid claims are returned by the API: ",
+            "TC-3": "For the scenario in Test 2, verify if all the claims are sorted from LATEST to OLDEST"
+        },
+        "Scenario-2":
+        {
+
+            "TC-1": "Hit the REST API, check for a valid response status code and convert the response in JSON format:",
+            "TC-2": "GIVEN an Adult Member, WHEN requesting to view his or her claim records, verify if all the valid claims are returned by the API: ",
+            "TC-3": "For the scenario in Test 2, verify if all the claims are sorted from LATEST to OLDEST"
+        },
+        "Scenario-3":
+        {
+
+            "TC-1": "Hit the REST API, check for a valid response status code and convert the response in JSON format:",
+            "TC-2": "GIVEN Child Member, WHEN requesting to view his or her claim records, verify if all the valid claims are returned by the API: ",
+            "TC-3": "For the scenario in Test 2, verify if all the claims are sorted from LATEST to OLDEST"
+        }
+    }
+}

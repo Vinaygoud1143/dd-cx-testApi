@@ -1,0 +1,35 @@
+{
+   "Scenarios":{
+      "Scenario1-AutoPay_For_Credit_Card":{
+         "TC-1":"Given a valid request for AutoPay_For_Credit_Card with PersonId and ClientKey WHEN requesting to POST should return SUCCESS CODE."
+      },
+      "Scenario2-AutoPay_For_Credit_Card_WithEmpty_ExpiryDate":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithEmpty_ExpiryDate,WHEN requesting to Enable Autopay THEN should Invalid/Missed Credit Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      },
+      "Scenario3-AutoPay_For_Credit_Card_WithEmpty_last4Digits":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithEmpty_last4Digits,WHEN requesting to Enable Autopay THEN should Invalid/Missed Credit Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      },
+       "Scenario4-AutoPay_For_Credit_Card_WithEmpty_nameOnCard":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithEmpty_nameOnCard,WHEN requesting to Enable Autopay THEN should Invalid/Missed Credit Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      },
+       "Scenario5-AutoPay_For_Credit_Card_WithEmpty_encryptedToken":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithEmpty_encryptedToken,WHEN requesting to Enable Autopay THEN should Invalid/Missed Credit Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      },
+      "Scenario6-AutoPay_For_Credit_Card_WithInvalid_ClientKey":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithInvalid_ClientKey,WHEN requesting to Enable Autopay THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      },
+      "Scenario7-AutoPay_For_Credit_Card_WithEmpty_ClientKey":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithEmpty_ClientKey,WHEN requesting to Enable Autopay THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      },
+      "Scenario8-AutoPay_For_Credit_Card_WithEmpty_PersonId":{
+         "TC-1":"GIVEN AutoPay_For_Credit_Card_WithEmpty_PersonId,WHEN requesting to Enable Autopay THEN should get Bad Request.",
+         "TC-2":"Validation of ErrorCode & CC AutoPay Details."
+      }
+   }
+}

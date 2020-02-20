@@ -1,0 +1,343 @@
+{
+    "positive_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "paymentReceipt",
+                    "enrolleeId": "123",
+                    "email": "NKanagala@delta.org"
+                }
+
+            },
+            "response":
+            {
+                "status": 200,
+                "requestReferenceId": "ab6c0399-e3a7-43bf-a4be-5e09385d9d75",
+                "emailStatus": "CREATED",
+                "templateType": null,
+                "notificationType": "EMAIL",
+                "instance": "localhost",
+                "clientApp": null,
+                "createdDate": "2020-01-30T09:04:23.942+0000",
+                "lastUpdatedDate": "2020-01-30T09:04:23.942+0000"
+            }
+        }
+    },
+    "negative_scenarios":
+    {
+        "scenario1":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "",
+                    "enrolleeId": "",
+                    "email": ""
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_006",
+                "shortDescription": "Wrong Template value in the Request .",
+                "detailedDescription": "Please verify Template name in the given request"
+            }
+        },
+        "scenario2":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "",
+                    "enrolleeId": "123",
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_006",
+                "shortDescription": "Wrong Template value in the Request .",
+                "detailedDescription": "Please verify Template name in the given request"
+            }
+        },
+        "scenario3":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "paymentReceipt"
+
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_007",
+                "shortDescription": "Missing Required fields in the Request .",
+                "detailedDescription": "Please verify Required input fields [enrolleeId, email]."
+            }
+        },
+        "scenario4":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "enrolleeId": "123"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_005",
+                "shortDescription": "Missing Template name in the Request .",
+                "detailedDescription": "Please provide the template in the given request"
+            }
+        },
+        "scenario5":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_005",
+                "shortDescription": "Missing Template name in the Request .",
+                "detailedDescription": "Please provide the template in the given request"
+            }
+        },
+        "scenario6":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "paymentReceipt",
+                    "enrolleeId": "123"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_007",
+                "shortDescription": "Missing Required fields in the Request .",
+                "detailedDescription": "Please verify Required input fields [email]."
+            }
+        },
+        "scenario7":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "paymentReceipt",
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_007",
+                "shortDescription": "Missing Required fields in the Request .",
+                "detailedDescription": "Please verify Required input fields [enrolleeId]."
+            }
+        },
+        "scenario8":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "enrolleeId": "123",
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_005",
+                "shortDescription": "Missing Template name in the Request .",
+                "detailedDescription": "Please provide the template in the given request"
+            }
+        },
+        "scenario9":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {}
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_005",
+                "shortDescription": "Missing Template name in the Request .",
+                "detailedDescription": "Please provide the template in the given request"
+            }
+        },
+        "scenario10":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": null,
+                    "enrolleeId": null,
+                    "email": null
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_006",
+                "shortDescription": "Wrong Template value in the Request .",
+                "detailedDescription": "Please verify Template name in the given request"
+            }
+        },
+        "scenario11":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "!@#$%^",
+                    "enrolleeId": 123,
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_006",
+                "shortDescription": "Wrong Template value in the Request .",
+                "detailedDescription": "Please verify Template name in the given request"
+            }
+        },
+        "scenario12":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": 123,
+                    "enrolleeId": 123,
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_006",
+                "shortDescription": "Wrong Template value in the Request .",
+                "detailedDescription": "Please verify Template name in the given request"
+            }
+        },
+        "scenario13":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "<script>alert('XSS')</script>",
+                    "enrolleeId": 123,
+                    "email": "NKanagala@delta.org"
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_006",
+                "shortDescription": "Wrong Template value in the Request .",
+                "detailedDescription": "Please verify Template name in the given request"
+            }
+        },
+        "scenario14":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "paymentReceipt",
+                    "enrolleeId": "123",
+                    "email": "bsudabathula@delta.org",
+                    "name": true
+                }
+            },
+            "response":
+            {
+                "status": 400,
+                "errorCode": "EMAIL_008",
+                "shortDescription": "Unknown fields in the Request .",
+                "detailedDescription": "Please verify the fields [name] which are not required for this template."
+            }
+        },
+        "scenario15":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody": null
+
+            },
+            "response":
+            {
+                "status": 400,
+                "error": "Bad Request",
+                "message": "Required request body is missing"
+
+            }
+        },
+        "scenario16":
+        {
+            "request":
+            {
+                "ClientKey": "12345",
+                "postbody":
+                {
+                    "template": "paymentReceipt",
+                    "enrolleeId": "123",
+                    "email": "nkanagala"
+
+                }
+            },
+            "response":
+            {
+                "status": 200,
+                "emailStatus": "CREATED",
+                "templateType": null,
+                "notificationType": "EMAIL",
+                "instance": "localhost",
+                "clientApp": null
+            }
+        }
+
+    }
+}

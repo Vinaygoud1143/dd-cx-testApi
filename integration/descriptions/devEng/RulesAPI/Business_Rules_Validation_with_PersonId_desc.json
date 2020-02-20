@@ -1,0 +1,13 @@
+{
+   "Scenarios":{
+      "Scenario1-Validating_with_PersonId":{
+         "TC-1":"GIVEN Valid PersonId And EnrolleeID WHEN requesting to Validate THEN should Return Status Code As 200"
+      },
+      "Scenario2-Validating_with_InValid_PersonId":{
+         "TC-1":"GIVEN InValid PersonId And Valid EnrolleeID WHEN requesting to Validate THEN should Return Status Code As 200"
+      },
+      "Scenario3-Validating_with_InValid_EnrolleeId":{
+         "TC-1":"GIVEN Valid PersonId And InValid EnrolleeID WHEN requesting to Validate THEN should Return Status Code As 200"
+      }
+   }
+}

@@ -1,0 +1,25 @@
+#################
+## Protractor + Node JS
+#################
+
+$Recycle.Bin
+*.tmp
+*.log
+*.bak
+*.swp
+*.png
+*.swp
+*.txt
+*.html
+*results.json
+*metadata.json
+node_modules/
+/bin/
+npm-debug.*
+local.log
+/.metadata
+/results
+/previousResults
+/keepingResults
+shounakClockwork.bat
+package-lock.json

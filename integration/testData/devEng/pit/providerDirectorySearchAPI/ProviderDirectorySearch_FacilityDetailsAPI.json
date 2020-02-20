@@ -1,0 +1,210 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Facility_Details_By_Providing_FacilityId":
+        {
+            "request":
+            {
+                "facilityId": "031404"
+            },
+            "params":
+            {
+                "lat": 37,
+                "long": -122
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "distance": 702.8
+                },
+                
+                "TC-3":
+                {
+                    "isOpen": true
+                },
+                "TC-4":
+                {
+                      "facilityId": "031404",
+					  "name": "Bright Now! Dental",
+					  "address": {
+					    "addressLine": "9503 192ND AVE E",
+					    "city": "BONNEY LAKE",
+					    "state": "WA",
+					    "zipcode": "98391-6533",
+					    "latitude": 47.1710663,
+					    "longitude": -122.1749115
+                    },
+                      "phone": "(253) 299-3033",
+					  "emailAddress": null,
+					  "faxNumber": "(425) 643-2124",
+					  "website": null,
+					  "practiceLocation": null
+                }
+            }
+        }
+    },
+    "AMGENSCENARIOS":
+    {
+        "Scenario1-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2PPO) - AMGEN SCENARIOS":
+        {
+            "request":
+            {
+                "facilityId": "026971"
+            },
+            "params":
+            {
+                "lat": 40.7491951,
+                "long": -73.993927,
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PPO"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "networkIdToBePresentInProviderNetworks": "2PPO"
+                }
+            }
+        },
+        "Scenario2-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2PREMIER) - AMGEN SCENARIOS":
+        {
+            "request":
+            {
+                "facilityId": "026971"
+            },
+            "params":
+            {
+                "lat": 40.7491951,
+                "long": -73.993927,
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PREMIER"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "networkIdToBePresentInProviderNetworks": "2PREMIER"
+                }
+            }
+        },
+        "Scenario3-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2DELTACARE) - AMGEN SCENARIOS":
+        {
+            "request":
+            {
+                "facilityId": "026971"
+            },
+            "params":
+            {
+                "lat": 40.7491951,
+                "long": -73.993927,
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2DELTACARE"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "networkIdToBePresentInProviderNetworks": "2DELTACARE"
+                }
+            }
+        },
+        "Scenario4-Retrieve_The_Facility_Details_By_Providing_FacilityId, sourceNetwork (2NYPPO) & targetNetwork (2NYPPO) - AMGEN SCENARIOS":
+        {
+            "request":
+            {
+                "facilityId": "026971"
+            },
+            "params":
+            {
+                "lat": 40.7491951,
+                "long": -73.993927,
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2NYPPO"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "networkIdToBePresentInProviderNetworks": "2NYPPO"
+                }
+            }
+        }
+    },
+    "negativetestdata":
+    {
+         "Scenario1-Invalid_FacilityId":{
+     
+            "request":
+            {
+                "facilityId": "0353634"
+            },
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+
+
+                    "statuscode": 404
+
+                },
+                "TC-2":
+                {}
+            }
+        },
+       "Scenario2-Empty_FacilityId":{
+       
+            "request":
+            {
+                "facilityId": ""
+            },
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 400
+
+                },
+                "TC-2":
+                {
+                  "errorCode": "PDS012",
+				  "shortDescription": null,
+				  "detailedDescription": null,
+				  "stackTrace": null
+				 }
+                    
+                
+            }
+        }
+    }
+}

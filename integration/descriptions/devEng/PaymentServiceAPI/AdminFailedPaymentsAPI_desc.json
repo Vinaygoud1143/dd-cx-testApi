@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-D2C_Admin_View_FailedPayments":
+        {
+            "TC-1": "GIVEN Valid PersonId & ClientKey Details,WHEN requesting to get FailedPayments THEN should get Successfully Failed Payments List.",
+            "TC-2": "Validate Response For status & numberOfRetries"
+        }
+    }
+}

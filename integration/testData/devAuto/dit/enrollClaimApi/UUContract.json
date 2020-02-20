@@ -1,0 +1,846 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDes": "Test 1: Given a PRIMARY member WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records of members only if the permission is granted",
+            "contractId": "1004871950",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "0358980916542245",
+                    "memberId": "01",
+                    "enrolleeId": "100487195001",
+                    "contractId": "1004871950",
+                    "memberName": "Terrance HOLLISTER"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 1,
+                        "totalRemaining": 1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/02/2018 01:08"
+            }, {
+                "memberInfo": {
+                    "personId": "0002580916542268",
+                    "memberId": "02",
+                    "enrolleeId": "100487195002",
+                    "contractId": "1004871950",
+                    "memberName": "Joline HOLLISTER"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/02/2018 01:08"
+            }, {
+                "memberInfo": {
+                    "personId": "0055480916542294",
+                    "memberId": "03",
+                    "enrolleeId": "100487195003",
+                    "contractId": "1004871950",
+                    "memberName": "Candis HOLLISTER"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/02/2018 01:08"
+            }, {
+                "memberInfo": {
+                    "personId": "0374780916542310",
+                    "memberId": "04",
+                    "enrolleeId": "100487195004",
+                    "contractId": "1004871950",
+                    "memberName": "Zulema HOLLISTER"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                },
+                "lastCalculatedDate": null
+            }]
+        },
+        "test2": {
+            "testCaseDes": "Test 2:Given an ADULT member WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records of members based on the Omnibus rule",
+            "contractId": "1004871950",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "0358980916542245",
+                    "memberId": "01",
+                    "enrolleeId": "100487195001",
+                    "contractId": "1004871950",
+                    "memberName": "Terrance HOLLISTER"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "0002580916542268",
+                    "memberId": "02",
+                    "enrolleeId": "100487195002",
+                    "contractId": "1004871950",
+                    "memberName": "Joline HOLLISTER"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/02/2018 01:08"
+            }, {
+                "memberInfo": {
+                    "personId": "0055480916542294",
+                    "memberId": "03",
+                    "enrolleeId": "100487195003",
+                    "contractId": "1004871950",
+                    "memberName": "Candis HOLLISTER"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "0374780916542310",
+                    "memberId": "04",
+                    "enrolleeId": "100487195004",
+                    "contractId": "1004871950",
+                    "memberName": "Zulema HOLLISTER"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                },
+                "lastCalculatedDate": null
+            }]
+        },
+
+        "test3": {
+            "testCaseDes": "Test 3: Given a CHILD member WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records of members based on the Omnibus rule",
+            "contractId": "1163798575",
+            "personId": "0431041316550753",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "0709841316550733",
+                    "memberId": "01",
+                    "enrolleeId": "116379857501",
+                    "contractId": "1163798575",
+                    "memberName": "Alleen DORE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "0661141316550746",
+                    "memberId": "02",
+                    "enrolleeId": "116379857502",
+                    "contractId": "1163798575",
+                    "memberName": "Tory DORE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "0431041316550753",
+                    "memberId": "03",
+                    "enrolleeId": "116379857503",
+                    "contractId": "1163798575",
+                    "memberName": "Angla DORE"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/02/2018 01:08"
+            }, {
+                "memberInfo": {
+                    "personId": "0785941316550767",
+                    "memberId": "04",
+                    "enrolleeId": "116379857504",
+                    "contractId": "1163798575",
+                    "memberName": "Margaret DORE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "0656241316550777",
+                    "memberId": "05",
+                    "enrolleeId": "116379857505",
+                    "contractId": "1163798575",
+                    "memberName": "Thao DORE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "0682641316550784",
+                    "memberId": "06",
+                    "enrolleeId": "116379857506",
+                    "contractId": "1163798575",
+                    "memberName": "Imogene DORE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }]
+        },
+        "test4": {
+            "testCaseDes": "Test 4: Given a PRIMARY member WHEN requesting to view the usage in the contract that he is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId": "1004571940",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+
+        },
+        "test5": {
+            "testCaseDes": "Test 5: Given an ADULT member WHEN requesting to view the usage in the contract that he/she is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId": "1004571940",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test6": {
+            "testCaseDes": "Test 6: Given an CHILD member WHEN requesting to view the usage in the contract that he/she is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId": "1004571940",
+            "personId": "0656241316550777",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test7": {
+            "testCaseDes": "Test 7: Invalid Person ID",
+            "contractId": "1004571940",
+            "personId": "1002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test8": {
+            "testCaseDes": "Test 8: Valid Person ID",
+            "contractId": "0081607978",
+            "personId": "5080000001392746",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5080000001283081",
+                    "memberId": "01",
+                    "enrolleeId": "008160797801",
+                    "contractId": "0081607978",
+                    "memberName": "Keli MCDOWELL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5080000001396320",
+                    "memberId": "02",
+                    "enrolleeId": "008160797802",
+                    "contractId": "0081607978",
+                    "memberName": "Alphonse MCDOWELL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5080000001377577",
+                    "memberId": "03",
+                    "enrolleeId": "008160797803",
+                    "contractId": "0081607978",
+                    "memberName": "Micheline MCDOWELL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5080000001392746",
+                    "memberId": "04",
+                    "enrolleeId": "008160797804",
+                    "contractId": "0081607978",
+                    "memberName": "Kristel MCDOWELL"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 1,
+                        "totalRemaining": 1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/02/2018 01:08"
+            }]
+        },
+        "test9": {
+            "testCaseDes": "Test 9: Validate Phone Number",
+            "contractId": "1142625952",
+            "personId": "0938661113434711",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "0938661113434711",
+                    "memberId": "01",
+                    "enrolleeId": "114262595201",
+                    "contractId": "1142625952",
+                    "memberName": "Denae ELLISON"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/08/2018 10:08"
+            }]
+        },
+        "test10": {
+            "testCaseDes": "Test 10: Validate Multiple Phone Numbers",
+            "contractId": "0010656697",
+            "personId": "5100000001602301",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5100000001602301",
+                    "memberId": "01",
+                    "enrolleeId": "001065669701",
+                    "contractId": "0010656697",
+                    "memberName": "Rosanna LAMERE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is requesting for his or her records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5100000001758311",
+                    "memberId": "02",
+                    "enrolleeId": "001065669702",
+                    "contractId": "0010656697",
+                    "memberName": "Stormy LAMERE"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/08/2018 11:08"
+            }]
+        },
+        "test11": {
+            "testCaseDes": "Test 11: Validate PHI enabled Primary person shouldn't be able to see other members claims even if the other members are not PHI enabled.",
+            "contractId": "0010656697",
+            "personId": "5100000001602301",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5100000001602301",
+                    "memberId": "01",
+                    "enrolleeId": "001065669701",
+                    "contractId": "0010656697",
+                    "memberName": "Rosanna LAMERE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is requesting for his or her records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5100000001758311",
+                    "memberId": "02",
+                    "enrolleeId": "001065669702",
+                    "contractId": "0010656697",
+                    "memberName": "Stormy LAMERE"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/09/2018 01:08"
+            }]
+        },
+        "test12": {
+            "testCaseDes": "Test 12: Validate PHI is enabled for 02 member only. When the primary is trying to access anyones information, it throws error saying 02 has PHI",
+            "contractId": "0010656697",
+            "personId": "5100000001602301",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5100000001602301",
+                    "memberId": "01",
+                    "enrolleeId": "001065669701",
+                    "contractId": "0010656697",
+                    "memberName": "Rosanna LAMERE"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is requesting for his or her records."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5100000001758311",
+                    "memberId": "02",
+                    "enrolleeId": "001065669702",
+                    "contractId": "0010656697",
+                    "memberName": "Stormy LAMERE"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/09/2018 02:08"
+            }]
+        },
+        "test13": {
+            "testCaseDes": "Test 13: Validate None of the members have PHI but when 01 is accessing 02 and 03 information it displays PHI message not Omnibus",
+            "contractId": "1142845989",
+            "personId": "5057000005158214",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5057000005158214",
+                    "memberId": "01",
+                    "enrolleeId": "114284598901",
+                    "contractId": "1142845989",
+                    "memberName": "Russell ROLL"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/09/2018 12:08"
+            }, {
+                "memberInfo": {
+                    "personId": "5057000004698196",
+                    "memberId": "02",
+                    "enrolleeId": "114284598902",
+                    "contractId": "1142845989",
+                    "memberName": "Joella ROLL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5057000005162905",
+                    "memberId": "03",
+                    "enrolleeId": "114284598903",
+                    "contractId": "1142845989",
+                    "memberName": "Rickie ROLL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                },
+                "lastCalculatedDate": null
+            }]
+        },
+        "test14": {
+            "testCaseDes": "Test 14: Validate none of the members have PHI but when the primary is trying to access 02 and 03 claims",
+            "contractId": "1142845989",
+            "personId": "5057000005158214",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5057000005158214",
+                    "memberId": "01",
+                    "enrolleeId": "114284598901",
+                    "contractId": "1142845989",
+                    "memberName": "Russell ROLL"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 0,
+                        "totalRemaining": 2,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": {
+                            "unitType": "YR",
+                            "unit": "1",
+                            "planYearType": "CA"
+                        },
+                        "procedureCodes": []
+                    }]
+                },
+                "ruleInfo": null,
+                "lastCalculatedDate": "08/09/2018 02:08"
+            }, {
+                "memberInfo": {
+                    "personId": "5057000004698196",
+                    "memberId": "02",
+                    "enrolleeId": "114284598902",
+                    "contractId": "1142845989",
+                    "memberName": "Joella ROLL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                },
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5057000005162905",
+                    "memberId": "03",
+                    "enrolleeId": "114284598903",
+                    "contractId": "1142845989",
+                    "memberName": "Rickie ROLL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "ruleInfo": {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                },
+                "lastCalculatedDate": null
+            }]
+        }
+    }
+
+}

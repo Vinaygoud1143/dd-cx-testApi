@@ -1,0 +1,599 @@
+{
+  "Scenarios": {
+    "Scenario1-Payment_ServiceAPI_CreditCardToken_With_Empty_EnrolleeId": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 404
+        },
+        "TC-2": {
+          "error": "Not Found",
+          "message": "No message available"
+        }
+      }
+    },
+    "Scenario2-Payment_ServiceAPI_CreditCardToken_With_Wrong_ClientKey": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 401
+        },
+        "TC-2": {
+          "error": "Unauthorized",
+          "message": "Security violation. Invalid Client Key"
+        }
+      }
+    },
+    "Scenario3-Payment_ServiceAPI_CreditCardToken_With_Empty_ClientKey": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": ""
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 400
+        },
+        "TC-2": {
+          "error": "Bad Request",
+          "message": "Security violation. Expected security headers are missing."
+        }
+      }
+    },
+    "Scenario4-Payment_ServiceAPI_CreditCardToken_With_Wrong_PersonId": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "03320202094606333",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 500
+        },
+        "TC-2": {
+          "errorCode": "PAYMENT_039",
+          "shortDescription": "Credit card details don't match with given token.",
+          "detailedDescription": "Credit card details don't match with given token. Please check your request."
+        }
+      }
+    },
+    "Scenario5-Payment_ServiceAPI_CreditCardToken_With_Empty_PersonId": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 400
+        },
+        "TC-2": {
+          "error": "Bad Request",
+          "message": "Security violation. Expected security headers are missing."
+        }
+      }
+    },
+    "Scenario6-Payment_ServiceAPI_CreditCardToken_With_InValid_AutoPay": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": "TRUEE"
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 400
+        },
+        "TC-2": {
+          "error": "Bad Request",
+          "message": "Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [TRUEE]"
+        }
+      }
+    },
+    "Scenario7-Payment_ServiceAPI_CreditCardToken_With_Empty_ExpiryDate": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 400
+        },
+        "TC-2": {
+          "errorCode": "PAYMENT_006",
+          "shortDescription": "Credit Card Information Invalid.",
+          "detailedDescription": "Required credit card information is missing."
+        }
+      }
+    },
+    "Scenario8-Payment_ServiceAPI_CreditCardToken_With_InValid_ExpiryDate": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "2009",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 500
+        },
+        "TC-2": {
+          "errorCode": "PAYMENT_039",
+          "shortDescription": "Credit card details don't match with given token.",
+          "detailedDescription": "Credit card details don't match with given token. Please check your request."
+        }
+      }
+    },
+    "Scenario9-Payment_ServiceAPI_CreditCardToken_With_Empty_NameOnCard": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": ""
+        },
+        "paymentType": "CREDIT_CARD_TOKEN"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 400
+        },
+        "TC-2": {
+          "errorCode": "PAYMENT_006",
+          "shortDescription": "Credit Card Information Invalid.",
+          "detailedDescription": "Required credit card information is missing."
+        }
+      }
+    },
+    "Scenario10-Payment_ServiceAPI_CreditCardToken_With_Wrong_PaymentType": {
+      "request": {
+        "amount": 57.35,
+        "creditCardToken": {
+          "encryptedToken": "yO857blUHOi7RwJ61v1wf0iYBAfsQlPdeIokUaeI1NE=",
+          "expiryDate": "12/2019",
+          "last4Digits": "2183",
+          "nameOnCard": "soma"
+        },
+        "paymentType": "CREDIT_CARD"
+      },
+      "headers": {
+        "PersonId": "0332020209460653",
+        "ClientKey": "12345"
+      },
+      "params": {
+        "enrolleeId": "113275597601",
+        "autoPay": false
+      },
+      "verify": {
+        "TC-1": {
+          "statuscode": 400
+        },
+        "TC-2": {
+          "errorCode": "PAYMENT_002",
+          "shortDescription": "Credit Card Request Invalid",
+          "detailedDescription": "Please verify payment request. Unable to find all the required payment information in the request."
+        }
+      }
+    },
+    "Scenario11-D2C_Payment_Using_CreditCard_With_Token_Given_Empty_EncryptedToken":{
+         "request":{
+            "amount":7.45,
+            "creditCardToken":{
+               "encryptedToken":"",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_006",
+               "shortDescription":"Credit Card Information Invalid.",
+               "detailedDescription":"Required credit card information is missing."
+            }
+         }
+      },
+      "Scenario12-D2C_Payment_Using_CreditCard_With_Token_Given_Wrong_PaymentType As CREDIT_CARD":{
+         "request":{
+            "amount":7.45,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_002",
+               "shortDescription":"Credit Card Request Invalid",
+               "detailedDescription":"Please verify payment request. Unable to find all the required payment information in the request."
+            }
+         }
+      },
+      "Scenario13-D2C_Payment_Using_CreditCard_With_Token_Given_Empty_PaymentType":{
+         "request":{
+            "amount":7.45,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":""
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_004",
+               "shortDescription":"Unsupported payment type.",
+               "detailedDescription":"Payment method is not supported. Please verify payment request."
+            }
+         }
+      },
+      "Scenario14-D2C_Payment_Using_CreditCard_With_Token_Given_Null_PaymentType":{
+         "request":{
+            "amount":7.45,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":null
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_004",
+               "shortDescription":"Unsupported payment type.",
+               "detailedDescription":"Payment method is not supported. Please verify payment request."
+            }
+         }
+      },
+      "Scenario15-D2C_Payment_Using_CreditCard_With_Token_Given_Zero_Amount":{
+         "request":{
+            "amount":0,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_005",
+               "shortDescription":"Payment Amount Invalid.",
+               "detailedDescription":"Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario16-D2C_Payment_Using_CreditCard_With_Token_Given_Null_Amount":{
+         "request":{
+            "amount":null,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_005",
+               "shortDescription":"Payment Amount Invalid.",
+               "detailedDescription":"Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario17-D2C_Payment_Using_CreditCard_With_Token_Given_Negative_Amount":{
+         "request":{
+            "amount":-10,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_005",
+               "shortDescription":"Payment Amount Invalid.",
+               "detailedDescription":"Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario18-D2C_Payment_Using_CreditCard_With_Token_Given_Empty_Last4Digits":{
+         "request":{
+            "amount":10,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"",
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_006",
+               "shortDescription":"Credit Card Information Invalid.",
+               "detailedDescription":"Required credit card information is missing."
+            }
+         }
+      },
+      "Scenario19-D2C_Payment_Using_CreditCard_With_Token_Given_Null_Last4Digits":{
+         "request":{
+            "amount":10,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":null,
+               "nameOnCard":"raghu"
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_006",
+               "shortDescription":"Credit Card Information Invalid.",
+               "detailedDescription":"Required credit card information is missing."
+            }
+         }
+      },
+      "Scenario20-D2C_Payment_Using_CreditCard_With_Token_Given_Null_NameOnCard":{
+         "request":{
+            "amount":10,
+            "creditCardToken":{
+               "encryptedToken":"uicCn6qncJo8Rjth9eTByWzE1oorylaGQC6YArnCJGc=",
+               "expiryDate":"12/2019",
+               "last4Digits":"4445",
+               "nameOnCard":null
+            },
+            "paymentType":"CREDIT_CARD_TOKEN"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601",
+            "autoPay": false
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_006",
+               "shortDescription":"Credit Card Information Invalid.",
+               "detailedDescription":"Required credit card information is missing."
+            }
+         }
+      }
+  }
+}

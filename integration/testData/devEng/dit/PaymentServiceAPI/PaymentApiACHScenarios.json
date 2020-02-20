@@ -1,0 +1,148 @@
+{
+   "Scenarios":{
+      "Scenario1-D2C_ACH_Payment":{
+         "request":{
+            "ach":{
+               "accountNumber":"122105278",
+               "accountType":"Checkings",
+               "bankRoutingNumber":"123567123678",
+               "nameOnAccount":"Martha Smith"
+            },
+            "amount":18.29,
+            "paymentType":"ACH"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "enrolleeId": "113275597601",
+               "requestReferenceId": "5e8e7728-8bed-443b-be3f-dba6a3d2c8f8"
+            }
+         }
+      },
+      "Scenario2-D2C_ACH_Payment_Missing_Or_Empty_AccountNumber":{
+         "request":{
+            "ach":{
+               "accountNumber":"",
+               "accountType":"Checkings",
+               "bankRoutingNumber":"123567123678",
+               "nameOnAccount":"Martha Smith"
+            },
+            "amount":18.29,
+            "paymentType":"ACH"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_007",
+               "shortDescription":"ACH Information Invalid.",
+               "detailedDescription":"Required ACH information is missing."
+            }
+         }
+      },
+      "Scenario3-D2C_ACH_Payment_Missing_Or_Empty_BankRoutingNumber":{
+         "request":{
+            "ach":{
+              "accountNumber":"122105278",
+               "accountType":"Checkings",
+               "bankRoutingNumber":"",
+               "nameOnAccount":"Martha Smith"
+            },
+            "amount":18.29,
+            "paymentType":"ACH"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+               "errorCode":"PAYMENT_007",
+               "shortDescription":"ACH Information Invalid.",
+               "detailedDescription":"Required ACH information is missing."
+            }
+         }
+      },
+      "Scenario4-D2C_ACH_Payment_Invalid_Amount":{
+         "request":{
+            "ach":{
+              "accountNumber":"122105278",
+               "accountType":"Checkings",
+               "bankRoutingNumber":"123567123678",
+               "nameOnAccount":"Martha Smith"
+            },
+            "amount":-18.29,
+            "paymentType":"ACH"
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+              "errorCode": "PAYMENT_005",
+           "shortDescription": "Payment Amount Invalid.",
+           "detailedDescription": "Payment amount is invalid. Please verify payment request."
+            }
+         }
+      },
+      "Scenario5-D2C_ACH_Payment_Empty_PaymentType":{
+         "request":{
+            "ach":{
+              "accountNumber":"122105278",
+               "accountType":"Checkings",
+               "bankRoutingNumber":"123567123678",
+               "nameOnAccount":"Martha Smith"
+            },
+            "amount":18.29,
+            "paymentType":""
+         },
+         "headers":{
+            "PersonId":"0332020209460653",
+            "ClientKey":"12345"
+         },
+         "params":{
+            "enrolleeId":"113275597601"
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":400
+            },
+            "TC-2":{
+              "errorCode": "PAYMENT_004",
+           "shortDescription": "Unsupported payment type.",
+           "detailedDescription": "Payment method is not supported. Please verify payment request."
+            }
+         }
+      }
+   }
+}

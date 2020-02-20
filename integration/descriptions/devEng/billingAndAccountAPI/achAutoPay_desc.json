@@ -1,0 +1,31 @@
+{
+   "Scenarios":{
+      "Scenario1-AutoPay_For_ACH":{
+         "TC-1":"Given a valid request payload for  ACH with PersonId and ClientKey WHEN requesting to POST should return SUCCESS CODE."
+      },
+      "Scenario2-AutoPay_For_ACH With Empty AccountNumber":{
+         "TC-1":"Given request payload with Empty AccountNumber for  ACH with PersonId and ClientKey WHEN requesting to POST should get Invalid/Missed ACH Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & ACH AutoPay Details."
+      },
+      "Scenario3-AutoPay_For_ACH With Empty NameOnAccount":{
+         "TC-1":"Given request payload with Empty NameOnCard for  ACH with PersonId and ClientKey WHEN requesting to POST should get Invalid/Missed ACH Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & ACH AutoPay Details."
+      },
+      "Scenario4-AutoPay_For_ACH With Empty BankRoutingNumber":{
+         "TC-1":"Given request payload with Empty BankRoutingNumber for  ACH with PersonId and ClientKey WHEN requesting to POST should get Invalid/Missed ACH Card Details in the Request.",
+         "TC-2":"Validation of ErrorCode & ACH AutoPay Details."
+      },
+      "Scenario5-AutoPay_For_ACH With Invalid ClientKey":{
+         "TC-1":"Given a valid request payload for  ACH with PersonId,Invalid ClientKey and Empty EnrolleeId WHEN requesting to POST should get Bad Request.",
+         "TC-2":"Validation of ErrorCode & ACH AutoPay Details."
+      },
+      "Scenario6-AutoPay_For_ACH With Empty ClientKey":{
+         "TC-1":"Given a valid request payload for  ACH with PersonId,Empty ClientKey and Empty EnrolleeId WHEN requesting to POST should get Bad Request.",
+         "TC-2":"Validation of ErrorCode & ACH AutoPay Details."
+      },
+      "Scenario7-AutoPay_For_ACH With Empty PersonId":{
+         "TC-1":"Given a valid request payload for  ACH with Empty PersonId,Valid ClientKey and Empty EnrolleeId WHEN requesting to POST should get Bad Request.",
+         "TC-2":"Validation of ErrorCode & ACH AutoPay Details."
+      }
+   }
+}

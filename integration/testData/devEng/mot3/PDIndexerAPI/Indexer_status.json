@@ -1,0 +1,14 @@
+{
+   "Scenarios":{
+      "Scenario1-Validating_Indexer_Status":{
+         "headers":{
+            
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            }
+         }
+     }
+   }
+ }

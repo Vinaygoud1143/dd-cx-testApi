@@ -1,0 +1,14 @@
+{
+   "Scenarios":{
+      "Scenario1-Retrieve_The_Broker_Details_By_Providing_Valid_BrokerId":{
+         "TC-1":"GIVEN Valid brokerId,WHEN requesting to view Broker details THEN should allowed to view broker details",
+         "TC-2":"Validating basic details of broker from BrokerDetails API"
+      }
+   },
+   "NegativeScenarios":{
+      "Scenario1-Invalid_BrokerId":{
+         "TC-1":"GIVEN InValid brokerId,WHEN requesting to view Broker details THEN should throw exception",
+         "TC-2":"Validation of ErrorCode & ErrorMessage Description"
+      }
+   }
+}

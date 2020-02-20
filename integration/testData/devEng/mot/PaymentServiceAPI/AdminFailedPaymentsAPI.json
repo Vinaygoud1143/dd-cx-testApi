@@ -1,0 +1,48 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-D2C_Admin_View_FailedPayments":
+        {
+            "request":
+            {
+                "creditCard":
+                {
+                    "address":
+                    {
+                        "addressLine": "1198 Mario Dr",
+                        "city": "Monroe",
+                        "state": "MI",
+                        "country": "US",
+                        "zipcode": "94539"
+                    },
+                    "cardNumber": "5415240007992183",
+                    "cvvNumber": 1234,
+                    "nameOnCard": "Vinod",
+                    "expiryDate": "12/2019"
+                },
+                "paymentType": "CREDIT_CARD",
+                "amount": 1.2
+            },
+            "headers":
+            {
+                "PersonId": "6107000007143442",
+                "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097"
+            },
+            "params":
+            {
+                "enrolleeId": "1138726092"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                {
+                    "status": "FAILED_AND_RETRYING"
+                }
+            }
+        }
+    }
+}

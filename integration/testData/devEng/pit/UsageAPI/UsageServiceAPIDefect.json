@@ -1,0 +1,70 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-CXCORETECH-847-Incorrect message shown for a person having PHI against his account":
+        {
+
+            "request":
+            {
+                "contract-id": "0045793778"
+            },
+            "headers":
+            {
+                "personId": "5047000004566430",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify":
+            {
+
+                "TC-1":
+                {
+                    "statuscode": 200
+                },
+                "TC-2":
+                [
+
+                       {
+    "memberInfo": {
+      "personId": "5047000004566430",
+      "memberId": "01",
+      "enrolleeId": "004579377801",
+      "contractId": "0045793778",
+      "memberName": "SUSAN CONRAD"
+    },
+    "planInfo": null,
+    "usageInfo": null,
+    "ruleInfo": null,
+    "lastCalculatedDate": null
+  },
+  {
+    "memberInfo": {
+      "personId": "5047000004555079",
+      "memberId": "02",
+      "enrolleeId": "004579377802",
+      "contractId": "0045793778",
+      "memberName": "ROBERT CONRAD"
+    },
+    "planInfo": null,
+    "usageInfo": null,
+    "ruleInfo": null,
+    "lastCalculatedDate": null
+  },
+  {
+    "memberInfo": {
+      "personId": "5047000004753793",
+      "memberId": "03",
+      "enrolleeId": "004579377803",
+      "contractId": "0045793778",
+      "memberName": "BRIAN CONRAD"
+    },
+    "planInfo": null,
+    "usageInfo": null,
+    "ruleInfo": null,
+    "lastCalculatedDate": null
+  }
+                    ]
+                }
+            }
+        }
+    
+}

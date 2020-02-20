@@ -1,0 +1,31 @@
+{
+    "Scenarios": 
+    {
+        "Scenario1-Enrollee_270960029101_Viewing_His_Family_Information": 
+        {
+            "TC-1": "WHEN Enrolleee requesting to view members information & THEN should be able to view all enrollees information of family.",
+            "TC-2": "Validation of Enrollee Details"
+        },
+        "Scenario2-Enrollee_114373445401_Viewing_His_Family_Information": 
+        {
+            "TC-1": "WHEN Enrolleee requesting to view members information & THEN should be able to view all enrollees information of family.",
+            "TC-2": "Validation of Enrollee Details"
+        },
+
+        "Scenario3-Enrollee_115967434801_Viewing_His_Family_Information": 
+        {
+            "TC-1": "WHEN Enrolleee requesting to view members information & THEN should be able to view all enrollees information of family.",
+            "TC-2": "Validation of Enrollee Details"
+        },
+        "Scenario4-Enrollee_100487195001_Viewing_His_Family_Information": 
+        {
+            "TC-1": "WHEN Enrolleee requesting to view members information & THEN should be able to view all enrollees information of family.",
+            "TC-2": "Validation of Enrollee Details"
+        },
+        "Scenario5-Enrollee_100088996605_Viewing_His_Family_Information": 
+        {
+            "TC-1": "WHEN Enrolleee requesting to view members information & THEN should be able to view all enrollees information of family.",
+            "TC-2": "Validation of Enrollee Details"
+        }       
+    }  
+}

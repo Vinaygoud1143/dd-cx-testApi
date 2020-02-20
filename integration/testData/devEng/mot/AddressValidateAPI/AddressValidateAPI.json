@@ -1,0 +1,114 @@
+{  
+   "Scenarios":{  
+      "Scenario1-Retrieve_The_Address_Details_For_Given_Address_ForState_DC":{  
+         "request":{  
+            "addressLine":"1150 K St NW Apt 809",
+            "city":"Washington",
+            "state":"DC",
+            "zipcode":"20005"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "addressLine":"1150 K St NW Apt 809",
+               "city":"Washington",
+               "state":"DC",
+               "zipcode":"200056808",
+               "countCode":"001",
+               "countyName":"District of Columbia",
+               "contryName":"USA"
+            }
+         }
+      },
+      "Scenario2-Retrieve_The_Address_Details_For_Given_Address_ForState_MD":{  
+         "request":{  
+            "addressLine":"15600 Everglade Ln APT 202",
+            "city":"Bowie",
+            "state":"MD",
+            "zipcode":"20716"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "addressLine":"15600 Everglade Ln Apt 202",
+               "city":"Bowie",
+               "state":"MD",
+               "zipcode":"207163238",
+               "countCode":"033",
+               "countyName":"Prince Georges",
+               "contryName":"USA"
+            }
+         }
+      },
+      "Scenario3-Retrieve_The_Address_Details_For_Given_Address_ForState_PR":{  
+         "request":{  
+            "addressLine":"275 Calle Sol",
+            "city":"San Juan",
+            "state":"PR",
+            "zipcode":"00901"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "addressLine":"275 Calle Sol",
+               "city":"San Juan",
+               "state":"PR",
+               "zipcode":"00901",
+               "countCode":"127",
+               "countyName":"San Juan",
+               "contryName":"USA"
+            }
+         }
+      },
+      "Scenario4-Retrieve_The_Address_Details_For_Given_Address_ForState_TN":{  
+         "request":{  
+            "addressLine":"499 N 1st St",
+            "city":"Clarksville",
+            "state":"TN",
+            "zipcode":"37040"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "addressLine":"499 N 1st St",
+               "city":"Clarksville",
+               "state":"TN",
+               "zipcode":"370403205",
+               "countCode":"125",
+               "countyName":"Montgomery",
+               "contryName":"USA"
+            }
+         }
+      },
+      "Scenario5-Retrieve_The_Address_Details_For_Given_Address_ForState_AK":{  
+         "request":{  
+            "addressLine":"1633 Woodroe Ln",
+            "city":"Anchorage",
+            "state":"AK",
+            "zipcode":"99507"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               "addressLine":"1633 Woodroe Ln",
+               "city":"Anchorage",
+               "state":"AK",
+               "zipcode":"995071969",
+               "countCode":"020",
+               "countyName":"Anchorage",
+               "contryName":"USA"
+            }
+         }
+      }
+   }
+}

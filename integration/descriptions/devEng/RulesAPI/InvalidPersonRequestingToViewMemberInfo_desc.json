@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Invalid_Person_Requesting_To_View_Member_Information":
+        {
+            "TC-1": "GIVEN Invalid Person WHEN requesting to view Members details THEN should NOT be allowed to view members records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }     
+    }
+}

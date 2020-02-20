@@ -1,0 +1,10 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Provider_Details_By_Passing_The_Empty_ProviderKey":
+        {
+            "TC-1": "GIVEN Invalid ProviderKey,WHEN requesting to view Provider details THEN should allowed to view provider details",
+            "TC-2": "Validation of the provider details with API response"
+        }     
+    }
+}

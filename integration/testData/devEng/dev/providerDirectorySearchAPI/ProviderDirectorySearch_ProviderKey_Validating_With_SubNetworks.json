@@ -1,0 +1,90 @@
+{
+   "Scenarios":{
+      "Scenario1-Retriveing_ProviderNetwork_when_FacilityId_matches_in_ProviderNetworks_And_facility_subNetwork":{
+         "request":{
+            "providerKey":"GRP240001239240001239085PRV24000751100"
+         },
+         "params":{
+            "lat":37.7931023,
+            "long":-122.3924255
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providerKey":"GRP240001239240001239085PRV24000751100",
+               "facilityId":"047375"
+            },
+            "TC-3":{
+               "providerNetworks":[
+                  {
+                     "networkId":"2DELTACARE",
+                     "networkName":"DeltaCare USA Participating Provider",
+                     "acceptsNewPatients":"Y",
+                     "suppressed":false,
+                     "dentalHomeType":null
+                  },
+                  {
+                     "networkId":"DCSUBIND",
+                     "networkName":"DeltaCare USA Individual",
+                     "acceptsNewPatients":"Y",
+                     "suppressed":false,
+                     "dentalHomeType":null
+                  },
+                  {
+                     "networkId":"DCSUBMED",
+                     "networkName":"DeltaCare USA Medicare",
+                     "acceptsNewPatients":"Y",
+                     "suppressed":false,
+                     "dentalHomeType":null
+                  },
+                  {
+                     "networkId":"DCSUBCON",
+                     "networkName":"DeltaCare USA Connect",
+                     "acceptsNewPatients":"Y",
+                     "suppressed":false,
+                     "dentalHomeType":null
+                  }
+               ]
+            }
+         }
+      },
+      "Scenario2-Retriveing_ProviderNetwork_when_FacilityId_Different_from_ProviderNetworks_And_facility_subNetwork":{
+         "request":{
+            "providerKey":"GRP240618307240618307001PRV24072581240"
+         },
+         "params":{
+            "lat":47.5248,
+            "long":-115.16542
+         },
+         "verify":{
+            "TC-1":{
+               "statuscode":200
+            },
+            "TC-2":{
+               "providerKey":"GRP240618307240618307001PRV24072581240",
+               "facilityId":null
+            },
+            "TC-3":{
+               "providerNetworks":[
+                  {
+                     "networkId":"2PPO",
+                     "networkName":"Delta Dental PPO",
+                     "acceptsNewPatients":"Y",
+                     "suppressed":false,
+                     "dentalHomeType":null
+                  },
+                  {
+                     "networkId":"2PREMIER",
+                     "networkName":"Delta Dental Premier",
+                     "acceptsNewPatients":"Y",
+                     "suppressed":false,
+                     "dentalHomeType":null
+                  }
+               ]
+            }
+         }
+      }
+   }
+}

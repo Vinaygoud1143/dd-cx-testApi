@@ -1,0 +1,15 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Viewing_Other_Adult_Claims_Not_Part_Of_Same_Contract":
+        {
+            "TC-1": "Given a PRIMARY member WHEN requesting to view other Adult member who is not part of the same contract as PRIMARY THEN should NOT be allowed to view claim records and indicate the person is not part of the contract",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+           "Scenario2-Adult_Member_Viewing_Other_Member_Claims_Not_In_Same_Contract":
+        {
+            "TC-1": "Given Adult member WHEN requesting to view other members NOT in this current contract THEN should NOT be allowed to view claim records and should raise security alert.",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }    
+    }
+}

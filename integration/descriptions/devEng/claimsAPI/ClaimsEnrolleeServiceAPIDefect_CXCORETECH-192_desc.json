@@ -1,0 +1,11 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-CXCORETECH-192- Recent Claims API Issues":
+        {
+            "TC-1": "GIVEN Adult Member WHEN requesting to view his claim records THEN should be able to view all his claim records",
+            "TC-2": "Validation of Person Info & Procedure Details in the response"
+        }     
+
+    }
+}

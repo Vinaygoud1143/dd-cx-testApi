@@ -1,0 +1,24 @@
+{
+  "ValidateCreditCardAPIScenarios":{
+      "Scenario1-ValidateCreditCard_with_Valid_VISA_Type_CreditCardRequest":{
+         "TC-1":"GIVEN Valid VISA type CreditCard Details WHEN requesting for CreditCard validation THEN should get succesfully validated Credit Card.",
+         "TC-2":"Validation of CreditCard response"
+      },
+      "Scenario2-ValidateCreditCard_with_Valid_MasterCard_Type_CreditCardRequest":{
+         "TC-1":"GIVEN Valid MasterCard type CreditCard Details WHEN requesting for CreditCard validation THEN should get succesfully validated Credit Card.",
+         "TC-2":"Validation of CreditCard response"
+      },
+      "Scenario3-ValidateCreditCard_with_Valid_Discover_Type_CreditCardRequest":{
+         "TC-1":"GIVEN Valid Discover type CreditCard Details WHEN requesting for CreditCard validation THEN should get succesfully validated Credit Card.",
+         "TC-2":"Validation of CreditCard response"
+      },
+      "Scenario4-ValidateCreditCard_with_Valid_AMEX_Type_CreditCardRequest":{
+         "TC-1":"GIVEN Valid AMEX type CreditCard Details WHEN requesting for CreditCard validation THEN should get succesfully validated Credit Card.",
+         "TC-2":"Validation of CreditCard response"
+      },
+      "Scenario5-ValidateCreditCard_with_Valid_InternationalVISA_Type_CreditCardRequest":{
+         "TC-1":"GIVEN Valid InternationalVISA type CreditCard Details WHEN requesting for CreditCard validation THEN should get succesfully validated Credit Card.",
+         "TC-2":"Validation of CreditCard response"
+      } 
+  }
+}

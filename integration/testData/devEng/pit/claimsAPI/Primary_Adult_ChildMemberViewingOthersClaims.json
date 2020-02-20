@@ -1,0 +1,65 @@
+{
+    "Scenarios": 
+    {
+       
+            "Scenario1-Adult_Member_Viewing_Other_Adult_Claims":
+        {
+            "request":
+            {
+                "enrollee-id": "100487195003"
+            },
+            "headers":
+            {
+                "personId": "0002580916542268",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify":
+            {
+                "TC-1":
+                {
+                    "statuscode": 401
+                },
+                "TC-2":
+                {
+                    "errorCode": "CLAIMS010",
+                    "shortDescription": "UnAuthorized Access.",
+                    "detailedDescription": "omnibus rules declined the permission for the given contract 1004871950 and person 0055480916542294"
+                }
+            }
+        },
+            
+       "Scenario2-Child_Member_Viewing_Other_Child_Claims": 
+        {
+            "request": 
+            {
+                "enrollee-id": "116379857506"
+            },
+            "headers": 
+            {
+                "personId" : "0661141316550746",
+                "ClientKey": "27feb576-ba4b-4379-a3c1-a53f21d34514"
+            },
+            "verify": 
+            {
+                "TC-1": 
+                {
+                    "statuscode": 401
+                },
+                "TC-2": 
+                {
+                    "errorCode"          : "CLAIMS010",
+                    "shortDescription"   : "UnAuthorized Access.",
+                    "detailedDescription": "omnibus rules declined the permission for the given contract 1163798575 and person 0682641316550784"
+                }
+            }
+        }
+    
+    }
+}  
+    
+
+    
+
+    
+
+  

@@ -1,0 +1,15 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Retrieve_The_Practice_Location_Details_By_Providing_OfficeId":
+        {
+            "TC-1": "GIVEN Valid officeId, WHEN requesting to view Practice location details THEN should allowed to view practice location details",
+            "TC-2": "Validation of the pratice location number & address with API response"
+        },
+         "Scenario2-Retrieve_The_Practice_Location_Details_By_Providing_Invalid_OfficeId":
+        {
+            "TC-1": "GIVEN InValid officeId, WHEN requesting to view Practice location details THEN no practice location details should be displayed",
+            "TC-2": "Validation of the pratice location number & address with API response"
+        }      
+    }
+}

@@ -1,0 +1,84 @@
+{
+   "Scenarios":{
+      "Scenario1-Payment_ServiceAPI_CreditCardToken_With_Empty_EnrolleeId":{
+         "TC-1":"GIVEN Payment details with empty EnrolleeId WHEN requesting to view payment response THEN should get Not Found Exception",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario2-Payment_ServiceAPI_CreditCardToken_With_Wrong_ClientKey":{
+         "TC-1":"GIVEN Payment details with wrong ClientKey WHEN requesting to view payment response THEN should get Unauthorized Exception",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario3-Payment_ServiceAPI_CreditCardToken_With_Empty_ClientKey":{
+         "TC-1":"GIVEN Payment details with empty ClientKey WHEN requesting to view payment response THEN should get Bad Request Exception",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario4-Payment_ServiceAPI_CreditCardToken_With_Wrong_PersonId":{
+         "TC-1":"GIVEN Payment details with wrong PersonId WHEN requesting to view payment response THEN should get Credit card details don't match with given token",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario5-Payment_ServiceAPI_CreditCardToken_With_Empty_PersonId":{
+         "TC-1":"GIVEN Payment details with empty PersonId WHEN requesting to view payment response THEN should get Bad Request Exception",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario6-Payment_ServiceAPI_CreditCardToken_With_InValid_AutoPay":{
+         "TC-1":"GIVEN Payment details with inValid AutoPay WHEN requesting to view payment response THEN should get Bad Request Exception",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario7-Payment_ServiceAPI_CreditCardToken_With_Empty_ExpiryDate":{
+         "TC-1":"GIVEN Payment details with empty ExpiryDate WHEN requesting to view payment response THEN should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario8-Payment_ServiceAPI_CreditCardToken_With_InValid_ExpiryDate":{
+         "TC-1":"GIVEN Payment details with inValid ExpiryDate WHEN requesting to view payment response THEN should get Credit card details don't match with given token",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario9-Payment_ServiceAPI_CreditCardToken_With_Empty_NameOnCard":{
+         "TC-1":"GIVEN Payment details with empty NameOnCard WHEN requesting to view payment response THEN should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario10-Payment_ServiceAPI_CreditCardToken_With_Wrong_PaymentType":{
+         "TC-1":"GIVEN Payment details with wrong PaymentType WHEN requesting to view payment response THEN should be Credit Card Request Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario11-D2C_Payment_Using_CreditCard_With_Token_Given_Empty_EncryptedToken":{
+         "TC-1":"GIVEN CreditCard Details with empty encryptedtoken WHEN requesting payment THEN response should be Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario12-D2C_Payment_Using_CreditCard_With_Token_Given_Wrong_PaymentType As CREDIT_CARD":{
+         "TC-1":"GIVEN CreditCard Details with wrong paymentType WHEN requesting payment THEN response should be Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario13-D2C_Payment_Using_CreditCard_With_Token_Given_Empty_PaymentType":{
+         "TC-1":"GIVEN CreditCard Details with Empty PaymentType WHEN requesting payment THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario14-D2C_Payment_Using_CreditCard_With_Token_Given_Null_PaymentType":{
+         "TC-1":"GIVEN CreditCard Details with Null paymentType WHEN requesting with null PaymentType THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario15-D2C_Payment_Using_CreditCard_With_Token_Given_Zero_Amount":{
+         "TC-1":"GIVEN CreditCard Details with token WHEN requesting with Zero Amount THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario16-D2C_Payment_Using_CreditCard_With_Token_Given_Null_Amount":{
+         "TC-1":"GIVEN CreditCard Details with token WHEN requesting with null Amount THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario17-D2C_Payment_Using_CreditCard_With_Token_Given_Negative_Amount":{
+         "TC-1":"GIVEN CreditCard Details with token WHEN requesting with Negative amount THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario18-D2C_Payment_Using_CreditCard_With_Token_Given_Empty_Last4Digits":{
+         "TC-1":"GIVEN CreditCard Details with token WHEN requesting with empty last4digits THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario19-D2C_Payment_Using_CreditCard_With_Token_Given_Null_Last4Digits":{
+         "TC-1":"GIVEN CreditCard Details with token WHEN requesting with null last4digits THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      },
+      "Scenario20-D2C_Payment_Using_CreditCard_With_Token_Given_Null_NameOnCard":{
+         "TC-1":"GIVEN CreditCard Details with token WHEN requesting with null NameOncard THEN response should get Credit Card Information Invalid",
+         "TC-2":"Validation of ErrorCode & Payment Status in the response"
+      }
+   }
+}

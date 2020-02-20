@@ -1,0 +1,328 @@
+{  
+   "Scenarios":{  
+      "Scenario1-Primary_Member_Requesting_To_View_Maximums_Utilization_Of_All_Members":{  
+         "request":{  
+            "contract-id":"1008746146"
+         },
+         "headers":{  
+            "personId":"0308120913240120",
+            "ClientKey":"12345"
+         },
+         "params":{  
+            "benefit-package-id":"P0091620"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+          
+               "maximumsInfo":[  
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##NP"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Endodontics",
+                        "Cosmetic Services",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":1000,
+                        "totalUsedAmt":281,
+                        "remainingAmt":719
+                    }
+                  },
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Endodontics",
+                        "Cosmetic Services",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":1500,
+                        "totalUsedAmt":281,
+                        "remainingAmt":1219
+                     }
+                  },
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"LFTORMXN",
+                        "accumPeriodStartDate":"01/01/0001",
+                        "accumPeriodEndDate":"12/31/9999",
+                        "benefitDescription":"LIFETIME ORTHO MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##NP",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Orthodontics"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":3000,
+                        "totalUsedAmt":0,
+                        "remainingAmt":3000
+                     }
+                  }
+               ]
+            }
+         }
+      },
+      "Scenario2-Spouse_Member_Requesting_To_View_Maximums_Utilization_Of_All_Members":{  
+         "request":{  
+            "contract-id":"1008746146"
+         },
+         "headers":{  
+            "personId":"0171720913240156",
+            "ClientKey":"12345"
+         },
+         "params":{  
+            "benefit-package-id":"P0091620"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               
+               "maximumsInfo":[  
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##NP"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Endodontics",
+                        "Cosmetic Services",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":1000,
+                        "totalUsedAmt":0,
+                        "remainingAmt":1000
+                     }
+                  },
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Endodontics",
+                        "Cosmetic Services",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":1500,
+                        "totalUsedAmt":0,
+                        "remainingAmt":1500
+                     }
+                  },
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"LFTORMXN",
+                        "accumPeriodStartDate":"01/01/0001",
+                        "accumPeriodEndDate":"12/31/9999",
+                        "benefitDescription":"LIFETIME ORTHO MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##NP",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Orthodontics"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":3000,
+                        "totalUsedAmt":0,
+                        "remainingAmt":3000
+                     }
+                  }
+               ]
+            }
+         }
+      },
+      "Scenario3-Child_Member_Requesting_To_View_Maximums_Utilization_Of_All_Members":{  
+         "request":{  
+            "contract-id":"1008746146"
+         },
+         "headers":{  
+            "personId":"0886920913240178",
+            "ClientKey":"12345"
+         },
+         "params":{  
+            "benefit-package-id":"P0091620"
+         },
+         "verify":{  
+            "TC-1":{  
+               "statuscode":200
+            },
+            "TC-2":{  
+               
+               "maximumsInfo":[  
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##NP"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Endodontics",
+                        "Cosmetic Services",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":1000,
+                        "totalUsedAmt":0,
+                        "remainingAmt":1000
+                     }
+                  },
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"CALYRMXN",
+                        "accumPeriodStartDate":"01/01/2018",
+                        "accumPeriodEndDate":"12/31/2018",
+                        "benefitDescription":"CALENDAR YR MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Periodontics",
+                        "Restorative",
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Preventative",
+                        "TMJ",
+                        "Adjunctive General Services",
+                        "Maxillofacial Prosthetics",
+                        "Endodontics",
+                        "Cosmetic Services",
+                        "Implant Services",
+                        "Prosthodontics; Fixed",
+                        "Prosthodontics; Removable"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":1500,
+                        "totalUsedAmt":0,
+                        "remainingAmt":1500
+                     }
+                  },
+                  {  
+                     "benefitDetails":{  
+                        "benefitType":"LFTORMXN",
+                        "accumPeriodStartDate":"01/01/0001",
+                        "accumPeriodEndDate":"12/31/9999",
+                        "benefitDescription":"LIFETIME ORTHO MAX"
+                     },
+                     "networksAllowed":[  
+                        "##PPO",
+                        "##NP",
+                        "##PMR"
+                     ],
+                     "servicesAllowed":[  
+                        "Oral & Maxillofacial Surgery",
+                        "Diagnostic",
+                        "Orthodontics"
+                     ],
+                     "amounts":{  
+                        "maxAllowedAmt":3000,
+                        "totalUsedAmt":0,
+                        "remainingAmt":3000
+                     }
+                  }
+               ]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,11 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-CXCORETECH-265- Recent Claims API: Claim Status coming as Null":
+        {
+            "TC-1": "GIVEN Child Member WHEN requesting to view his claim records THEN should be able to view all his claim records",
+            "TC-2": "Validation of ClaimIDs & Claim Status in the response"
+        }   
+
+    }
+}

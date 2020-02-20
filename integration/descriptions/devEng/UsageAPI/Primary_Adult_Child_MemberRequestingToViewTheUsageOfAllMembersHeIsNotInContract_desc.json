@@ -1,0 +1,20 @@
+{
+    "Scenarios":
+    {
+        "Scenario1-Primary_Member_Requesting_To_View_The_Usage_Of_All_Members_He_Is_Not_In_Contract":
+        {
+            "TC-1": "GIVEN Primary member WHEN requesting to view the usage in the contract that he is NOT part of THEN should NOT be allowed to view Usages records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+        "Scenario2-Adult_Member_Requesting_To_View_The_Usage_Of_All_Members_He_Is_Not_In_Contract":
+        {
+            "TC-1": "GIVEN Adult member WHEN requesting to view the usage in the contract that he is NOT part of THEN should NOT be allowed to view Usages records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        } ,
+        "Scenario3-Child_Member_Requesting_To_View_The_Usage_Of_All_Members_He_Is_Not_In_Contract":
+        {
+            "TC-1": "GIVEN Child member WHEN requesting to view the usage in the contract that he is NOT part ofTHEN should NOT be allowed to view Usages records",
+            "TC-2": "Validation of ErrorCode & ErrorMessage Description"
+        }     
+    }
+}
